@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Expletus+Sans&family=Lusitana:wght@400;700&family=Raleway:wght@400;600;700&display=swap");
+html {
+  font-size: 100%;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+  color: #131313;
+}
+
+p {
+  line-height: 1.7;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.header__trans {
+  background: none;
+}
+.header__white {
+  background: #f3f3f3;
+}
+.header .logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+}
+
+/*# sourceMappingURL=index.css.map */
