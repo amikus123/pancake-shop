@@ -31,6 +31,10 @@ ul {
   list-style: none;
 }
 
+#root {
+  height: 2000px;
+}
+
 .flex {
   display: flex;
 }
@@ -48,6 +52,8 @@ ul {
 }
 
 .header {
+  position: fixed;
+  top: 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -63,8 +69,8 @@ ul {
   width: 80%;
 }
 .header nav ul {
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: calc(50% + 2rem);
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -85,7 +91,9 @@ ul {
   font-family: "Raleway", sans-serif;
 }
 .header nav .open {
+  background-color: #f3f3f3;
   box-shadow: 0 0 0 150vw #f3f3f3, 0 0 0 150vh #f3f3f3;
+  border-radius: 50%;
 }
 .header nav .open + ul {
   opacity: 1;
@@ -125,9 +133,11 @@ ul {
 }
 .header nav .abs-con {
   position: relative;
+  background-color: #f3f3f3;
+  width: 1px;
+  height: 1px;
   border-radius: 50%;
-  padding-right: 2rem;
-  transition: all 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
 }
 .header nav .menu-icon {
   position: absolute;
@@ -137,7 +147,6 @@ ul {
   height: 1rem;
   display: block;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
   transform: translate(-50%, -50%);
   z-index: 5;
 }
@@ -178,16 +187,23 @@ ul {
   top: 1.05rem;
   left: 0.2rem;
 }
-.header__trans {
-  background: none;
-}
 @media (min-width: 64em) {
+  .header__trans {
+    background: none;
+  }
   .header__trans .logo {
     color: #131313;
   }
   .header__trans nav ul li a {
     color: #131313;
   }
+}
+
+.first-hero {
+  background: url("./images/lading-hero-mobile-alt.jpg") no-repeat fixed;
+  background-size: 100% auto;
+  width: 100%;
+  height: 350px;
 }
 
 /*# sourceMappingURL=index.css.map */

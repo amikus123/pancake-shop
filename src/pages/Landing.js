@@ -1,12 +1,16 @@
 import React from 'react'
 import Header from '../components/Header'
+import FirstHero from '../components/landing/FirstHero'
 
 function Landing() {
   return (
-    <div>
+    <>
       <Header where="landing"/>
-      <p>main</p>
-    </div>
+      <main>
+     <FirstHero/>
+     
+      </main>
+    </>
   )
 }
 

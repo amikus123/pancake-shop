@@ -9,10 +9,10 @@ function Menu({ item }) {
       console.log(item);
     }
   }, [item]);
-  return <div>
+  return <>
     <Header/>
     <p>menu</p>
-    </div>;
+    </>;
 }
 
 export default Menu;

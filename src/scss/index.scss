@@ -16,7 +16,7 @@ html {
 body {
   font-size: 18px;
   font-size: vars.$font-md;
-  color: vars.$dark;
+  color: vars.$dark; 
 }
 p {
   line-height: 1.7;
@@ -29,6 +29,9 @@ a:hover {
 }
 ul {
   list-style: none;
+}
+#root{
+  height:2000px;
 }
 //
 //       FLEX         //
@@ -54,6 +57,8 @@ ul {
 // HEADER
 //
 .header {
+  position: fixed;
+  top:0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -70,9 +75,9 @@ ul {
     width: 80%;
     // ul for mobile
     ul {
-      position: absolute;
+      position: fixed;
       // background-color: red;
-      top: 50%;
+      top: calc(50% + 2rem);
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
@@ -92,7 +97,9 @@ ul {
     }
     .open {
       // when opened
+      background-color: vars.$whiteish;
       box-shadow: 0 0 0 150vw vars.$whiteish, 0 0 0 150vh vars.$whiteish;
+      border-radius: 50%;
       + ul {
         // background: red;
         opacity: 1;
@@ -135,12 +142,13 @@ ul {
     // hamubregr icon
     .abs-con {
       position: relative;
-      // background: rgba(255, 0, 0, 0.5);
-      // width: 4rem;
-      // height: 4rem;
+      // background: rgba(0,0,0,0);
+      background-color: vars.$whiteish;
+      width: 1px;
+      height: 1px;
       border-radius: 50%;
-      padding-right: 2rem;
-      transition: all 0.5s ease-in-out;
+      // padding-right: 2rem;
+      transition: box-shadow 0.5s ease-in-out;
     }
     .menu-icon {
       position: absolute;
@@ -150,7 +158,7 @@ ul {
       height: 1rem;
       display: block;
       cursor: pointer;
-      transition: 0.5s ease-in-out;
+      // transition: all 0.5s ease-in-out, background-color 0s;
       transform: translate(-50%, -50%);
       z-index: 5;
       // aniamtion of click
@@ -197,8 +205,9 @@ ul {
     }
   }
   &__trans {
-    background: none;
     @include mix.breakpoint-up(large) {
+    background: none;
+
       .logo {
         color: vars.$dark;
       }
@@ -213,4 +222,16 @@ ul {
       }
     }
   }
+}
+
+// landing 
+
+// fisrt hero
+
+.first-hero{
+  background: url("./images/lading-hero-mobile-alt.jpg")   no-repeat fixed                     ; 
+  background-size: 100% auto;
+
+  width: 100%;
+  height: 350px;
 }
