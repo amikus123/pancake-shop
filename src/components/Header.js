@@ -1,26 +1,23 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import MenuButton from "./MenuButton";
 function Header({ where }) {
   return (
-    <Router
-    forceRefresh={true}
-    >
-      <header className={where ? "header header-trans" : "header"}>
-        <Link to="/" className="logo">
-          Cakepan
-        </Link>
+    <Router forceRefresh={true}>
+      <header className={where ? "header header__trans" : "header"}>
         <nav>
+          <Link to="/" className="logo">
+            Cakepan
+          </Link>
+         
+          <MenuButton />
+
           <ul>
             <li>
               <Link to="/"> Home</Link>
             </li>
             <li>
-              <Link 
-              to="/menu"
-              >Menu</Link>
+              <Link to="/menu">Menu</Link>
             </li>
             <li>
               <Link to="/menu">Order now</Link>
@@ -31,7 +28,6 @@ function Header({ where }) {
           </ul>
         </nav>
       </header>
-     
     </Router>
   );
 }

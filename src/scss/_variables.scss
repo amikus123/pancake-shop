@@ -1,3 +1,4 @@
+
 // colors
 $dark: #131313;
 $grey: #514646;
@@ -9,14 +10,15 @@ $yellow: #dda157; // might be replaced
 
 // font sizes
 
-$font-logo: 3rem; //48
-$font-heading: 2.25rem;
+$font-biggest: 3rem; //48
+$font-bigger: 2.25rem; // 36
+$font-big: 1.5rem; // 24
 $font-md: 1.125rem; // 18
 $font-sm: 0.875rem; // 14
 $font-micro: 0.75rem;
 
 // fonts
 
-$font-ral: "Expletus Sans", cursive;
-$font-tetx: "Lusitana", serif;
-$font-logo: "Raleway", sans-serif;
+$font-logo: "Expletus Sans", cursive;
+$font-lus: "Lusitana", serif;
+$font-ral: "Raleway", sans-serif;
