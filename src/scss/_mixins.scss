@@ -47,3 +47,17 @@ $breakpoints-down: (
   font-weight: 700;
   font-family: vars.$font-lus;
 }
+ // flex shit
+ @mixin f-center($direction : row){
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: $direction;
+ }
+ @mixin f-space($direction : row){
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: $direction;
+}
+ // heading mobile
