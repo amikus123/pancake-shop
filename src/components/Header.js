@@ -6,12 +6,12 @@ function Header({ where }) {
     <Router forceRefresh={true}>
       <header className={where ? "header header__trans" : "header"}>
         <nav>
+         
+         
+          <MenuButton />
           <Link to="/" className="logo">
             Cakepan
           </Link>
-         
-          <MenuButton />
-
           <ul>
             <li>
               <Link to="/"> Home</Link>

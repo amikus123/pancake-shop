@@ -5,6 +5,7 @@
 // reset and basic
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 *,
 *::after,
@@ -65,6 +66,7 @@ ul {
 .logo {
   @include mix.logo();
   color: vars.$gold;
+  transition: all 0.2s ease-in-out;
   z-index: 10;
 }
 //
@@ -106,6 +108,7 @@ ul {
           text-transform: uppercase;
           color: vars.$gold;
           @include mix.sh();
+          transition: color 0.2s ease-in-out;
         }
       }
     }
@@ -114,11 +117,22 @@ ul {
       background-color: vars.$whiteish;
       box-shadow: 0 0 0 150vw vars.$whiteish, 0 0 0 150vh vars.$whiteish;
       border-radius: 50%;
-      + ul {
+      span{
+        background-color: vars.$gold!important;
+      }
+      ~ ul {
         // background: red;
         opacity: 1;
         z-index: 2;
         visibility: visible;
+        li{
+          a{
+            color: vars.$gold;
+          }
+        }
+      }
+      ~ .logo{
+        color:vars.$gold!important;
       }
     }
 
@@ -163,6 +177,7 @@ ul {
       border-radius: 50%;
       // padding-right: 2rem;
       transition: box-shadow 0.5s ease-in-out;
+      order:3;
     }
     .menu-icon {
       position: absolute;
@@ -219,18 +234,23 @@ ul {
     }
   }
   &__trans {
-    @include mix.breakpoint-up(large) {
+    @include mix.breakpoint-up(medium) {
       background: none;
-
+      
       .logo {
-        color: vars.$dark;
+        color: vars.$whiteish;
       }
       nav {
         ul {
           li {
             a {
-              color: vars.$dark;
+              color: vars.$whiteish;
             }
+          }
+        }
+        .menu-icon{
+          span{
+            background-color: vars.$whiteish;
           }
         }
       }
@@ -242,13 +262,11 @@ ul {
 
 // fisrt hero
 main {
-  margin-top: 4rem;
-  @include mix.breakpoint-up(large) {
-    margin-top: 100px;
-  }
+  @include mix.breakpoint-down(small){
+    margin-top: 4rem;
   .first-hero {
     background: url("./images/lading-hero-mobile.jpg") no-repeat ; 
-    background-position:  center bottom 100px;
+    background-position:  center bottom 15vh;
     background-size: cover;
     background-attachment: fixed;
     min-height: 360px;
@@ -261,9 +279,30 @@ main {
       @include mix.f-space(column);
       h1{
         color:vars.$whiteish;
-        @include mix.sh;
-
+        @include mix.sh(500);
+        width:300px;
         text-align:center;
+      }
+    }
+  }
+}
+  @include mix.breakpoint-up(medium) {
+    .first-hero {
+      background: url("./images/back-img.jpg") no-repeat ; 
+      background-size: cover;
+      height: 67vw;
+      width: 100%;
+      @include mix.f-center(row);
+      .content-wrap{
+        width: 80%;
+        height: 70%;
+        @include mix.f-space(column);
+        h1{
+          color:vars.$whiteish;
+          @include mix.sh(500);
+          width:300px;
+          text-align:center;
+        }
       }
     }
   }

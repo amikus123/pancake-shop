@@ -36,11 +36,12 @@ $breakpoints-down: (
   }
 }
 // secomdary heading
-@mixin sh() {
+@mixin sh($weight: 600) {
   font-size: vars.$font-bigger;
-  font-weight: 600;
+  font-weight: $weight;
   font-family: vars.$font-ral;
 }
+
 // basic nav 
 @mixin bn(){
   font-size: vars.$font-md;
