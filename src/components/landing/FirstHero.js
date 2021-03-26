@@ -1,4 +1,5 @@
 import React from "react";
+import Menu from "../../pages/Menu";
 import Button from "../Button";
 
 function FirstHero() {
@@ -12,7 +13,7 @@ function FirstHero() {
           and cake alike.
         </p>
 
-        <Button text={"ORDER NOW"} location={"/menu"} type={"red"} />
+        <Button text={"ORDER NOW"} location={"/menu"} component={Menu} type={"red"} />
 
       </div>
     </div>
