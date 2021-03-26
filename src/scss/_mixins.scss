@@ -1,15 +1,15 @@
 @use "variables.scss" as vars;
 // Breakpoints
 
-// 640 1024 1400
+// 768 1024 1400
 $breakpoints-up: (
-  "medium": "40em",
+  "medium": "48em",
   "large": "64em",
   "xlarge": "87.5em",
 );
-// 639 1023 1399
+// 767 1023 1399
 $breakpoints-down: (
-  "small": "39.9375em",
+  "small": "47.9375em",
   "medium": "63.9375em",
   "large": "87.4375em",
 );
@@ -25,6 +25,13 @@ $breakpoints-down: (
     @content;
   }
 }
+@mixin breakpoint-mixed($size1, $size2) {
+  @media (min-width: map-get($breakpoints-up,$size1)) and (max-width: map-get($breakpoints-down,$size2)) {
+    @content;
+  }
+}
+
+// FONTS
 // used for logos
 // changes ize to 48 when widtgh >= 1024
 @mixin logo() {
@@ -35,6 +42,12 @@ $breakpoints-down: (
     font-size: vars.$font-biggest;
   }
 }
+// primaty heading
+@mixin ph($weight: 600) {
+  font-size: vars.$font-biggest;
+  font-weight: $weight;
+  font-family: vars.$font-ral;
+}
 // secomdary heading
 @mixin sh($weight: 600) {
   font-size: vars.$font-bigger;
@@ -42,23 +55,80 @@ $breakpoints-down: (
   font-family: vars.$font-ral;
 }
 
-// basic nav 
-@mixin bn(){
+// basic nav
+@mixin bn() {
   font-size: vars.$font-md;
   font-weight: 700;
   font-family: vars.$font-lus;
 }
- // flex shit
- @mixin f-center($direction : row){
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: $direction;
- }
- @mixin f-space($direction : row){
+// paragraph text
+@mixin pt($weight: 400) {
+  font-size: vars.$font-md;
+  font-weight: $weight;
+  font-family: vars.$font-lus;
+}
+// large paragrapg text
+@mixin lpt($weight: 400) {
+  font-size: vars.$font-big;
+  font-weight: $weight;
+  font-family: vars.$font-lus;
+}
+// flex shit
+@mixin f-center($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+@mixin f-space($direction: row) {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: $direction;
 }
- // heading mobile
+// grid
+@mixin grid {
+  display: grid;
+}
+
+/*
+  COMMON RESOLUSTIONS
+  
+
+1366x768 (22.98%)
+1920x1080 (20.7%)
+1536x864 (7.92%)
+1440x900 (7.23%)
+1280x720 (4.46%)
+
+360x640 (18.7%)
+375x667 (7.34%)
+414x896 (6.76%)
+360x780 (5.31%)
+375x812 (5.01%)
+
+768x1024 (51.43%)
+1280x800 (7.28%)
+800x1280 (5.26%)
+601x962 (4.32%)
+962x601 (2.99%)
+
+1920x1080 (19.57%)
+1366x768 (14.88%)
+1440x900 (9.18%)
+1536x864 (7.22%)
+1024x768 (4.73%)
+
+414x896 (19.44%)
+375x667 (13.67%)
+375x812 (12.3%)
+414x736 (8.91%)
+360x640 (8.21%)
+
+768x1024 (55.64%)
+1280x800 (5.74%)
+800x1280 (5.31%)
+601x962 (5.14%)
+962x601 (3.2%)
+
+ */

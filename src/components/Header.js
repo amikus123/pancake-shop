@@ -1,26 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import Landing from "../pages/Landing";
+import Menu from "../pages/Menu";
 import MenuButton from "./MenuButton";
 function Header({ where }) {
   return (
-    <Router forceRefresh={true}>
       <header className={where ? "header header__trans" : "header"}>
         <nav>
-         
-         
           <MenuButton />
-          <Link to="/" className="logo">
+          <Link to="/" className="logo" >
             Cakepan
           </Link>
           <ul>
             <li>
-              <Link to="/"> Home</Link>
+              <Link to="/" > Home</Link>
             </li>
             <li>
-              <Link to="/menu">Menu</Link>
+              <Link to="/menu" >Menu</Link>
             </li>
             <li>
-              <Link to="/menu">Order now</Link>
+              <Link to="/menu" >Order now</Link>
             </li>
             <li>
               <Link to="/contact">Contact us</Link>
@@ -28,7 +27,6 @@ function Header({ where }) {
           </ul>
         </nav>
       </header>
-    </Router>
   );
 }
 

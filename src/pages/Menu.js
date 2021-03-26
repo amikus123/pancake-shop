@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Header from "../components/Header";
 
 function Menu({ item }) {
   useEffect(() => {
@@ -10,7 +9,6 @@ function Menu({ item }) {
     }
   }, [item]);
   return <>
-    <Header/>
     <p>menu</p>
     </>;
 }

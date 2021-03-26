@@ -7,6 +7,7 @@ import Menu from "./pages/Menu";
 
 // style
 import "./index.css";
+import Header from "./components/Header";
 function App() {
   const MenuItem = () =>{
     let item =useRouteMatch("/menu/:slug");
@@ -14,13 +15,11 @@ function App() {
   }
   return (
     <Router>
+      <Header/>
       <Switch>
-        <Route path="/menu">
-          <MenuItem />
+        <Route path="/menu" exact component={MenuItem}>
         </Route>
-  
-        <Route path="/" exact>
-          <Landing />
+        <Route path="/" exact component={Landing}>
         </Route>
         <Route path="/*">
           <Error/>
