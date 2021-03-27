@@ -61,6 +61,12 @@ $breakpoints-down: (
   font-weight: 700;
   font-family: vars.$font-lus;
 }
+// small text
+@mixin st($weight: 400){
+  font-size: vars.$font-sm;
+  font-weight: $weight;
+  font-family: vars.$font-lus;
+}
 // paragraph text
 @mixin pt($weight: 400) {
   font-size: vars.$font-md;
@@ -73,6 +79,7 @@ $breakpoints-down: (
   font-weight: $weight;
   font-family: vars.$font-lus;
 }
+
 // flex shit
 @mixin f-center($direction: row) {
   display: flex;

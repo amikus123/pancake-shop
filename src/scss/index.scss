@@ -10,7 +10,7 @@ html {
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -37,40 +37,40 @@ ul {
 // hide elemnet based on media query
 .hide-mobile {
   @include mix.breakpoint-down("small") {
-
-display: none!important;
+    display: none !important;
   }
 }
-.hide-tablet {
-  // @media (min-width: mixin.$breakpoints-up("medium")) and (max-width: mixin.$breakpoints-up("large")) {
-  //   display: none;
-  // }
-  @include mix.breakpoint-mixed("medium", "medium") {
-    display: none!important;
-  }
-}
+// .hide-tablet {
+//   // @media (min-width: mixin.$breakpoints-up("medium")) and (max-width: mixin.$breakpoints-up("large")) {
+//   //   display: none;
+//   // }
+//   @include mix.breakpoint-mixed("medium", "medium") {
+//     display: none!important;
+//   }
+// }
 
 .hide-desktop {
   @include mix.breakpoint-up("large") {
-    display: none!important;
+    display: none !important;
   }
 }
 
 .show-mobile {
   @include mix.breakpoint-up("medium") {
-    display: none!important;
+    display: none !important;
+    color: red;
   }
 }
 
-.show-tablet {
-  @include mix.breakpoint-mixed("small", "large") {
-    display: none!important;
-  }
-}
+// .show-tablet {
+//   @include mix.breakpoint-mixed("small", "large") {
+//     display: none!important;
+//   }
+// }
 
 .show-desktop {
   @include mix.breakpoint-down("medium") {
-    display: none!important;
+    display: none !important;
   }
 }
 //
@@ -95,14 +95,12 @@ display: none!important;
   &__trans {
     span {
       color: vars.$whiteish;
-
     }
   }
-  &__large{
+  &__large {
     width: 15rem;
     height: 4.03125rem;
-    span{
-
+    span {
     }
   }
 }
@@ -112,6 +110,80 @@ display: none!important;
   color: vars.$gold;
   transition: all 0.2s ease-in-out;
   z-index: 10;
+}
+
+.rating {
+  display: flex;
+  .stars {
+    position: relative;
+    overflow: hidden;
+    .full-stars {
+      width: 150px;
+      height: 23px;
+      position: absolute;
+    }
+  }
+
+  span {
+    color: vars.$dark;
+    padding-left: 0.5rem;
+  }
+}
+// FRAME
+.product-frame {
+  @include mix.breakpoint-down(medium) {
+    width: 250px;
+    height: 227px;
+    background-color: vars.$whiteish;
+    overflow: hidden;
+    border-radius: 20px;
+    @include mix.f-center(column);
+    .frame-img {
+      width: 100%;
+      height: 167px;
+      position: relative;
+      .frame-rating {
+        position: absolute;
+        border-bottom-right-radius: 20px;
+        top: 0;
+        left: 0;
+        width: 27%;
+        height: 15%;
+        background-color: vars.$whiteish;
+        @include mix.f-center;
+
+        .frame-rating-text {
+          @include mix.f-center;
+          span {
+            margin-left: 3px;
+            line-height: 100%;
+          }
+        }
+      }
+      img {
+        width: inherit;
+        border-radius: 20px;
+      }
+    }
+    .frame-data {
+      @include mix.f-space(row);
+      padding: 0.5rem;
+      flex: 1;
+      width: 100%;
+      .frame-name {
+        width:75%;
+        @include mix.st(700);
+        text-align: left;
+
+      }
+      .frame-price {
+        width:25%;
+        @include mix.bn;
+        text-align: right;
+
+      }
+    }
+  }
 }
 //
 // HEADER
@@ -370,7 +442,7 @@ main {
       }
     }
   }
-  @include mix.breakpoint-up(large){
+  @include mix.breakpoint-up(large) {
     .first-hero {
       background: url("./images/test.jpg") no-repeat;
       background-size: cover;
@@ -384,7 +456,7 @@ main {
         @include mix.f-center(column);
         align-items: flex-start;
         flex-wrap: wrap;
-        padding: 1rem 0 ;
+        padding: 1rem 0;
         margin-right: 10vw;
 
         height: 80%;

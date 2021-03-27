@@ -10,22 +10,17 @@ import "./index.css";
 import Header from "./components/Header";
 
 function App() {
-  useEffect(()=>{
-    console.log(1) 
-  })
   const MenuItem = () =>{
     let item =useRouteMatch("/menu/:slug");
     return <Menu item={item}/>
   }
 
   const location = useLocation();
-  useEffect(() => {
-    console.log('Location changed');
-  }, [location]);
+
 
   return (
-    <Router>
-      <Header/>
+    <>
+      <Header location={location}/>
       <Switch>
         <Route path="/menu" exact component={MenuItem}>
         </Route>
@@ -35,8 +30,7 @@ function App() {
           <Error/>
         </Route>
       </Switch>
-    </Router>
-  
+  </>
   );
 }
 

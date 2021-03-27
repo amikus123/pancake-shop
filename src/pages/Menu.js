@@ -8,9 +8,9 @@ function Menu({ item }) {
       console.log(item);
     }
   }, [item]);
-  return <>
+  return <main>
     <p>menu</p>
-    </>;
+    </main>;
 }
 
 export default Menu;

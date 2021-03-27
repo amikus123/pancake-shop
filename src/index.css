@@ -48,7 +48,7 @@ html {
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -83,12 +83,6 @@ ul {
   }
 }
 
-@media (min-width: 48em) and (max-width: 63.9375em) {
-  .hide-tablet {
-    display: none !important;
-  }
-}
-
 @media (min-width: 64em) {
   .hide-desktop {
     display: none !important;
@@ -98,12 +92,7 @@ ul {
 @media (min-width: 48em) {
   .show-mobile {
     display: none !important;
-  }
-}
-
-@media (min-width: ) and (max-width: 87.4375em) {
-  .show-tablet {
-    display: none !important;
+    color: red;
   }
 }
 
@@ -150,6 +139,92 @@ ul {
 @media (min-width: 64em) {
   .logo {
     font-size: 3rem;
+  }
+}
+
+.rating {
+  display: flex;
+}
+.rating .stars {
+  position: relative;
+  overflow: hidden;
+}
+.rating .stars .full-stars {
+  width: 150px;
+  height: 23px;
+  position: absolute;
+}
+.rating span {
+  color: #131313;
+  padding-left: 0.5rem;
+}
+
+@media (max-width: 63.9375em) {
+  .product-frame {
+    width: 250px;
+    height: 227px;
+    background-color: #f3f3f3;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .product-frame .frame-img {
+    width: 100%;
+    height: 167px;
+    position: relative;
+  }
+  .product-frame .frame-img .frame-rating {
+    position: absolute;
+    border-bottom-right-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 27%;
+    height: 15%;
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .product-frame .frame-img .frame-rating .frame-rating-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .product-frame .frame-img .frame-rating .frame-rating-text span {
+    margin-left: 3px;
+    line-height: 100%;
+  }
+  .product-frame .frame-img img {
+    width: inherit;
+    border-radius: 20px;
+  }
+  .product-frame .frame-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0.5rem;
+    flex: 1;
+    width: 100%;
+  }
+  .product-frame .frame-data .frame-name {
+    width: 75%;
+    font-size: 0.875rem;
+    font-weight: 700;
+    font-family: "Lusitana", serif;
+    text-align: left;
+  }
+  .product-frame .frame-data .frame-price {
+    width: 25%;
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-family: "Lusitana", serif;
+    text-align: right;
   }
 }
 

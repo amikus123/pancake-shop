@@ -4,44 +4,38 @@ import Landing from "../pages/Landing";
 import Menu from "../pages/Menu";
 import MenuButton from "./MenuButton";
 
-function Header({ where }) {
-  const [pathname, setPathname] = useState("");
+function Header({ location }) {
   useEffect(() => {
-    console.log(window.location.pathname);
-    setPathname(window.location.pathname)
+    console.log(location,"zmiana");
 
-  }, []);
-  const checkLanding = () => {
-    console.log(333);
-    console.log(window.location.pathname);
-    setPathname(window.location.pathname)
-  };
+  }, [location]);
+
   
   return (
-    <header className={where ? "header header__trans" : "header"}>
+    <header className={location.pathname === "/" ? "header header__trans" : "header"}>
       <nav>
         <MenuButton />
-        <Link to="/" className="logo" onClick={checkLanding}>
+        <Link to="/" className="logo">
           Cakepan
         </Link>
         <ul>
           <li>
-            <Link to="/" onClick={checkLanding}>
+            <Link to="/" >
               Home
             </Link>
           </li>
           <li>
-            <Link to="/menu" onClick={checkLanding}>
+            <Link to="/menu" >
               Menu
             </Link>
           </li>
           <li>
-            <Link to="/menu" onClick={checkLanding}>
+            <Link to="/menu" >
               Order now
             </Link>
           </li>
           <li>
-            <Link to="/contact" onClick={checkLanding}>
+            <Link to="/contact">
               Contact us
             </Link>
           </li>
