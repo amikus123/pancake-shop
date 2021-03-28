@@ -46,6 +46,18 @@ $breakpoints-down: (
   justify-content: space-between;
   flex-direction: $direction;
 }
+@mixin f-end($direction: row){
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: $direction;
+}
+@mixin f-start($direction: row){
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: $direction;
+}
 // grid
 @mixin grid {
   display: grid;

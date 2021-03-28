@@ -1,1 +1,60 @@
 @use '../../abstracts/' as *;
+
+footer{
+  height: 720px;
+  text-align:left;
+  background-color: $whiteish;
+  @include f-start(column);
+  // align-items: ;
+  padding: 4rem 2rem;
+  .contact{
+    // width:100%;
+    padding-bottom: 3rem;
+    .logo{
+      color:$gold;
+      display: inline-block;
+      margin-bottom: 1em
+    }
+    ul{
+      li{
+        @include bn;
+
+      }
+      padding-bottom: 1rem;;
+    }
+    .icons{
+      // width:50%;
+      @include f-space;
+      font-size: 1.5rem;
+      padding: 1rem 0;
+      svg{
+        fill:$dark;
+      }
+    }
+  }
+  
+  nav{
+    // width:100%;
+    // padding:1rem;
+    @include f-center;
+    align-items:start;
+   
+    ul{
+      margin:0 1.5rem;
+      :first-child{
+        color: $dark;
+      }
+
+      li{
+        color:$grey;
+        @include bn;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+  @include breakpoint-up(medium){
+    @include f-space(row);
+    align-items:flex-start;
+    padding:4rem 10vw;
+  }
+}

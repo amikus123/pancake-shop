@@ -2,7 +2,6 @@
 
 
   // fisrt hero
-.landing{
   .landing{
     @include breakpoint-down(small) {
       margin-top: 4rem;
@@ -33,7 +32,7 @@
         }
       }
     }
-  }
+  
   @include breakpoint-up(medium) {
     .first-hero {
       background: url("./images/test.jpg") no-repeat;

@@ -41,6 +41,9 @@
         }
       }
     }
+    .logo {
+      color: $gold;
+    }
     .open {
       // when opened
       background-color: $whiteish;
@@ -60,11 +63,33 @@
           }
         }
       }
-      ~ .logo {
-        color: $gold !important;
-      }
+     
     }
 
+    &__trans {
+      @include breakpoint-up(medium) {
+        background: none;
+  
+        .logo {
+          color: $whiteish;
+        }
+        nav {
+          ul {
+            li {
+              a {
+                color: $whiteish;
+              }
+            }
+          }
+          .menu-icon {
+            span {
+              background-color: $whiteish;
+            }
+          }
+        }
+      }
+    }
+    
     // big screen
     @include breakpoint-up(large) {
       height: 6.25rem;
@@ -95,6 +120,10 @@
         display: none;
       }
     }
+
+
+
+
 
     // hamubregr icon
     .abs-con {
@@ -162,27 +191,6 @@
       // outline:1px solid red;
     }
   }
-  &__trans {
-    @include breakpoint-up(medium) {
-      background: none;
-
-      .logo {
-        color: $whiteish;
-      }
-      nav {
-        ul {
-          li {
-            a {
-              color: $whiteish;
-            }
-          }
-        }
-        .menu-icon {
-          span {
-            background-color: $whiteish;
-          }
-        }
-      }
-    }
-  }
+  
+ 
 }
