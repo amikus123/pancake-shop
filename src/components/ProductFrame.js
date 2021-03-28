@@ -1,11 +1,12 @@
 import React from "react";
 import Rating from "./Rating";
 import { AiFillStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function ProductFrame({ product }) {
   const { name, img, price, rating } = product;
   return (
-    <div className="product-frame">
+    <Link to="/a" className="product-frame" >
       <div className="frame-img">
         <div className="frame-rating">
           <span className="frame-rating-text">
@@ -19,7 +20,7 @@ function ProductFrame({ product }) {
         <span className="frame-name">{name}</span>
         <span className="frame-price">{price} zł</span>
       </div>
-    </div>
+    </Link>
   );
 }
 

@@ -18,6 +18,9 @@ body {
   font-size: 18px;
   font-size: vars.$font-md;
   color: vars.$dark;
+  height:100%;
+  overflow: scroll;
+
 }
 p {
   line-height: 1.7;
@@ -26,13 +29,14 @@ a,
 a:visited,
 a:hover {
   text-decoration: none;
+  color:inherit;
   // color: vars.$whiteish;
 }
 ul {
   list-style: none;
 }
 #root {
-  height: 2000px;
+  // height: 2000px;
 }
 // hide elemnet based on media query
 .hide-mobile {
@@ -83,6 +87,7 @@ ul {
   @include mix.f-center();
   span {
     @include mix.bn;
+    font-size: 1.125em;
   }
   // subclasses
   &__red {
@@ -97,7 +102,6 @@ ul {
       color: vars.$whiteish;
     }
   }
-
 }
 
 .logo {
@@ -126,60 +130,60 @@ ul {
 }
 // FRAME
 .product-frame {
-  @include mix.breakpoint-down(medium) {
-    width: 15.625em;
-    height: 14.1875em;
-    background-color: vars.$whiteish;
-    overflow: hidden;
-    border-radius: 1.25em;
-    font-size: 1rem;
-    @include mix.f-center(column);
-    .frame-img {
-      width: 100%;
-      height: 10.5em;
-      position: relative;
-      .frame-rating {
-        position: absolute;
-        border-bottom-right-radius: 20px;
-        top: 0;
-        left: 0;
-        width: 27%;
-        height: 1.5625em;
-        background-color: vars.$whiteish;
+  width: 15.625em;
+  height: 14.1875em;
+  background-color: vars.$whiteish;
+  overflow: hidden;
+  border-radius: 1.25em;
+  font-size: 1rem;
+  @include mix.f-center(column);
+  .frame-img {
+    width: 100%;
+    height: 10.5em;
+    position: relative;
+    .frame-rating {
+      position: absolute;
+      border-bottom-right-radius: 1em;
+      top: 0;
+      left: 0;
+      width: 4.2em;
+      height: 1.5625em;
+      background-color: vars.$whiteish;
+      @include mix.f-center;
+      .frame-rating-text {
         @include mix.f-center;
-
-        .frame-rating-text {
-          @include mix.f-center;
-          span {
-            margin-left: 3px;
-            line-height: 100%;
-          }
+        span {
+          margin-left: 0.1875em;
+          line-height: 100%;
+          font-size: inherit;
         }
       }
-      img {
-        width: inherit;
-        border-radius: 20px;
-      }
     }
-    .frame-data {
-      @include mix.f-space(row);
-      padding: 0.5rem;
-      flex: 1;
-      width: 100%;
-      .frame-name {
-        width:75%;
-        @include mix.st(700);
-        text-align: left;
-
-      }
-      .frame-price {
-        width:25%;
-        @include mix.bn;
-        text-align: right;
-
-      }
+    img {
+      width: inherit;
+      border-radius: 1.25em;
     }
   }
+  .frame-data {
+    @include mix.f-space(row);
+    padding: 0.75em;
+    height: 3.6875em;
+    width: 100%;
+    .frame-name {
+      width: 75%;
+      @include mix.st(700);
+      text-align: left;
+      font-size: 0.875em;
+    }
+    .frame-price {
+      width: 25%;
+      @include mix.bn;
+      text-align: right;
+      font-size: 1.125em;
+    }
+  }
+  // tu bede dawac rozmiary
+  font-size: 18px;
 }
 //
 // HEADER
@@ -192,7 +196,7 @@ ul {
   align-items: center;
   justify-content: center;
   background: vars.$whiteish;
-
+  z-index: 100;
   nav {
     height: 4rem;
 
@@ -476,6 +480,128 @@ ul {
       }
     }
   }
-// second section
+  // second section
+  // gallery
+  .embla {
+    position: relative;
+    padding: 2em 1em ;
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box;
+    &__viewport {
+      overflow: hidden;
+      width: 100%;
+      box-sizing: content-box;
 
+    }
+    &__container {
+      display: flex;
+      user-select: none;
+      margin-left: -2em;
+    box-sizing: content-box;
+
+    }
+    &__slide {
+      position: relative;
+      // min-width: 80%;
+      padding-left:2em;
+    box-sizing: content-box;
+
+      &__inner {
+        position: relative;
+        overflow: hidden;
+        width: 15.625em;
+        height: 14.1875em;
+    box-sizing: content-box;
+
+      }
+    }
+    a {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      min-height: 100%;
+      min-width: 100%;
+      max-width: none;
+      transform: translate(-50%, -50%);
+      font-size: inherit;
+    }
+    .embla__button {
+      outline: 0;
+      cursor: pointer;
+      background-color: transparent;
+      touch-action: manipulation;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 0;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      fill: vars.$dark;
+      padding: 0;
+    }
+    
+    .embla__button:disabled {
+      cursor: default;
+      opacity: 0.3;
+    }
+    
+    .embla__button__svg {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .embla__button--prev {
+      left:  0;
+    }
+    
+    .embla__button--next {
+      right: 0;
+    }
+    
+  }
+  .second-hero{
+    @include mix.f-center(column);
+    width:100%;
+    padding:1em;
+    // overflow:hidden;
+    .text{
+    @include mix.f-center(column);
+      padding:2em 1em ;
+      :not(:last-child) {
+        margin-bottom: 2rem;
+      }
+      h1{
+        @include mix.sh();
+        text-align: center;
+        color: vars.$dark;
+      }
+      p{
+        @include mix.bn();
+        text-align: left;
+        color:vars.$gold;
+      }
+    }
+
+    .image-con{
+      background: url('./images/ve.svg') no-repeat;
+      width:fit-content;
+      height: fit-content;
+      background-position: center;
+      background-size: contain;
+      img{
+        width:80vw;
+      }
+    }
+
+  }
+}
+footer{
+  .contacnt
 }

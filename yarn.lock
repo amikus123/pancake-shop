@@ -4368,6 +4368,11 @@
     "minimalistic-assert" "^1.0.1"
     "minimalistic-crypto-utils" "^1.0.1"
 
+"embla-carousel@^4.3.0":
+  "integrity" "sha512-BLqjl3b9wyRywE9nfFgdfxr6N/DS5Cr6NKkA7oIU5s1XdxAXYTgYZ/gc9cN1KzbPtYZKkQOBpeLOOqZ8TK0IPA=="
+  "resolved" "https://registry.npmjs.org/embla-carousel/-/embla-carousel-4.3.0.tgz"
+  "version" "4.3.0"
+
 "emittery@^0.7.1":
   "integrity" "sha512-A8OG5SR/ij3SsJdWDJdkkSYUjQdCUx6APQXem0SaEePBSRg4eymGYwBkKo1Y6DU+af/Jn2dBQqDBvjnr9Vi8nQ=="
   "resolved" "https://registry.yarnpkg.com/emittery/-/emittery-0.7.2.tgz"

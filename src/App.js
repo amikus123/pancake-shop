@@ -8,6 +8,7 @@ import Menu from "./pages/Menu";
 // style
 import "./index.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const MenuItem = () =>{
@@ -30,6 +31,7 @@ function App() {
           <Error/>
         </Route>
       </Switch>
+      <Footer/>
   </>
   );
 }

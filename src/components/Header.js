@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import Landing from "../pages/Landing";
-import Menu from "../pages/Menu";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import MenuButton from "./MenuButton";
 
 function Header({ location }) {
