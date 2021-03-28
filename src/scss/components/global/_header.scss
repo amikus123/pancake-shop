@@ -1,0 +1,188 @@
+@use '../../abstracts/' as *;
+
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $whiteish;
+  z-index: 100;
+  nav {
+    height: 4rem;
+
+    padding: 0 0.6875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    // ul for mobile
+    ul {
+      position: fixed;
+      // background-color: red;
+      top: calc(50% + 2rem);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: 0.5s ease-in-out;
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      li {
+        padding: 0 0 3.1875rem 0;
+        a {
+          text-transform: uppercase;
+          color: $gold;
+          @include sh();
+          transition: color 0.2s ease-in-out;
+        }
+      }
+    }
+    .open {
+      // when opened
+      background-color: $whiteish;
+      box-shadow: 0 0 0 150vw $whiteish, 0 0 0 150vh $whiteish;
+      border-radius: 50%;
+      span {
+        background-color: $gold !important;
+      }
+      ~ ul {
+        // background: red;
+        opacity: 1;
+        z-index: 2;
+        visibility: visible;
+        li {
+          a {
+            color: $gold;
+          }
+        }
+      }
+      ~ .logo {
+        color: $gold !important;
+      }
+    }
+
+    // big screen
+    @include breakpoint-up(large) {
+      height: 6.25rem;
+
+      ul {
+        //reset
+        visibility: visible;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0%, 0%);
+        opacity: 1;
+        display: flex;
+        transition: 0s ease-in-out;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60%;
+        max-width: 500px;
+        li {
+          padding: 0 0 0 0;
+          a {
+            color: $gold;
+            @include bn();
+          }
+        }
+      }
+      .abs-con {
+        display: none;
+      }
+    }
+
+    // hamubregr icon
+    .abs-con {
+      position: relative;
+      // background: rgba(0,0,0,0);
+      background-color: $whiteish;
+      width: 1px;
+      height: 1px;
+      border-radius: 50%;
+      // padding-right: 2rem;
+      transition: box-shadow 0.5s ease-in-out;
+      order: 3;
+    }
+    .menu-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1.5rem;
+      height: 1rem;
+      display: block;
+      cursor: pointer;
+      // transition: all 0.5s ease-in-out, background-color 0s;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      // aniamtion of click
+      span {
+        display: block;
+        position: absolute;
+        height: 0.2rem;
+        width: 1.5rem;
+        opacity: 1;
+        left: 0;
+        background-color: $gold;
+        transition: 0.25s ease-in-out;
+        transform: rotate(0deg);
+      }
+      :nth-child(1) {
+        top: 0rem;
+        transform-origin: left center;
+      }
+      :nth-child(2) {
+        top: 0.5rem;
+        transform-origin: left center;
+      }
+      :nth-child(3) {
+        top: 1rem;
+        transform-origin: left center;
+      }
+      &__open {
+        :nth-child(1) {
+          transform: rotate(45deg);
+          top: 0rem;
+          left: 0.2rem;
+        }
+        :nth-child(2) {
+          width: 0%;
+          opacity: 0;
+        }
+        :nth-child(3) {
+          transform: rotate(-45deg);
+          top: 1.05rem;
+          left: 0.2rem;
+        }
+      }
+      // outline:1px solid red;
+    }
+  }
+  &__trans {
+    @include breakpoint-up(medium) {
+      background: none;
+
+      .logo {
+        color: $whiteish;
+      }
+      nav {
+        ul {
+          li {
+            a {
+              color: $whiteish;
+            }
+          }
+        }
+        .menu-icon {
+          span {
+            background-color: $whiteish;
+          }
+        }
+      }
+    }
+  }
+}

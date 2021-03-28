@@ -1,0 +1,110 @@
+@use '../../abstracts/' as *;
+
+
+  // fisrt hero
+.landing{
+  .landing{
+    @include breakpoint-down(small) {
+      margin-top: 4rem;
+      }
+  
+  }
+    .first-hero {
+      background: url("./images/mobile2.jpg") no-repeat;
+      background-position: center;
+
+      background-size: cover;
+      height: 100vw;
+      width: 100%;
+      @include f-center(row);
+      .content-wrap {
+        width: 80%;
+        height: 60%;
+        @include f-space(column);
+        h1 {
+          color: $gold;
+          // color: $dark;
+          @include sh();
+          width: 300px;
+          text-align: center;
+        }
+        .button {
+          // margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+  @include breakpoint-up(medium) {
+    .first-hero {
+      background: url("./images/test.jpg") no-repeat;
+      background-size: cover;
+      background-position: right center;
+      height: 100vh;
+      // max-height: 70vh;
+      width: 100%;
+      @include f-center(row);
+      justify-content: flex-end;
+      .content-wrap {
+        @include f-center(column);
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 1rem;
+        margin-right: 10vw;
+
+        height: 80%;
+        * {
+          margin: 1rem;
+        }
+        h1 {
+          text-align: left;
+          color: $whiteish;
+          @include sh();
+          width: 250px;
+        }
+        p {
+          @include pt();
+          color: $gold;
+          width: 250px;
+        }
+        .button {
+        }
+      }
+    }
+  }
+  @include breakpoint-up(large) {
+    .first-hero {
+      background: url("./images/test.jpg") no-repeat;
+      background-size: cover;
+      background-position: right center;
+      height: 100vh;
+      // max-height: 70vh;
+      width: 100%;
+      @include f-center(row);
+      justify-content: flex-end;
+      .content-wrap {
+        @include f-center(column);
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+        margin-right: 10vw;
+
+        height: 80%;
+        * {
+          margin: 1rem 0;
+        }
+        h1 {
+          text-align: left;
+          color: $whiteish;
+          @include ph();
+          width: 250px;
+        }
+        p {
+          @include lpt();
+          color: $gold;
+          width: 320px;
+        }
+        .button {
+        }
+      }
+    }
+  }

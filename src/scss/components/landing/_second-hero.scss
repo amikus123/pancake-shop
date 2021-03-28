@@ -1,0 +1,37 @@
+@use '../../abstracts/' as *;
+
+.second-hero{
+  @include f-center(column);
+  width:100%;
+  padding:1em;
+  // overflow:hidden;
+  .text{
+  @include f-center(column);
+    padding:2em 1em ;
+    :not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    h1{
+      @include sh();
+      text-align: center;
+      color: $dark;
+    }
+    p{
+      @include bn();
+      text-align: left;
+      color:$gold;
+    }
+  }
+
+  .image-con{
+    background: url('./images/ve.svg') no-repeat;
+    width:fit-content;
+    height: fit-content;
+    background-position: center;
+    background-size: contain;
+    img{
+      width:80vw;
+    }
+  }
+
+}

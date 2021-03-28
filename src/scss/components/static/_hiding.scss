@@ -1,0 +1,40 @@
+@use '../../abstracts/' as *;
+
+
+.hide-mobile {
+  @include breakpoint-down("small") {
+    display: none !important;
+  }
+}
+// .hide-tablet {
+//   // @media (min-width: mixin.$breakpoints-up("medium")) and (max-width: mixin.$breakpoints-up("large")) {
+//   //   display: none;
+//   // }
+//   @include breakpoint-mixed("medium", "medium") {
+//     display: none!important;
+//   }
+// }
+
+.hide-desktop {
+  @include breakpoint-up("large") {
+    display: none !important;
+  }
+}
+
+.show-mobile {
+  @include breakpoint-up("medium") {
+    display: none !important;
+  }
+}
+
+// .show-tablet {
+//   @include breakpoint-mixed("small", "large") {
+//     display: none!important;
+//   }
+// }
+
+.show-desktop {
+  @include breakpoint-down("medium") {
+    display: none !important;
+  }
+}

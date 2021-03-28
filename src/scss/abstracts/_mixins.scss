@@ -1,4 +1,4 @@
-@use "variables.scss" as vars;
+@use "variables" as *;
 // Breakpoints
 
 // 768 1024 1400
@@ -31,54 +31,7 @@ $breakpoints-down: (
   }
 }
 
-// FONTS
-// used for logos
-// changes ize to 48 when widtgh >= 1024
-@mixin logo() {
-  font-size: vars.$font-bigger;
-  font-family: vars.$font-logo;
 
-  @include breakpoint-up(large) {
-    font-size: vars.$font-biggest;
-  }
-}
-// primaty heading
-@mixin ph($weight: 600) {
-  font-size: vars.$font-biggest;
-  font-weight: $weight;
-  font-family: vars.$font-ral;
-}
-// secomdary heading
-@mixin sh($weight: 600) {
-  font-size: vars.$font-bigger;
-  font-weight: $weight;
-  font-family: vars.$font-ral;
-}
-
-// basic nav
-@mixin bn() {
-  font-size: vars.$font-md;
-  font-weight: 700;
-  font-family: vars.$font-lus;
-}
-// small text
-@mixin st($weight: 400){
-  font-size: vars.$font-sm;
-  font-weight: $weight;
-  font-family: vars.$font-lus;
-}
-// paragraph text
-@mixin pt($weight: 400) {
-  font-size: vars.$font-md;
-  font-weight: $weight;
-  font-family: vars.$font-lus;
-}
-// large paragrapg text
-@mixin lpt($weight: 400) {
-  font-size: vars.$font-big;
-  font-weight: $weight;
-  font-family: vars.$font-lus;
-}
 
 // flex shit
 @mixin f-center($direction: row) {

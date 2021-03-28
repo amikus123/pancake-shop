@@ -1,0 +1,33 @@
+@use '../../abstracts/' as *;
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 18px;
+  font-size: $font-md;
+  color: $dark;
+  height:100%;
+  overflow: scroll;
+
+}
+p {
+  line-height: 1.7;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color:inherit;
+}
+ul {
+  list-style: none;
+}
