@@ -23,13 +23,18 @@
   font-weight: $weight;
   font-family: $font-ral;
 }
-
+@mixin th($weight: 600) {
+  font-size: $font-big;
+  font-weight: $weight;
+  font-family: $font-ral;
+}
 // basic nav, ssub heading
 @mixin bn() {
   font-size: $font-md;
   font-weight: 700;
   font-family: $font-lus;
 }
+
 // small text
 @mixin st($weight: 400){
   font-size: $font-sm;
