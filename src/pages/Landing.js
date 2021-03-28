@@ -5,7 +5,7 @@ import pancakes from "../data/pancakes"
 function Landing() {
   return (
     <>
-      <main>
+      <main className="landing">
      <FirstHero/>
      <ProductFrame product={pancakes[0]}/>
       </main>

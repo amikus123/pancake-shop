@@ -8,7 +8,7 @@ function Menu({ item }) {
       console.log(item);
     }
   }, [item]);
-  return <main>
+  return <main className="menu"> 
     <p>menu</p>
     </main>;
 }

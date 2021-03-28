@@ -103,9 +103,9 @@ ul {
 }
 
 .button {
-  border-radius: 10px;
-  width: 10rem;
-  height: 2.6875rem;
+  border-radius: 0.625em;
+  width: 10em;
+  height: 2.6875em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,10 +125,7 @@ ul {
 .button__trans span {
   color: #f3f3f3;
 }
-.button__large {
-  width: 15rem;
-  height: 4.03125rem;
-}
+
 .logo {
   font-size: 2.25rem;
   font-family: "Expletus Sans", cursive;
@@ -161,11 +158,12 @@ ul {
 
 @media (max-width: 63.9375em) {
   .product-frame {
-    width: 250px;
-    height: 227px;
+    width: 15.625em;
+    height: 14.1875em;
     background-color: #f3f3f3;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 1.25em;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,7 +171,7 @@ ul {
   }
   .product-frame .frame-img {
     width: 100%;
-    height: 167px;
+    height: 10.5em;
     position: relative;
   }
   .product-frame .frame-img .frame-rating {
@@ -182,7 +180,7 @@ ul {
     top: 0;
     left: 0;
     width: 27%;
-    height: 15%;
+    height: 1.5625em;
     background-color: #f3f3f3;
     display: flex;
     align-items: center;
@@ -391,10 +389,10 @@ ul {
 }
 
 @media (max-width: 47.9375em) {
-  main {
+  .landing {
     margin-top: 4rem;
   }
-  main .first-hero {
+  .landing .first-hero {
     background: url("./images/mobile2.jpg") no-repeat;
     background-position: center;
     background-size: cover;
@@ -405,7 +403,7 @@ ul {
     justify-content: center;
     flex-direction: row;
   }
-  main .first-hero .content-wrap {
+  .landing .first-hero .content-wrap {
     width: 80%;
     height: 60%;
     display: flex;
@@ -413,7 +411,7 @@ ul {
     justify-content: space-between;
     flex-direction: column;
   }
-  main .first-hero .content-wrap h1 {
+  .landing .first-hero .content-wrap h1 {
     color: #a16720;
     font-size: 2.25rem;
     font-weight: 600;
@@ -423,7 +421,7 @@ ul {
   }
 }
 @media (min-width: 48em) {
-  main .first-hero {
+  .landing .first-hero {
     background: url("./images/test.jpg") no-repeat;
     background-size: cover;
     background-position: right center;
@@ -435,7 +433,7 @@ ul {
     flex-direction: row;
     justify-content: flex-end;
   }
-  main .first-hero .content-wrap {
+  .landing .first-hero .content-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -446,10 +444,10 @@ ul {
     margin-right: 10vw;
     height: 80%;
   }
-  main .first-hero .content-wrap * {
+  .landing .first-hero .content-wrap * {
     margin: 1rem;
   }
-  main .first-hero .content-wrap h1 {
+  .landing .first-hero .content-wrap h1 {
     text-align: left;
     color: #f3f3f3;
     font-size: 2.25rem;
@@ -457,7 +455,7 @@ ul {
     font-family: "Raleway", sans-serif;
     width: 250px;
   }
-  main .first-hero .content-wrap p {
+  .landing .first-hero .content-wrap p {
     font-size: 1.125rem;
     font-weight: 400;
     font-family: "Lusitana", serif;
@@ -466,7 +464,7 @@ ul {
   }
 }
 @media (min-width: 64em) {
-  main .first-hero {
+  .landing .first-hero {
     background: url("./images/test.jpg") no-repeat;
     background-size: cover;
     background-position: right center;
@@ -478,7 +476,7 @@ ul {
     flex-direction: row;
     justify-content: flex-end;
   }
-  main .first-hero .content-wrap {
+  .landing .first-hero .content-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -489,10 +487,10 @@ ul {
     margin-right: 10vw;
     height: 80%;
   }
-  main .first-hero .content-wrap * {
+  .landing .first-hero .content-wrap * {
     margin: 1rem 0;
   }
-  main .first-hero .content-wrap h1 {
+  .landing .first-hero .content-wrap h1 {
     text-align: left;
     color: #f3f3f3;
     font-size: 3rem;
@@ -500,7 +498,7 @@ ul {
     font-family: "Raleway", sans-serif;
     width: 250px;
   }
-  main .first-hero .content-wrap p {
+  .landing .first-hero .content-wrap p {
     font-size: 1.5rem;
     font-weight: 400;
     font-family: "Lusitana", serif;
