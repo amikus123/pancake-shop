@@ -29,9 +29,9 @@
   font-family: $font-ral;
 }
 // basic nav, ssub heading
-@mixin bn() {
+@mixin bn($weight: 700) {
   font-size: $font-md;
-  font-weight: 700;
+  font-weight: $weight;
   font-family: $font-lus;
 }
 

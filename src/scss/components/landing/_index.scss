@@ -1,7 +1,16 @@
- @use "first-hero";
- @use "carousel";
- @use "second-hero";
- @use "final-CTA";
- .landing{
-  //  background-color: red;
- }
+@use '../../abstracts/' as *;
+
+@use "first-hero";
+@use "carousel";
+@use "second-hero";
+@use "final-CTA";
+@use "card-gallery";
+.landing {
+  @include f-start(column);
+  > * {
+    margin-bottom: 1rem;
+  }
+  > :last-child{
+    margin-bottom: 0;
+  }
+}

@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
-import ProductFrame from '../ProductFrame'
-import { useRecursiveTimeout } from "./useRecursiveTimeout";
-import { useEmblaCarousel } from "embla-carousel/react";
 import { PrevButton, NextButton } from "./Buttons";
+import { useEmblaCarousel } from "embla-carousel/react";
+import { useRecursiveTimeout } from "./useRecursiveTimeout";
 
-const AUTOPLAY_INTERVAL = 4000;
-
-
-function Gallery({products}) {
+import cards from "../../data/cards";
+import Card from "../Card";
+function CardGallery() {
+  const AUTOPLAY_INTERVAL = 4000;
   const [viewportRef, embla] = useEmblaCarousel();
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
@@ -51,24 +50,24 @@ function Gallery({products}) {
   useEffect(() => {
     play();
   }, [play]);
-  return (
 
-     <div className="embla">
-     <div className="embla__viewport" ref={viewportRef}>
-       <div className="embla__container">
-         {products.map((prod,index) => (
-           <div className="embla__slide" key={index}>
-             <div className="embla__slide__inner">
-                <ProductFrame product={prod}/>
-             </div>
-           </div>
-         ))}
-       </div>
-     </div>
-     <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
+  return (
+    <div className="embla-cards">
+      <div className="embla-cards__viewport" ref={viewportRef}>
+        <div className="embla-cards__container">
+          {cards.map((card, index) => (
+            <div className="embla-cards__slide" key={index}>
+              <div className="embla-cards__slide__inner">
+                <Card card={card} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
       <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
-   </div>
-  )
+    </div>
+  );
 }
 
-export default Gallery
+export default CardGallery;

@@ -5,7 +5,8 @@ import { FaFacebookF,FaTwitter,FaInstagram} from 'react-icons/fa';
 function Footer() {
   return (
     <footer>
-      <div className="contact">
+     <div className="wrapper">
+     <div className="contact">
       <Link to="/" className="logo">
           Cakepan
         </Link>
@@ -37,6 +38,7 @@ function Footer() {
 
     </ul>
       </nav>
+       </div>
     </footer>
   )
 }

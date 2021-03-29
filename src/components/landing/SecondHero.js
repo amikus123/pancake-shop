@@ -12,9 +12,9 @@ function SecondHero() {
 
     </div>
 <div className="text">
-    <h1>
+    <h2>
     Qualityy over quantity
-    </h1>
+    </h2>
     <p>
     Turpis nisl elit amett, amet, eu. Bibendum scelerisque pretium, scelerisque adipiscing curabitur morbi.
     </p>

@@ -1,0 +1,33 @@
+@use '../../abstracts/' as *;
+
+.card {
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  @include f-center(column);
+  background-color: $whiteish;
+  .wrap {
+    @include f-space(column);
+    height: 80%;
+    width: 80%;
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 2rem;
+    }
+    .text-wrap {
+      width: 75%;
+      text-align: center;
+      h4 {
+        @include th;
+        color: $dark;
+        padding-bottom: 1em;
+      }
+      p {
+        color: $gold;
+        @include bn;
+      }
+    }
+  }
+}
