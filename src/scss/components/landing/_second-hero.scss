@@ -2,16 +2,16 @@
 
 .second-hero{
   @include f-center(column);
-  width:100%;
-  padding:1em;
+  width:80%;
   // overflow:hidden;
   .text{
   @include f-center(column);
-    padding:2em 1em ;
-    :not(:last-child) {
+    // padding:2em 1em ;
+    width: 80%;
+    > * {
       margin-bottom: 2rem;
     }
-    h1{
+    h2{
       @include sh();
       text-align: center;
       color: $dark;
@@ -30,7 +30,7 @@
     background-position: center;
     background-size: contain;
     img{
-      width:80vw;
+      width:100%;
     }
   }
 

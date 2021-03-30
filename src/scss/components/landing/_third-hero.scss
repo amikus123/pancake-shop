@@ -1,0 +1,54 @@
+@use '../../abstracts/' as *;
+
+.third-hero {
+  @include f-center(column);
+  width: 80%;
+  .text-wrap {
+    @include f-center(column);
+    // width: 80%;
+    > * {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      @include sh();
+      text-align: center;
+      color: $dark;
+    }
+    p {
+      @include bn();
+      text-align: center;
+      color: $gold;
+    }
+
+    ul {
+      li {
+        @include bn(400);
+        color: $gold;
+        position: relative;
+        margin-bottom: 1.5em;
+        // font-size: 2rem;
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f14a";
+          color: $red;
+          // position: absolute;
+          // left: -1.5em;
+          // top: 0.2em;
+          margin-right: 0.5em;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .third-img {
+    background: url("./images/ve.svg") no-repeat;
+    width: fit-content;
+    height: fit-content;
+    background-position: center;
+    background-size: contain;
+    img {
+      width: 100%;
+    }
+  }
+}

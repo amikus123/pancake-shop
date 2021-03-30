@@ -1,0 +1,24 @@
+@use '../../abstracts/' as *;
+
+.review-item{
+  .author{
+    img{
+
+    }
+    &-data{
+      .name{
+        @include bn;
+
+      }
+      .posistion{
+        @include bn;
+        font-size:0.75rem;
+      }
+    }
+
+  }
+  p{
+    @include bn;
+  }
+
+}

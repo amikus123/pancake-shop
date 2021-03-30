@@ -1,5 +1,5 @@
 import React from "react";
-import Rating from "./Rating";
+import Rating from "./review/Rating";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 

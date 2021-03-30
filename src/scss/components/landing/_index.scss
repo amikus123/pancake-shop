@@ -5,6 +5,10 @@
 @use "second-hero";
 @use "final-CTA";
 @use "card-gallery";
+@use "third-hero";
+@use "reviews";
+@use "review";
+
 .landing {
   @include f-start(column);
   > * {
