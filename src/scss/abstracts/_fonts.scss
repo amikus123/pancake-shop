@@ -22,6 +22,8 @@
   font-size: $font-bigger;
   font-weight: $weight;
   font-family: $font-ral;
+  text-align:center;
+  color:$dark;
 }
 @mixin th($weight: 600) {
   font-size: $font-big;

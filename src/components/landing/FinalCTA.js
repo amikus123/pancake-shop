@@ -5,7 +5,7 @@ function FinalCTA() {
   return (
     <div className="final-cta">
       <div className="text-wrap">
-        <h3>Get 10% off on first order</h3>
+        <h4>Get 10% off on first order</h4>
         <Button text="ORDER NOW" to="/menu"/>
       </div>
     </div>

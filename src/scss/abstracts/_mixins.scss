@@ -63,7 +63,13 @@ $breakpoints-down: (
 @mixin grid {
   display: grid;
 }
+// shortcuts
 
+// fot not full witdh items on landig page
+@mixin l-nfw{
+  @include f-center(column);
+  width:80%;
+}
 /*
   COMMON RESOLUSTIONS
   

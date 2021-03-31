@@ -1,24 +1,26 @@
 @use '../../abstracts/' as *;
 
 .product-frame {
-  width: 15.625em;
-  height: 15.1875em;
+  width: 100%;
+  height: inherit;
   background-color: $whiteish;
   overflow: hidden;
-  border-radius: 1.25em;
+  margin:1rem;
+  border-radius: 10%;
   font-size: 1rem;
+  box-shadow: 0 5px 5px 1px hsla(0, 0%, 7%, 10%);
   @include f-center(column);
   .frame-img {
-    width: 100%;
-    height: 10.5em;
+    height: 75%;
     position: relative;
+    width: 100%;
     .frame-rating {
       position: absolute;
-      border-bottom-right-radius: 1.3em;
+      border-bottom-right-radius: 10000rem;
       top: 0;
       left: 0;
-      width: 4.2em;
-      height: 1.5625em;
+      width: 33%;
+      height: 19%;
       background-color: $whiteish;
       @include f-center;
       .frame-rating-text {
@@ -30,37 +32,38 @@
           line-height: 100%;
           @include bn();
           color:$red;
-          font-size: 0.875em;
+          font-size: 1.125em;
         }
       }
     }
     img {
-      width: inherit;
-      border-radius: 1.33em;
+      width:100%;
+      border-radius: 18%;
+     
+
     }
   }
   .frame-data {
     @include f-space(row);
-    padding: 0 1.5em;
+    padding: 1rem 1rem;
     // height: 3.6875em;
-    flex:1;
+
     width: 100%;
     .frame-name {
       width: 70%;
       @include st(700);
       text-align: left;
-      font-size: 1.125em;
-      color: $dark;
+      font-size: 1.125rem;
+      color: $gold;
     }
     .frame-price {
       width: 25%;
       @include bn;
       text-align: right;
-      font-size: 1.25em;
-      color: $red;
+      font-size: 1.25rem;
+      color: $dark;
 
     }
   }
   // tu bede dawac rozmiary
-  font-size: 18px;
 }

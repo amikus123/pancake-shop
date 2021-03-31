@@ -185,6 +185,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.25rem;
   font-weight: 600;
   font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: #131313;
   transition: color 0.2s ease-in-out;
 }
 .header nav .logo {
@@ -546,30 +548,31 @@ footer .wrapper nav ul li {
 
  */
 .product-frame {
-  width: 15.625em;
-  height: 15.1875em;
+  width: 100%;
+  height: inherit;
   background-color: #f3f3f3;
   overflow: hidden;
-  border-radius: 1.25em;
+  margin: 1rem;
+  border-radius: 10%;
   font-size: 1rem;
+  box-shadow: 0 5px 5px 1px rgba(18, 18, 18, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-size: 18px;
 }
 .product-frame .frame-img {
-  width: 100%;
-  height: 10.5em;
+  height: 75%;
   position: relative;
+  width: 100%;
 }
 .product-frame .frame-img .frame-rating {
   position: absolute;
-  border-bottom-right-radius: 1.3em;
+  border-bottom-right-radius: 10000rem;
   top: 0;
   left: 0;
-  width: 4.2em;
-  height: 1.5625em;
+  width: 33%;
+  height: 19%;
   background-color: #f3f3f3;
   display: flex;
   align-items: center;
@@ -590,19 +593,18 @@ footer .wrapper nav ul li {
   font-weight: 700;
   font-family: "Lusitana", serif;
   color: #801d14;
-  font-size: 0.875em;
+  font-size: 1.125em;
 }
 .product-frame .frame-img img {
-  width: inherit;
-  border-radius: 1.33em;
+  width: 100%;
+  border-radius: 18%;
 }
 .product-frame .frame-data {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 0 1.5em;
-  flex: 1;
+  padding: 1rem 1rem;
   width: 100%;
 }
 .product-frame .frame-data .frame-name {
@@ -611,8 +613,8 @@ footer .wrapper nav ul li {
   font-weight: 700;
   font-family: "Lusitana", serif;
   text-align: left;
-  font-size: 1.125em;
-  color: #131313;
+  font-size: 1.125rem;
+  color: #a16720;
 }
 .product-frame .frame-data .frame-price {
   width: 25%;
@@ -620,8 +622,8 @@ footer .wrapper nav ul li {
   font-weight: 700;
   font-family: "Lusitana", serif;
   text-align: right;
-  font-size: 1.25em;
-  color: #801d14;
+  font-size: 1.25rem;
+  color: #131313;
 }
 
 /*
@@ -737,6 +739,8 @@ footer .wrapper nav ul li {
   font-size: 2.25rem;
   font-weight: 600;
   font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: #131313;
   width: 300px;
   text-align: center;
 }
@@ -773,6 +777,8 @@ footer .wrapper nav ul li {
     font-size: 2.25rem;
     font-weight: 600;
     font-family: "Raleway", sans-serif;
+    text-align: center;
+    color: #131313;
     width: 250px;
   }
   .first-hero .content-wrap p {
@@ -826,110 +832,36 @@ footer .wrapper nav ul li {
     width: 320px;
   }
 }
+.promoted-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
 .promoted-items h3 {
   font-size: 2.25rem;
   font-weight: 600;
   font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: #131313;
 }
 .promoted-items p {
   font-size: 1.125rem;
   font-weight: 700;
   font-family: "Lusitana", serif;
+  text-align: center;
+  color: #a16720;
 }
-.promoted-items .embla {
-  position: relative;
-  padding: 2em 1em;
-  max-width: 15.625em;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: content-box;
-}
-.promoted-items .embla__viewport {
-  overflow: hidden;
-  width: 100%;
-  box-sizing: content-box;
-}
-.promoted-items .embla__container {
+.promoted-items .promoted-wrapper {
   display: flex;
-  user-select: none;
-  margin-left: -2em;
-  box-sizing: content-box;
-}
-.promoted-items .embla__slide {
-  position: relative;
-  padding-left: 2em;
-  box-sizing: content-box;
-}
-.promoted-items .embla__slide__inner {
-  position: relative;
-  overflow: hidden;
-  width: 15.625em;
-  height: 15.1875em;
-  box-sizing: content-box;
-}
-.promoted-items .embla a {
-  position: absolute;
-  display: flex;
-  top: 50%;
-  left: 50%;
-  width: auto;
-  min-height: 100%;
-  min-width: 100%;
-  max-width: none;
-  transform: translate(-50%, -50%);
-  font-size: inherit;
-}
-.promoted-items .embla .embla__button {
-  outline: 0;
-  cursor: pointer;
-  background-color: transparent;
-  touch-action: manipulation;
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 0;
-  width: 1.875em;
-  height: 1.875em;
-  justify-content: center;
   align-items: center;
-  fill: #131313;
-  padding: 0;
-  font-size: inherit;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.promoted-items .embla .embla__button:disabled {
-  cursor: default;
-  opacity: 0.3;
-}
-.promoted-items .embla .embla__button__svg {
+.promoted-items .promoted-wrapper > * {
   width: 100%;
-  height: 100%;
-}
-.promoted-items .embla .embla__button--prev {
-  left: -1.2em;
-}
-.promoted-items .embla .embla__button--next {
-  right: -1.2em;
-}
-@media (min-width: 32.5em) {
-  .promoted-items .embla {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 48em) {
-  .promoted-items .embla {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 64em) {
-  .promoted-items .embla {
-    font-size: 1.25rem;
-  }
-}
-@media (min-width: 87.5em) {
-  .promoted-items .embla {
-    font-size: 2rem;
-  }
 }
 
 .second-hero {
@@ -944,7 +876,6 @@ footer .wrapper nav ul li {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
 }
 .second-hero .text > * {
   margin-bottom: 2rem;
@@ -953,6 +884,8 @@ footer .wrapper nav ul li {
   font-size: 2.25rem;
   font-weight: 600;
   font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: #131313;
   text-align: center;
   color: #131313;
 }
@@ -1097,6 +1030,8 @@ footer .wrapper nav ul li {
   font-family: "Raleway", sans-serif;
   text-align: center;
   color: #131313;
+  text-align: center;
+  color: #131313;
 }
 .third-hero .text-wrap p {
   font-size: 1.125rem;
@@ -1132,15 +1067,23 @@ footer .wrapper nav ul li {
   width: 100%;
 }
 
+.reviews {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
 .reviews-wrap h2 {
   font-size: 2.25rem;
   font-weight: 600;
   font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: #131313;
   color: #131313;
 }
 .reviews-wrap .embla {
   position: relative;
-  width: 90%;
   max-width: 440px;
   margin-left: auto;
   margin-right: auto;
@@ -1178,7 +1121,7 @@ footer .wrapper nav ul li {
 .reviews-wrap .embla__slide__inner {
   position: relative;
   overflow: hidden;
-  height: 400px;
+  height: 300px;
 }
 .reviews-wrap .embla__slide__inner > * {
   position: absolute;

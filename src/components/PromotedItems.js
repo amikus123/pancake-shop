@@ -1,7 +1,7 @@
 import React from 'react'
 import Gallery from './carousel/Gallery'
 
-function PromotedItems({products}) {
+function PromotedItems() {
   return (
     <div className="promoted-items">
       <h3>
@@ -10,7 +10,7 @@ function PromotedItems({products}) {
       <p>
       Made with indigirents with of best quality
       </p>
-              <Gallery products={products} />
+       <Gallery />
     </div>
   )
 }

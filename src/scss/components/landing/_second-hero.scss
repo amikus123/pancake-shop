@@ -1,14 +1,12 @@
 @use '../../abstracts/' as *;
 
 .second-hero{
-  @include f-center(column);
-  width:80%;
+  @include l-nfw;
   // overflow:hidden;
   .text{
   @include f-center(column);
     // padding:2em 1em ;
-    width: 80%;
-    > * {
+        > * {
       margin-bottom: 2rem;
     }
     h2{

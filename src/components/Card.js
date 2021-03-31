@@ -15,4 +15,6 @@ function Card({ card }) {
   );
 }
 
+// na mobile clikc to view
+// desktop autoamtycznie sie poakzuja a synchornicznie 
 export default Card;

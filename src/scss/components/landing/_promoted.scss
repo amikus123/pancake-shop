@@ -1,0 +1,21 @@
+@use '../../abstracts/' as *;
+.promoted-items {
+  @include l-nfw;
+
+  h3 {
+    @include sh;
+  }
+  p {
+    @include bn;
+    text-align: center;
+    color:$gold;
+  }
+  .promoted-wrapper{
+    @include f-start(row);
+    flex-wrap: wrap;
+    >*{
+      width: 100%;
+    }
+  }
+    
+}

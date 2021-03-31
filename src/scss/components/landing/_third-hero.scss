@@ -1,8 +1,8 @@
 @use '../../abstracts/' as *;
 
 .third-hero {
-  @include f-center(column);
-  width: 80%;
+  @include l-nfw;
+
   .text-wrap {
     @include f-center(column);
     // width: 80%;
