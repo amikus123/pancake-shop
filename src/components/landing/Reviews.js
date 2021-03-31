@@ -14,7 +14,7 @@ function Reviews() {
       <ReviewsGallery/>
       </div>
       <div className="reviews-img">
-        <img src={Mobile}/>
+        {/* <img src={Mobile}/> */}
       </div>
     </section>
   )

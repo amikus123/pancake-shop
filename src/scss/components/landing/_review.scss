@@ -1,24 +1,58 @@
 @use '../../abstracts/' as *;
 
 .review-item{
+  @include f-start(column);
+  align-items: flex-start;
+  padding:1rem;
   .author{
+    @include f-start;
     img{
 
+      margin: 0 3rem 0 0.75rem;
     }
     &-data{
+      @include f-space(column);
+      align-items: flex-start;
       .name{
-        @include bn;
+        @include bn(400);
+        color:$gold;
+        // color:$grey;
+
 
       }
       .posistion{
-        @include bn;
+        @include bn(400);
         font-size:0.75rem;
+        color:$grey;
       }
     }
 
   }
   p{
-    @include bn;
+    @include bn(400);
+    // font-size:0.875rem;
+    padding:1rem 0;
   }
 
+  .rating {
+    @include f-start;
+    // width:100%;
+    .stars {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      .full-stars {
+        width: 150px;
+        height: 23px;
+        // position: absolute; 
+        // moe niepotrzbene
+      }
+    }
+  
+    span {
+      color: $dark;
+      @include bn();
+      padding-left: 0.5rem;
+    }
+  }
 }
