@@ -6,7 +6,8 @@ function Gallery() {
      <div className="promoted-wrapper">
 
          {products.map((prod,index) => (
-                <ProductFrame product={prod} key={index}/>
+
+                <ProductFrame product={prod} key={index} classes={index}/>
               
          ))}
        </div>

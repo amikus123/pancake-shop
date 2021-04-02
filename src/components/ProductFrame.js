@@ -3,10 +3,10 @@ import Rating from "./landing/review/Rating";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-function ProductFrame({ product }) {
+function ProductFrame({ product,classes }) {
   const { name, img, price, rating } = product;
   return (
-    <Link to="/a" className="product-frame" >
+    <Link to="/a" className={`product-frame ${classes<3?null:"hide-mobile"}`} >
       <div className="frame-img">
         <div className="frame-rating">
           <span className="frame-rating-text">

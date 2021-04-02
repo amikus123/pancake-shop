@@ -915,7 +915,7 @@ footer .wrapper nav ul li {
 
 .final-cta {
   width: 100%;
-  height: 67vw;
+  height: 70vw;
   background: linear-gradient(180deg, #13131380, #13131380), url("./images/test-prod.jpg");
   background-size: cover, cover;
   display: flex;
@@ -924,17 +924,19 @@ footer .wrapper nav ul li {
   flex-direction: column;
 }
 .final-cta .text-wrap {
-  height: 60%;
-  width: 75%;
+  height: 70%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
 }
-.final-cta .text-wrap h4 {
-  font-size: 1.5rem;
+.final-cta .text-wrap h4, .final-cta .text-wrap h3, .final-cta .text-wrap h2 {
+  font-size: 2.25rem;
   font-weight: 600;
   font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: #131313;
   text-align: center;
   color: #f3f3f3;
 }
@@ -1080,6 +1082,9 @@ footer .wrapper nav ul li {
   flex-direction: column;
   width: 80%;
 }
+.reviews-wrap > * {
+  margin-bottom: 3rem;
+}
 .reviews-wrap h2 {
   font-size: 2.25rem;
   font-weight: 600;
@@ -1139,6 +1144,38 @@ footer .wrapper nav ul li {
   min-width: 100%;
   max-width: none;
   transform: translateX(-50%);
+}
+.reviews-wrap .embla__button {
+  outline: 0;
+  cursor: pointer;
+  background-color: transparent;
+  touch-action: manipulation;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  fill: #1bcacd;
+  padding: 0;
+  display: none;
+}
+.reviews-wrap .embla__button:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+.reviews-wrap .embla__button__svg {
+  width: 100%;
+  height: 100%;
+}
+.reviews-wrap .embla__button--prev {
+  left: 27px;
+}
+.reviews-wrap .embla__button--next {
+  right: 27px;
 }
 .review-item {
   display: flex;
@@ -1262,12 +1299,23 @@ footer .wrapper nav ul li {
   position: absolute;
   top: 0;
 }
-.cards-control .second-hide {
+.cards-control .second-hide-right {
   left: 100vw;
 }
+.cards-control .second-hide-left {
+  left: -100vh;
+}
 .cards-control .second-show {
-  transition: all 0.4s ease-out;
+  transition: all 0.3s ease-out;
   left: 0;
+}
+.cards-control .first-show {
+  opacity: 1;
+  transition: all 0s ease-in-out;
+}
+.cards-control .first-hide {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .landing {

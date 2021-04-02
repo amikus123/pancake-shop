@@ -3,22 +3,22 @@ const reviews = [
   img:"/reviews/first.png",
   name:"Axie Melasei",
   position: "UI/UX Designer",
-  text:"Quod et et sunt mollitia. Quaerat corporis sit amet dolore. Sunt est numquam incidunt ut.",
-  rating : 4.2,
+  text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a tincidunt dui. Sed ornare tincidunt purus id volutpat.",
+  rating : 3.2,
 },
 {
   img:"/reviews/first.png",
   name:"Axie Melasei",
   position: "UI/UX Designer",
-  text:"Quod et et sunt mollitia. Quaerat corporis sit amet dolore. Sunt est numquam incidunt ut.",
-  rating : 4.2,
+  text:"Nunc porttitor mollis eros, quis pharetra sem dignissim ac. Vestibulum tempor consectetur euismod.",
+  rating : 5,
 },
 {
   img:"/reviews/first.png",
   name:"Axie Melasei",
   position: "UI/UX Designer",
-  text:"Quod et et sunt mollitia. Quaerat corporis sit amet dolore. Sunt est numquam incidunt ut.",
-  rating : 4.2,
+  text:"enean aliquet lectus in pulvinar egestas. Proin eu dapibus nibh, tempor ultrices ex. Donec nec eros at leo euismod scelerisque.",
+  rating : 4.4,
 },
 ]
 export default reviews;

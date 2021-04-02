@@ -2,18 +2,18 @@
 
 .final-cta {
   width: 100%;
-  height: 67vw;
+  height: 70vw;
   background: linear-gradient(180deg, $dark-trans, $dark-trans),
     url("./images/test-prod.jpg");
   background-size: cover, cover;
   @include f-center(column);
   .text-wrap {
-    height: 60%;
-    width: 75%;
+    height: 70%;
+    width: 80%;
     @include f-space(column);
 
-    h4 {
-      @include th;
+    h4,h3,h2 {
+      @include sh;
       text-align: center;
       color: $whiteish;
     }
