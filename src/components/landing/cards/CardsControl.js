@@ -30,7 +30,7 @@ function CardsControl({ number }) {
       setFirst({ num: number - 1, classes: "first first-show" });
       setSecond({ num: number - 1, classes: "second second-show" });
       console.log(2);
-    }, 300);
+    }, 400);
     return () => clearTimeout(timeout);
   }, [number]);
   useEffect(() => {

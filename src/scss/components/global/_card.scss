@@ -1,26 +1,28 @@
 @use '../../abstracts/' as *;
 
 .card {
-  width: 300px;
-  height: 500px;
+
   border-radius: 20px;
-  @include f-center(column);
+  @include f-start(column);
   background-color: $whiteish;
+  width: 300px;
+  height: 550px;
   .wrap {
     @include f-space(column);
-    height: 80%;
-    width: 80%;
+    @include text-margin;
+    height: 100%;
+    // width: 80%;
     img {
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      margin-bottom: 2rem;
+      margin-top: 3rem;
     }
     .text-wrap {
       width: 75%;
       text-align: center;
       h4 {
-        @include th;
+        @include th(700);
         color: $dark;
         padding-bottom: 1em;
       }

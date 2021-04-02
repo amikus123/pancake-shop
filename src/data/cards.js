@@ -12,7 +12,7 @@ const cards = [
   {
     img:"/products/1.jpg",
     header:"Constant innovation",
-    text:"estibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
+    text:"Destibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
   },
 ]
 export default cards;

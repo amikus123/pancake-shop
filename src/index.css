@@ -668,28 +668,30 @@ footer .wrapper nav ul li {
 
  */
 .card {
-  width: 300px;
-  height: 500px;
   border-radius: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   background-color: #f3f3f3;
+  width: 300px;
+  height: 550px;
 }
 .card .wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  height: 80%;
-  width: 80%;
+  height: 100%;
+}
+.card .wrap > * {
+  margin-bottom: 3rem;
 }
 .card .wrap img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 .card .wrap .text-wrap {
   width: 75%;
@@ -697,7 +699,7 @@ footer .wrapper nav ul li {
 }
 .card .wrap .text-wrap h4 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   font-family: "Raleway", sans-serif;
   color: #131313;
   padding-bottom: 1em;
@@ -742,6 +744,7 @@ footer .wrapper nav ul li {
   text-align: center;
   color: #131313;
   width: 300px;
+  font-size: 2.5rem;
   text-align: center;
 }
 @media (min-width: 48em) {
@@ -1070,6 +1073,7 @@ footer .wrapper nav ul li {
   height: fit-content;
   background-position: center;
   background-size: contain;
+  margin-bottom: 3rem;
 }
 .third-hero .third-img img {
   width: 100%;
@@ -1293,20 +1297,22 @@ footer .wrapper nav ul li {
 }
 .cards-control {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 550px;
 }
 .cards-control .second {
   position: absolute;
   top: 0;
 }
 .cards-control .second-hide-right {
-  left: 100vw;
+  left: 50vw;
 }
 .cards-control .second-hide-left {
-  left: -100vh;
+  left: -50vw;
 }
 .cards-control .second-show {
-  transition: all 0.3s ease-out;
+  transition: all 0.4s ease-out;
   left: 0;
 }
 .cards-control .first-show {
@@ -1315,7 +1321,7 @@ footer .wrapper nav ul li {
 }
 .cards-control .first-hide {
   opacity: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .landing {
@@ -1329,6 +1335,9 @@ footer .wrapper nav ul li {
 }
 .landing > :last-child {
   margin-bottom: 0;
+}
+.landing h1, .landing h2, .landing h3, .landing h4, .landing p {
+  max-width: 300px;
 }
 
 /*# sourceMappingURL=index.css.map */
