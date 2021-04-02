@@ -839,6 +839,9 @@ footer .wrapper nav ul li {
   flex-direction: column;
   width: 80%;
 }
+.promoted-items > * {
+  margin-bottom: 3rem;
+}
 .promoted-items h3 {
   font-size: 2.25rem;
   font-weight: 600;
@@ -871,6 +874,9 @@ footer .wrapper nav ul li {
   flex-direction: column;
   width: 80%;
 }
+.second-hero > * {
+  margin-bottom: 3rem;
+}
 .second-hero .text {
   display: flex;
   align-items: center;
@@ -878,7 +884,7 @@ footer .wrapper nav ul li {
   flex-direction: column;
 }
 .second-hero .text > * {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .second-hero .text h2 {
   font-size: 2.25rem;
@@ -893,7 +899,7 @@ footer .wrapper nav ul li {
   font-size: 1.125rem;
   font-weight: 700;
   font-family: "Lusitana", serif;
-  text-align: left;
+  text-align: center;
   color: #a16720;
 }
 .second-hero .image-con {
@@ -1200,6 +1206,70 @@ footer .wrapper nav ul li {
   padding-left: 0.5rem;
 }
 
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
+.cards > * {
+  margin-bottom: 3rem;
+}
+.cards h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: #131313;
+}
+.cards .icon-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.cards .icon-row .icon {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.cards .icon-row .icon svg {
+  width: 50%;
+  height: 50%;
+}
+.cards .icon-row .active {
+  background-color: #a16720;
+  color: #f3f3f3;
+}
+.cards .icon-row .inactive {
+  background-color: none;
+  color: #131313;
+}
+.cards-control {
+  position: relative;
+  overflow: hidden;
+}
+.cards-control .second {
+  position: absolute;
+  top: 0;
+}
+.cards-control .second-hide {
+  left: 100vw;
+}
+.cards-control .second-show {
+  transition: all 0.4s ease-out;
+  left: 0;
+}
+
 .landing {
   display: flex;
   align-items: center;
@@ -1207,7 +1277,7 @@ footer .wrapper nav ul li {
   flex-direction: column;
 }
 .landing > * {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 .landing > :last-child {
   margin-bottom: 0;

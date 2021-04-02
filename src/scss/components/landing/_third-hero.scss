@@ -5,10 +5,7 @@
 
   .text-wrap {
     @include f-center(column);
-    // width: 80%;
-    > * {
-      margin-bottom: 3rem;
-    }
+    @include text-margin;
     h2 {
       @include sh();
       text-align: center;

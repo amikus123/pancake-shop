@@ -1,5 +1,5 @@
-import ProductFrame from '../ProductFrame'
-import products from "../../data/pancakes"
+import ProductFrame from '../../ProductFrame'
+import products from "../../../data/pancakes"
 function Gallery() {
   return (
 

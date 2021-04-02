@@ -1,7 +1,7 @@
 import React from 'react'
 import Mobile from "../../images/landing/Review-mobile.png";
 import Desktop from "../../images/landing/Review-desktop.png";
-import ReviewsGallery from '../review/ReviewsGallery';
+import ReviewsGallery from './review/ReviewsGallery';
 
 // im not sure if 2 pic are making any difference
 function Reviews() {

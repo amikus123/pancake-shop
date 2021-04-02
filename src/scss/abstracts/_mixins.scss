@@ -69,6 +69,12 @@ $breakpoints-down: (
 @mixin l-nfw{
   @include f-center(column);
   width:80%;
+
+}
+@mixin text-margin{
+  > * {
+    margin-bottom: 3rem;
+  }
 }
 /*
   COMMON RESOLUSTIONS

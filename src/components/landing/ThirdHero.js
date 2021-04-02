@@ -13,8 +13,8 @@ function ThirdHero() {
           <li>A lot of passsion and dedication</li>
           <li className="hide-mobile">Expierience unmatched in the industry</li>
           <li className="show-mobile">Original recipies</li>
-
         </ul>
+        
       </div>
 
       <div className="third-img">

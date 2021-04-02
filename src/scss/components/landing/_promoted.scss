@@ -1,6 +1,7 @@
 @use '../../abstracts/' as *;
 .promoted-items {
   @include l-nfw;
+  @include text-margin;
 
   h3 {
     @include sh;

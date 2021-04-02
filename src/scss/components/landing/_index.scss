@@ -8,11 +8,14 @@
 @use "third-hero";
 @use "reviews";
 @use "review";
+@use "cards";
+
 
 .landing {
   @include f-start(column);
   > * {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+    
   }
   > :last-child{
     margin-bottom: 0;

@@ -2,13 +2,11 @@
 
 .second-hero{
   @include l-nfw;
-  // overflow:hidden;
+  @include text-margin;
   .text{
   @include f-center(column);
-    // padding:2em 1em ;
-        > * {
-      margin-bottom: 2rem;
-    }
+    @include text-margin;
+
     h2{
       @include sh();
       text-align: center;
@@ -16,7 +14,7 @@
     }
     p{
       @include bn();
-      text-align: left;
+      text-align: center;
       color:$gold;
     }
   }
