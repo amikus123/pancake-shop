@@ -57,14 +57,15 @@
       @include st(700);
       text-align: left;
       font-size: 1.125rem;
-      color: $gold;
+      color: $dark;
     }
     .frame-price {
       width: 25%;
+      color: $red;
+
       @include bn;
       text-align: right;
       font-size: 1.25rem;
-      color: $dark;
 
     }
   }

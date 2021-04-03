@@ -10,7 +10,7 @@ function ReviewsGallery() {
   const [viewportRef, embla] = useEmblaCarousel({ loop: true });
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
-  const AUTOPLAY_INTERVAL = 4000;
+  const AUTOPLAY_INTERVAL = 2000;
   const autoplay = useCallback(() => {
     if (!embla) return;
     if (embla.canScrollNext()) {

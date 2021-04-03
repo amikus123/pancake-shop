@@ -44,22 +44,22 @@
       width: 100%;
       @include f-center(row);
       justify-content: flex-end;
+
       .content-wrap {
         @include f-center(column);
         align-items: flex-start;
-        flex-wrap: wrap;
-        padding: 1rem;
         margin-right: 10vw;
-
-        height: 80%;
-        * {
-          margin: 1rem;
+        width: min-content;
+        // height: 80%;
+        > * {
+          margin-bottom: 2rem;
         }
         h1 {
           text-align: left;
-          color: $whiteish;
           @include sh();
           width: 250px;
+          color: $whiteish;
+          text-align: left;
         }
         p {
           @include pt();
@@ -71,7 +71,7 @@
       }
     }
   }
-  @include breakpoint-up(large) {
+  @include breakpoint-up(xlarge) {
     .first-hero {
       background: url("./images/test.jpg") no-repeat;
       background-size: cover;

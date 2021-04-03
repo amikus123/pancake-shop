@@ -14,7 +14,7 @@ function Rating({ number }) {
         <AiFillStar fill="#A16720" />
         </div>
       </div>
-      <span>({number})</span>
+      {/* <span>({number})</span> */}
     </div>
   );
 }

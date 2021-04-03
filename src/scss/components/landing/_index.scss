@@ -14,11 +14,15 @@
 .landing {
   @include f-start(column);
   > * {
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
     
   }
   > :last-child{
     margin-bottom: 0;
+    
+    @include breakpoint-up(medium){
+      margin-bottom: 6rem;
+    }
   }
   h1,h2,h3,h4,p{
     max-width:300px;

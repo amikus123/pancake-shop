@@ -1,8 +1,9 @@
 @use '../../abstracts/' as *;
 
 footer{
-  height: 720px;
+  height: auto;
   text-align:left;
+  padding:4rem 0;
   background-color: $whiteish;
   @include f-center(column);
 

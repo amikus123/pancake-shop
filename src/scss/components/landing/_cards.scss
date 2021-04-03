@@ -11,6 +11,7 @@
     @include f-space();
     justify-content: space-around;
     width: 100%;
+    max-width: 820px;
     .icon {
       border-radius: 50%;
       width: 50px;
