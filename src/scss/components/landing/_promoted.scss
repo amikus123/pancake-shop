@@ -12,10 +12,14 @@
     color:$gold;
   }
   .promoted-wrapper{
-    @include f-start(row);
+    @include f-center(row);
     flex-wrap: wrap;
     >*{
-      width: 100%;
+      width: 300px;
+    }
+    @include breakpoint-up(medium){
+     
+      min-width: 700px;
     }
   }
     

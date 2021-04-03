@@ -10,12 +10,23 @@
   .text-wrap {
     height: 70%;
     width: 80%;
-    @include f-space(column);
+    @include f-center(column);
 
-    h4,h3,h2 {
+    h4,
+    h3,
+    h2 {
       @include sh;
       text-align: center;
       color: $whiteish;
+      margin-bottom: 3rem;
     }
+  }
+  @include breakpoint-up(medium) {
+    @include l-nfw;
+    width: 60%;
+    height: 42vw;
+    border-radius: 5%;
+    max-width: 800px;
+    
   }
 }

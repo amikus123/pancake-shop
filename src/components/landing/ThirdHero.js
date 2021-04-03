@@ -6,9 +6,9 @@ function ThirdHero() {
   return (
     <section className="third-hero">
        <div className="third-img">
-        <img src={Man} alt="man" className="hide-mobile"/>
+        <img src={Man} alt="man" className="first"/>
         {/* <a href="https://www.freepik.com/photos/business">Business photo created by freepik - www.freepik.com</a> young male */}
-        <img src={MobileMan} alt="" className="show-mobile"/>
+        <img src={MobileMan} alt="" className="second"/>
         {/* <a href="https://www.freepik.com/photos/fashion">Fashion photo created by benzoix - www.freepik.com</a> */}
 
       </div>

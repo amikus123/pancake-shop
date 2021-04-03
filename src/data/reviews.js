@@ -3,7 +3,7 @@ const reviews = [
   img:"/reviews/first.png",
   name:"Axie Melasei",
   position: "UI/UX Designer",
-  text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a tincidunt dui. Sed ornare tincidunt purus id volutpat.",
+  text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a tincidunt dui. Sed ornare tincidunt .",
   rating : 3,
 },
 {
@@ -17,7 +17,7 @@ const reviews = [
   img:"/reviews/first.png",
   name:"Axie Melasei",
   position: "UI/UX Designer",
-  text:"Penean aliquet lectus in pulvinar egestas. Proin eu dapibus nibh, tempor ultrices ex. Donec nec eros at leo euismod scelerisque.",
+  text:"Penean aliquet lectus in pulvinar egestas. Proin eu dapibus nibh, tempor ultrices ex. Donec nec eros.",
   rating : 4,
 },
 ]

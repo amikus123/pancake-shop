@@ -1,8 +1,8 @@
 @use '../../abstracts/' as *;
 
 .product-frame {
-  width: 100%;
-  height: inherit;
+  height:300px;
+  width:300px;
   background-color: $whiteish;
   overflow: hidden;
   margin:1rem;

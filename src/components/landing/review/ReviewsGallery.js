@@ -60,6 +60,8 @@ function ReviewsGallery() {
             <div className="embla__slide" key={index}>
               <div className="embla__slide__inner">
                 <Review data={data}/>
+                <Review data={data} classess="helper"/>
+
               </div>
             </div>
           ))}

@@ -44,9 +44,21 @@
     height: fit-content;
     background-position: center;
     background-size: contain;
-    margin-bottom:3rem;
+    margin-bottom: 3rem;
     img {
       width: 100%;
+      display: none;
+    }
+    .first {
+      @include breakpoint-up(large) {
+        display: block;
+      }
+    }
+    .second {
+      @include breakpoint-down(medium) {
+        display: block;
+        max-width:466px;
+      }
     }
   }
 }

@@ -3,7 +3,7 @@
 .review-item{
   @include f-start(column);
   align-items: flex-start;
-  padding:1rem;
+  // padding:1rem;
   .author{
     @include f-start;
     img{
@@ -28,10 +28,11 @@
     }
 
   }
-  p{
+  .review-text{
     @include bn(400);
     // font-size:0.875rem;
     padding:1rem 0;
+    max-width: 500px;
   }
 
   .rating {
@@ -55,4 +56,9 @@
       padding-left: 0.5rem;
     }
   }
+}
+.helper{
+  visibility: hidden;
+  position: relative!important;
+  width:0px!important;
 }

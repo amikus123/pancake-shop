@@ -1,10 +1,10 @@
 import React,{useState} from 'react'
 import Rating from './Rating';
 
-function Review({data}) {
+function Review({data,classess}) {
   const {img,name,position,text,rating} = data;
   return (
-    <div className="review-item">
+    <div className={`review-item ${classess}`}>
       <div className="author">
       <img src={img} alt="person who posted this review"/>
       <div className="author-data">
@@ -13,7 +13,7 @@ function Review({data}) {
       </div>
     </div>
 
-      <p>
+      <p className="review-text">
         {text}
       </p>
       <Rating number={rating}/>

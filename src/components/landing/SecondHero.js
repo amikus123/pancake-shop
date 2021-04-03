@@ -5,9 +5,8 @@ function SecondHero() {
   // https://freedesignfile.com/380895-pretty-female-cook-stock-photo-07/
   return (
     <section className="second-hero">
-    <div className="image-con">
-    <img src={Woman} alt=""/>
-    </div>
+   
+
 <div className="text">
     <h2>
     Qualityy over quantity
@@ -17,6 +16,9 @@ function SecondHero() {
     </p>
     <Button text="ORDER NOW"/>
 </div>
+<div className="image-con">
+    <img src={Woman} alt=""/>
+    </div>
     </section>
   )
 }
