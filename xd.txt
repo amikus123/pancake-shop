@@ -1,2 +1,4 @@
 sass --watch src/scss:src/
 
+npm run build 
+firebase deploy

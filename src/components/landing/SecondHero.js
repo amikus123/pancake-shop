@@ -12,7 +12,7 @@ function SecondHero() {
     Qualityy over quantity
     </h2>
     <p>
-    Turpis nisl elit amett, amet, eu. Bibendum scelerisque pretium, scelerisque adipiscing curabitur morbi.
+    Our motto is to focus on quality, rather on quantity.
     </p>
     <Button text="ORDER NOW"/>
 </div>
