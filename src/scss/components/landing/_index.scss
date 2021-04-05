@@ -15,6 +15,9 @@
   @include f-start(column);
   > * {
     margin-bottom: 3rem;
+    @include breakpoint-up(large){
+      margin-bottom: 8rem;
+    }
     
   }
   > :first-child{
@@ -26,8 +29,18 @@
     @include breakpoint-up(medium){
       margin-bottom: 3rem;
     }
+   
   }
-  h1,h2,h3,h4,p{
-    max-width:300px;
+  
+  
+  @include breakpoint-down(large){
+    h1,h2,h3,h4,p{
+      max-width:300px;
+    }
+  }
+  @include breakpoint-up(large){
+    h1,h2,h3,h4,p{
+      max-width:450px;
+    }
   }
 }

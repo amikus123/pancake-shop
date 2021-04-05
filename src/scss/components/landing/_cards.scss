@@ -72,4 +72,18 @@
       }
     }
   }
+  &-full{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height: 800px;
+    max-width: 1200px;
+    margin-bottom: 0px;
+    :nth-child(2){
+      align-self: center
+    }
+    :nth-child(3){
+      align-self: flex-end;
+    }
+  }
 }

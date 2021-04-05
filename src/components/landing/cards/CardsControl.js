@@ -39,7 +39,7 @@ function CardsControl({ number }) {
   }, []);
 
   return (
-    <div className="cards-control">
+    <div className="cards-control hide-desktop">
       <Card card={cards[first.num]} classes={first.classes} />
       {/*  there will be current and the next one */}
       <Card card={cards[second.num]} classes={second.classes} />

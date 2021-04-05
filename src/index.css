@@ -922,6 +922,11 @@ footer .wrapper nav ul li {
 @media (min-width: 64em) {
   .second-hero {
     flex-direction: row-reverse;
+    justify-content: space-around;
+    max-width: 1200px;
+  }
+  .second-hero > * {
+    margin-bottom: 0;
   }
   .second-hero .text {
     align-items: flex-start;
@@ -973,8 +978,9 @@ footer .wrapper nav ul li {
     width: 80%;
     width: 60%;
     height: 42vw;
-    border-radius: 5%;
+    border-radius: 10px;
     max-width: 800px;
+    max-height: 560px;
   }
 }
 
@@ -1132,6 +1138,7 @@ footer .wrapper nav ul li {
   }
   .third-hero .text-wrap h2, .third-hero .text-wrap p {
     text-align: left;
+    max-width: 300px;
   }
   .third-hero .third-img {
     background: none;
@@ -1464,6 +1471,20 @@ footer .wrapper nav ul li {
   opacity: 0;
   transition: all 0.1s ease-in-out;
 }
+.cards-full {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 800px;
+  max-width: 1200px;
+  margin-bottom: 0px;
+}
+.cards-full :nth-child(2) {
+  align-self: center;
+}
+.cards-full :nth-child(3) {
+  align-self: flex-end;
+}
 
 .landing {
   display: flex;
@@ -1473,6 +1494,11 @@ footer .wrapper nav ul li {
 }
 .landing > * {
   margin-bottom: 3rem;
+}
+@media (min-width: 64em) {
+  .landing > * {
+    margin-bottom: 8rem;
+  }
 }
 .landing > :first-child {
   margin-bottom: 3rem;
@@ -1485,8 +1511,15 @@ footer .wrapper nav ul li {
     margin-bottom: 3rem;
   }
 }
-.landing h1, .landing h2, .landing h3, .landing h4, .landing p {
-  max-width: 300px;
+@media (max-width: 79.875em) {
+  .landing h1, .landing h2, .landing h3, .landing h4, .landing p {
+    max-width: 300px;
+  }
+}
+@media (min-width: 64em) {
+  .landing h1, .landing h2, .landing h3, .landing h4, .landing p {
+    max-width: 450px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
