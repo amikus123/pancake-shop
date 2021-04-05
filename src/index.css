@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 64em) {
   .header {
-    height: 6.25rem;
+    height: 5rem;
   }
   .header ul {
     display: flex;
@@ -983,7 +983,7 @@ footer .wrapper nav ul li {
     font-weight: 400;
     font-family: "Lusitana", serif;
     color: #a16720;
-    font-size: 1.85rem;
+    font-size: 1.75rem;
     width: 320px;
   }
 }
@@ -1016,12 +1016,13 @@ footer .wrapper nav ul li {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 @media (min-width: 48em) {
   .promoted-items .promoted-wrapper {
     min-width: 700px;
-    max-width: 1000px;
+    max-width: 1200px;
   }
 }
 
@@ -1154,7 +1155,17 @@ footer .wrapper nav ul li {
     margin-bottom: 1rem;
   }
 }
-
+@media (min-width: 80em) {
+  .final-cta .text-wrap {
+    height: 75%;
+  }
+  .final-cta .text-wrap h4, .final-cta .text-wrap h3, .final-cta .text-wrap h2 {
+    font-size: 4rem;
+  }
+  .final-cta .text-wrap p {
+    font-size: 1.75rem;
+  }
+}
 .third-hero {
   display: flex;
   align-items: center;

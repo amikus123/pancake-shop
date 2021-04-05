@@ -51,4 +51,19 @@
     }
   }
   }
-}
+  @include breakpoint-up(xlarge) {
+    .text-wrap{
+      height: 75%;
+      h4,h3,h2{
+        font-size: 4rem;
+
+      }
+      p{
+        font-size: 1.75rem;
+
+      }
+    }
+ 
+  }
+  @include breakpoint-up(xlarge) {
+}}
