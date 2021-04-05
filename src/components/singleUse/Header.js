@@ -1,16 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { Link } from "react-router-dom";
 import MenuButton from "../general/MenuButton";
 
 function Header({ location }) {
+  const [offset, setOffset] = useState(false);
+
   useEffect(() => {
     console.log(location,"zmiana");
 
   }, [location]);
+  // measuer the vertcial offset, used to cgange navbar color
+  useEffect(()=>{
+    // temporary solution, not efficient
+  if(location.pathname === "/"){
 
-  
+    window.onscroll = () => {
+      if(window.pageYOffset === 0){
+        setOffset(false)
+      }else{
+        setOffset(true)
+      }
+    } }
+  },[])
+
+
   return (
-    <header className={location.pathname === "/" ? "header header__trans" : "header"}>
+    // transparten is given on main page
+    <header className={`header ${(location.pathname ==="/") && "header__trans"} ${offset && "header__full"} `}>
       <nav>
         <MenuButton />
         <Link to="/" className="logo">

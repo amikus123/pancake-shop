@@ -11,6 +11,7 @@
 
 .landing {
   @include f-start(column);
+  
   > * {
     margin-bottom: 3rem;
     @include breakpoint-up(large){

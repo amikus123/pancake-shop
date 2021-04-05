@@ -69,9 +69,10 @@
       }
     }
   }
+  @include breakpoint-up(medium) {
+    transition: all 0.4s ease-in-out;
  
     &__trans {
-      @include breakpoint-up(medium) {
         background: none;
 
         nav {
@@ -82,25 +83,53 @@
             li {
               a {
                 color: $whiteish;
+    transition: all 0.4s ease-in-out;
+
               }
             }
           }
           .menu-icon {
             span {
               background-color: $whiteish;
+    transition: all 0.4s ease-in-out;
+
             }
           }
         }
         .open{
           ~ .logo{
             color:$gold;
+    transition: all 0.4s ease-in-out;
+
           }
         }
       }
-
-
+    &__full{
+      background-color:$whiteish;
+      nav {
+        .logo {
+          color: $gold;
+        }
+        ul {
+          li {
+            a {
+              color: $gold;
+            }
+          }
+        }
+        .menu-icon {
+          span {
+            background-color: $gold;
+          }
+        }
+      }
+      .open{
+        ~ .logo{
+          color:$gold;
+        }
+      }
     }
-    
+  }
     // big screen
     @include breakpoint-up(large) {
       height: 6.25rem;
@@ -116,14 +145,14 @@
           padding: 0 0 0 0;
           a {
             text-transform: uppercase;
-            @include bn(400);
+            @include bn(600);
           }
         }
       }
       .abs-con {
         display: none;
       }
-
+    
     }
 
 

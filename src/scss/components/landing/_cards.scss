@@ -72,6 +72,9 @@
       }
     }
   }
+  @include breakpoint-up(large){
+    min-width:960px;
+  }
   &-full{
     display: flex;
     justify-content: space-between;
