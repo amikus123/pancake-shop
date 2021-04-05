@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../Button';
+import Button from '../general/Button';
 import Woman from "../../images/landing/SH.png";
 function SecondHero() {
   // https://freedesignfile.com/380895-pretty-female-cook-stock-photo-07/

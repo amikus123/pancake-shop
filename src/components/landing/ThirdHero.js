@@ -1,13 +1,12 @@
 import React from "react";
-import Man from "../../images/landing/TH-desktop.png";
 import MobileMan from "../../images/landing/TH-mobile.png";
-import Man2 from "../../images/landing/test2.png";
+import DesktopMan from "../../images/landing/test2.png";
 
 function ThirdHero() {
   return (
     <section className="third-hero">
        <div className="third-img">
-        <img src={Man2} alt="man" className="first"/>
+        <img src={DesktopMan} alt="man" className="first"/>
         {/* <a href="https://www.freepik.com/photos/business">Business photo created by freepik - www.freepik.com</a> young male */}
         <img src={MobileMan} alt="" className="second"/>
         {/* <a href="https://www.freepik.com/photos/fashion">Fashion photo created by benzoix - www.freepik.com</a> */}

@@ -1,6 +1,6 @@
 import React from 'react'
-import Card from "./Card";
-import cards from "../../../data/cards";function CardsFull() {
+import Card from "./CardsItem";
+import cards from "../../../data/cardsData";function CardsFull() {
   return (
     <div className="show-desktop cards-full" >
       <Card card={cards[0]}/>

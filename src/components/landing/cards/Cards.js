@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import CardsControl from './CardsControl';
-import IconsRow from "./IconsRow";
+import IconsRow from "./CardsIconsRow";
 import CardsFull from "./CardsFull";
 function Cards() {
   const [number,setNumber] = useState(1)

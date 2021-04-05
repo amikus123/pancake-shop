@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from "../../pages/Menu";
-import Button from "../Button";
+import Button from "../general/Button";
 
 function FirstHero() {
   return (

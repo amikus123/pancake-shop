@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from "./Icon";
+import Icon from "./CardsIcon";
 
 function IconsRow({fun,number}) {
   let three = [1,2,3]

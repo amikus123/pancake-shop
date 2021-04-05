@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import MenuButton from "./MenuButton";
+import MenuButton from "../general/MenuButton";
 
 function Header({ location }) {
   useEffect(() => {

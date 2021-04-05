@@ -4,7 +4,7 @@ import { useRecursiveTimeout } from "./useRecursiveTimeout";
 
 import { useEmblaCarousel } from "embla-carousel/react";
 import Review from './Review'
-import reviews from "../../../data/reviews";
+import reviews from "../../../data/reviewData";
 
 function ReviewsGallery() {
   const [viewportRef, embla] = useEmblaCarousel({ loop: true });
