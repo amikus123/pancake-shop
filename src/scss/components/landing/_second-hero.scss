@@ -1,33 +1,44 @@
 @use '../../abstracts/' as *;
 
-.second-hero{
+.second-hero {
   @include l-nfw;
   @include text-margin;
-  .text{
-  @include f-center(column);
+  .text {
+    @include f-center(column);
     @include text-margin;
 
-    h2{
+    h2 {
       @include sh();
       text-align: center;
       color: $dark;
     }
-    p{
+    p {
       @include bn();
       text-align: center;
-      color:$gold;
+      color: $gold;
     }
   }
 
-  .image-con{
-    background: url('./images/ve.svg') no-repeat;
-    width:fit-content;
+  .image-con {
+    background: url("./images/ve.svg") no-repeat;
+    width: fit-content;
     height: fit-content;
     background-position: center;
     background-size: contain;
-    img{
-      width:100%;
+    img {
+      width: 100%;
     }
   }
-
+  @include breakpoint-up(large) {
+    flex-direction: row-reverse;
+    .text {
+      align-items: flex-start;
+      h2 {
+        text-align: left;
+      }
+      p {
+        text-align: left;
+      }
+    }
+  }
 }

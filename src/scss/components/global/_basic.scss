@@ -1,9 +1,8 @@
 @use '../../abstracts/' as *;
 
 .button {
-  border-radius: 0.625em;
-  width: 10em;
-  height: 2.6875em;
+  border-radius: 10px;
+  padding: 10px 20px;
   @include f-center();
   span {
     @include bn;
@@ -19,8 +18,9 @@
   }
   &__trans {
     span {
-      color: $whiteish;
+      color: $red;
     }
+    border: 4px solid $red;
   }
 }
 

@@ -54,11 +54,31 @@
         display: block;
       }
     }
-    .second {
+    .second { 
       @include breakpoint-down(medium) {
         display: block;
         max-width:466px;
       }
+    }
+  }
+
+  @include breakpoint-up(large){
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 1200px;
+    .text-wrap{
+      h2,p{
+        text-align: left;
+      }
+
+    }
+    .third-img{
+      background:none;
+      margin-bottom: 0;
+      min-width: 250px;
+      max-width:600px;
+      width:50%;
+
     }
   }
 }

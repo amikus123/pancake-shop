@@ -1,5 +1,7 @@
 import React from 'react'
+import Button from '../Button'
 import Gallery from './carousel/Gallery'
+import Menu from "../../pages/Menu";
 
 function PromotedItems() {
   return (
@@ -11,7 +13,8 @@ function PromotedItems() {
       Made with indigirents with of best quality
       </p>
        <Gallery />
-    </div>
+       <Button text={"MORE PANCAKES"} location={"/menu"} component={Menu} type={"trans"} />
+  </div>
   )
 }
 

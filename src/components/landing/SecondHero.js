@@ -11,8 +11,11 @@ function SecondHero() {
     <h2>
     Qualityy over quantity
     </h2>
-    <p>
+    <p className="hide-desktop">
     Our motto is to focus on quality, rather on quantity.
+    </p>
+    <p className="show-desktop">
+    Turpis nisl elit amett, amet, eu. Bibendum scelerisque pretium, scelerisque adipiscing curabitur morbi. Nec vel vitae tellus auctor aliquam in lectus amet. Sit vulputate leo cras condimentum.
     </p>
     <Button text="ORDER NOW"/>
 </div>

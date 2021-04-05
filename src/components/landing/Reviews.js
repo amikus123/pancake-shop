@@ -11,11 +11,10 @@ function Reviews() {
       <h2>
       What customers say about us
       </h2>
+
       <ReviewsGallery/>
       </div>
-      <div className="reviews-img">
-        {/* <img src={Mobile}/> */}
-      </div>
+        <img src={Desktop}/>
     </section>
   )
 }
