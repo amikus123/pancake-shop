@@ -1,6 +1,6 @@
 import React from "react";
-import MobileMan from "../../images/landing/TH-mobile.png";
-import DesktopMan from "../../images/landing/test2.png";
+import MobileMan from "../../images/landing/third-hero/third-hero-mobile.png";
+import DesktopMan from "../../images/landing/third-hero/third-hero-desktop.png";
 
 function ThirdHero() {
   return (

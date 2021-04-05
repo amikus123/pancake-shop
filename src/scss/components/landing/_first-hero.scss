@@ -9,7 +9,7 @@
   
   }
     .first-hero {
-      background: url("./images/mobile2.jpg") no-repeat;
+      background: url("images/landing/first-hero/hero-mobile.jpg") no-repeat;
       background-position: center;
 
       background-size: cover;
@@ -36,7 +36,7 @@
   
   @include breakpoint-up(medium) {
     .first-hero {
-      background: url("./images/test.jpg") no-repeat;
+      background: url("images/landing/first-hero/hero-desktop.jpg") no-repeat;
       background-size: cover;
       background-position: right center;
       height: 100vh;
@@ -73,7 +73,6 @@
   }
   @include breakpoint-up(xlarge) {
     .first-hero {
-      background: url("./images/test.jpg") no-repeat;
       background-size: cover;
       background-position: right center;
       height: 100vh;

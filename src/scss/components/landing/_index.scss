@@ -23,10 +23,7 @@
   }
   > :last-child{
     margin-bottom: 0;
-    
-    @include breakpoint-up(medium){
-      margin-bottom: 3rem;
-    }
+  
    
   }
   
