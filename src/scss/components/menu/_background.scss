@@ -5,15 +5,15 @@
   align-items: center;
   background: url("images/2.jpg") no-repeat;
   width: 100vw;
-  height: calc(100vw + 100px);
+  height: calc(100vw + 80px);
   background-size: cover;
   background-position: 40% 60%;
   position: relative;
   // i dont want it to count the top margin
   box-sizing: content-box;
   // height of item list
-  padding-bottom: 100px;
-  margin-bottom: -100px;
+  padding-bottom: 80px;
+  margin-bottom: -80px;
   .hide-curve {
     // rhis element is used to hide bottom border radius on category list
     position: absolute;
@@ -32,8 +32,8 @@
 
   @include breakpoint-up(medium) {
     background: url("images/3.jpg") no-repeat;
-    height: calc(66vw + 100px);
-    max-height: calc(66vh + 100px);
+    height: calc(66vw + 80px);
+    max-height: calc(66vh + 80px);
     background-size: cover;
     background-position: center;
     h1 {

@@ -1658,13 +1658,13 @@ footer .wrapper nav ul li {
   align-items: center;
   background: url("images/2.jpg") no-repeat;
   width: 100vw;
-  height: calc(100vw + 100px);
+  height: calc(100vw + 80px);
   background-size: cover;
   background-position: 40% 60%;
   position: relative;
   box-sizing: content-box;
-  padding-bottom: 100px;
-  margin-bottom: -100px;
+  padding-bottom: 80px;
+  margin-bottom: -80px;
 }
 .background .hide-curve {
   position: absolute;
@@ -1684,8 +1684,8 @@ footer .wrapper nav ul li {
 @media (min-width: 48em) {
   .background {
     background: url("images/3.jpg") no-repeat;
-    height: calc(66vw + 100px);
-    max-height: calc(66vh + 100px);
+    height: calc(66vw + 80px);
+    max-height: calc(66vh + 80px);
     background-size: cover;
     background-position: center;
   }
@@ -1741,9 +1741,8 @@ footer .wrapper nav ul li {
   width: 100%;
   padding: 0 1rem;
   height: 100px;
-  position: relative;
   background-color: #f3f3f3;
-  border-radius: 3vw;
+  border-radius: 50px 50px 0 0;
 }
 .menu-nav > a {
   margin-left: 2rem;
@@ -1751,8 +1750,13 @@ footer .wrapper nav ul li {
 .menu-nav > :first-child {
   margin-left: 0rem;
 }
-.menu-nav .fixed {
-  background-color: red;
+.menu-nav-sticky {
+  position: fixed;
+  top: 100px;
+  border-radius: 0 0 50px 50px;
+}
+.menu-nav-relative {
+  position: relative;
 }
 
 .menu {

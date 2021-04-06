@@ -2,7 +2,7 @@ import React, {useEffect,useState} from 'react'
 import pancakesData from "../../../data/pancakesData";
 import CategoryItem from './CategoryItem';
 
-function CategoryList() {
+function CategoryList({sticky}) {
   const [categories,setCategories] = useState([])
   useEffect(()=>{
     // stores categories, used for comparing
@@ -15,7 +15,7 @@ function CategoryList() {
     setCategories(temp);
   },[pancakesData])
   return (
-    <div className ="menu-nav">
+    <div className ={`menu-nav ${sticky? "menu-nav-sticky":"menu-nav-relative"}`}>
       {categories.map((item,index)=>{
         return <CategoryItem text={item} where={"#" + item} key={index}/>
       })}
