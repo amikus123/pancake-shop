@@ -105,6 +105,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.75em;
 }
 
+main > :first-child {
+  margin-top: 4rem;
+}
+@media (min-width: 64em) {
+  main > :first-child {
+    margin-top: 5rem;
+  }
+}
+
 /*
   COMMON RESOLUSTIONS
 
@@ -861,12 +870,6 @@ footer .wrapper nav ul li {
   width: 0px !important;
 }
 
-@media (max-width: 47.9375em) {
-  .landing {
-    margin-top: 4rem;
-  }
-}
-
 .first-hero {
   background: url("images/landing/first-hero/hero-mobile.jpg") no-repeat;
   background-position: center;
@@ -897,6 +900,12 @@ footer .wrapper nav ul li {
   font-size: 2.5rem;
   text-align: center;
 }
+@media (max-width: 47.9375em) {
+  .first-hero .content-wrap {
+    margin-top: 4rem;
+  }
+}
+
 @media (min-width: 48em) {
   .first-hero {
     background: url("images/landing/first-hero/hero-desktop.jpg") no-repeat;
@@ -909,6 +918,7 @@ footer .wrapper nav ul li {
     justify-content: center;
     flex-direction: row;
     justify-content: flex-end;
+    margin-top: 0 !important;
   }
   .first-hero .content-wrap {
     display: flex;
@@ -1643,25 +1653,115 @@ footer .wrapper nav ul li {
 .background {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
   align-items: center;
-  height: 12vw;
-  min-height: 200px;
+  background: url("images/2.jpg") no-repeat;
+  width: 100vw;
+  height: calc(100vw + 100px);
+  background-size: cover;
+  background-position: 40% 60%;
+  position: relative;
+  box-sizing: content-box;
+  padding-bottom: 100px;
+  margin-bottom: -100px;
+}
+.background .hide-curve {
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  background-color: #f3f3f3;
 }
 .background h1 {
   font-size: 3rem;
   font-weight: 600;
   font-family: "Raleway", sans-serif;
-  margin-bottom: 0;
+  position: absolute;
+  top: 13%;
+  color: #f3f3f3;
+}
+@media (min-width: 48em) {
+  .background {
+    background: url("images/3.jpg") no-repeat;
+    height: calc(66vw + 100px);
+    max-height: calc(66vh + 100px);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/*
+  COMMON RESOLUSTIONS
+
+
+1366x768 (22.98%)
+1920x1080 (20.7%)
+1536x864 (7.92%)
+1440x900 (7.23%)
+1280x720 (4.46%)
+
+360x640 (18.7%)
+375x667 (7.34%)
+414x896 (6.76%)
+360x780 (5.31%)
+375x812 (5.01%)
+
+768x1024 (51.43%)
+1280x800 (7.28%)
+800x1280 (5.26%)
+601x962 (4.32%)
+962x601 (2.99%)
+
+1920x1080 (19.57%)
+1366x768 (14.88%)
+1440x900 (9.18%)
+1536x864 (7.22%)
+1024x768 (4.73%)
+
+414x896 (19.44%)
+375x667 (13.67%)
+375x812 (12.3%)
+414x736 (8.91%)
+360x640 (8.21%)
+
+768x1024 (55.64%)
+1280x800 (5.74%)
+800x1280 (5.31%)
+601x962 (5.14%)
+962x601 (3.2%)
+
+ */
+.menu-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  overflow-x: auto;
+  width: 100%;
+  padding: 0 1rem;
+  height: 100px;
+  top: 64px;
+  position: sticky;
+  background-color: #f3f3f3;
+  border-radius: 3vw;
+}
+.menu-nav > a {
+  margin-left: 2rem;
+}
+.menu-nav > :first-child {
+  margin-left: 0rem;
+}
+.menu-nav .fixed {
+  background-color: red;
 }
 
 .menu {
-  height: 1000px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
+  height: 2000px;
 }
 
 /*# sourceMappingURL=index.css.map */

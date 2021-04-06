@@ -2,12 +2,8 @@
 
 
   // fisrt hero
-  .landing{
-    @include breakpoint-down(small) {
-      margin-top: 4rem;
-      }
+ 
   
-  }
     .first-hero {
       background: url("images/landing/first-hero/hero-mobile.jpg") no-repeat;
       background-position: center;
@@ -28,9 +24,10 @@
           font-size:2.5rem;
           text-align: center;
         }
-        .button {
-          // margin-bottom: 2rem;
-        }
+
+        @include breakpoint-down(small) {
+          margin-top: 4rem;
+          }
       }
     }
   
@@ -39,18 +36,18 @@
       background: url("images/landing/first-hero/hero-desktop.jpg") no-repeat;
       background-size: cover;
       background-position: right center;
-      // height: 100vh;
       max-height: 100vh;
       width: 100%;
       @include f-center(row);
       justify-content: flex-end;
-
+      // unique margin beacuse off fulll page hero
+      margin-top: 0!important;
+      
       .content-wrap {
         @include f-center(column);
         align-items: flex-start;
         margin-right: 8vw;
         width: min-content;
-        // height: 80%;
         > * {
           margin-bottom: 2rem;
         }

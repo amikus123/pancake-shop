@@ -1,1 +1,25 @@
-@forward "nav";
+@use '../../abstracts/' as *;
+
+.menu-nav{
+  @include f-start(row);
+  overflow-x: auto;
+  width:100%;
+  padding: 0 1rem;
+  height:100px;
+  top:64px; // height of navbar
+  // margin-top: 86px;
+  position: sticky;
+
+  background-color: $whiteish;
+  border-radius:  3vw ;
+  >a{
+    margin-left:2rem;
+  }
+  > :first-child{
+    margin-left:0rem;
+
+  }
+  .fixed{
+    background-color: red;
+  }
+}

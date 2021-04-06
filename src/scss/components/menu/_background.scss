@@ -1,12 +1,41 @@
 @use '../../abstracts/' as *;
 
-.background{
-  @include f-center(column);
+.background {
+  @include f-end(column);
   align-items: center;
-  height: 12vw;
-  min-height: 200px;
-  h1{
+  background: url("images/2.jpg") no-repeat;
+  width: 100vw;
+  height: calc(100vw + 100px);
+  background-size: cover;
+  background-position: 40% 60%;
+  position: relative;
+  // i dont want it to count the top margin
+  box-sizing: content-box;
+  // height of item list
+  padding-bottom: 100px;
+  margin-bottom: -100px;
+  .hide-curve {
+    // rhis element is used to hide bottom border radius on category list
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    width:100%;
+    background-color: $whiteish;
+  }
+  h1 {
     @include ph();
-    margin-bottom:0;
+    position: absolute;
+    top: 13%;
+    color: $whiteish;
+  }
+
+  @include breakpoint-up(medium) {
+    background: url("images/3.jpg") no-repeat;
+    height: calc(66vw + 100px);
+    max-height: calc(66vh + 100px);
+    background-size: cover;
+    background-position: center;
+    h1 {
+    }
   }
 }

@@ -15,7 +15,7 @@ function CategoryList() {
     setCategories(temp);
   },[pancakesData])
   return (
-    <div className ="category-list">
+    <div className ="menu-nav">
       {categories.map((item,index)=>{
         return <CategoryItem text={item} where={"#" + item} key={index}/>
       })}

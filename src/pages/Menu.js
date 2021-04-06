@@ -10,7 +10,6 @@ function Menu({ item }) {
     }
   }, [item]);
   return <main className="menu"> 
-    <p>menu</p>
     <Background/>
     <CategoryList/>
     <p id="pog">asdsasda</p>
