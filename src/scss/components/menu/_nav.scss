@@ -6,10 +6,7 @@
   width:100%;
   padding: 0 1rem;
   height:100px;
-  top:64px; // height of navbar
-  // margin-top: 86px;
-  position: sticky;
-
+  position: relative;
   background-color: $whiteish;
   border-radius:  3vw ;
   >a{
