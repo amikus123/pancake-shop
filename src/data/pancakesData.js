@@ -12,42 +12,55 @@ const pancakes = [
     price: "22",
     img: p1,
     rating: "4.5",
+    category:"sweet",
   },
   {
     name: "Pancake with berries",
     price: "28",
     img: p2,
     rating: "2.2",
+    category:"sweet",
+
   },
   {
     name: "Pancake with chocolate",
     price: "19",
     img: p3,
     rating: "3.2",
+    category:"bitter",
+
   },
   {
     name: "Pancake with fish",
     price: "22",
     img: p4,
     rating: "5.0",
+    category:"bitter",
+
   },
   {
     name: "Pancake with bananas",
     price: "16",
     img: p5,
     rating: "4.1",
+    category:"tropical",
+
   },
   {
     name: "Pancake with strawberries",
     price: "26",
     img: p6,
     rating: "4.8",
+    category:"tropical",
+
   },
   {
     name: "Pancake with panckaes",
     price: "17",
     img: p7,
     rating: "4.2",
+    category:"special",
+
   },
 ];
 export default pancakes;

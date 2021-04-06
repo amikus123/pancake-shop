@@ -20,7 +20,15 @@
   }
   @include breakpoint-down(medium){
     nav {
-     
+      .overlay{
+        position:fixed;
+        width:100vw;
+        height: 100vh;
+        top:0;
+        left:0;
+        display: none;
+        z-index:1000;
+      }
       // ul for mobile
       ul {
         position: fixed;
@@ -65,7 +73,9 @@
             }
           }
         }
-       
+        ~.overlay{
+          display: block;
+        }
       }
     }
   }

@@ -4,7 +4,6 @@ import MenuButton from "../general/MenuButton";
 
 function Header({ location }) {
   const [offset, setOffset] = useState(false);
-
   useEffect(() => {
     console.log(location,"zmiana");
 
@@ -23,12 +22,12 @@ function Header({ location }) {
     } }
   },[])
 
-
   return (
-    // transparten is given on main page
-    <header className={`header ${(location.pathname ==="/") && "header__trans"} ${offset && "header__full"} `}>
+    // transparency is given on main page
+    <header className={`header ${(location.pathname ==="/") && "header__trans"} ${offset && "header__full"}`} >
       <nav>
-        <MenuButton />
+        <MenuButton  />
+        {/* <div className="overlay" onClick={handleClick}></div> */}
         <Link to="/" className="logo">
           Cakepan
         </Link>

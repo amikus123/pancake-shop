@@ -12,9 +12,9 @@ const changePosistion = (num) =>{
 }
 
   return (
-    <div className="cards-window">
+    <div className="cards-window hide-desktop">
 
-    <div className={`cards-control-2 hide-desktop ${changePosistion(number)} `}>
+    <div className={`cards-control-2  ${changePosistion(number)} `}>
       <Card card={cards[0]}/>
       <Card card={cards[1]}/>
       <Card card={cards[2]}/>

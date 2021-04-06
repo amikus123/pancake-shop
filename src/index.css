@@ -164,6 +164,15 @@ h1, h2, h3, h4, h5, h6 {
   width: 80%;
 }
 @media (max-width: 63.9375em) {
+  .header nav .overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1000;
+  }
   .header nav ul {
     position: fixed;
     top: calc(50% + 2rem);
@@ -207,6 +216,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .header nav .open ~ ul li a {
     color: #a16720;
+  }
+  .header nav .open ~ .overlay {
+    display: block;
   }
 }
 @media (min-width: 48em) {
@@ -1585,6 +1597,71 @@ footer .wrapper nav ul li {
   .landing h1, .landing h2, .landing h3, .landing h4, .landing p {
     max-width: 450px;
   }
+}
+
+/*
+  COMMON RESOLUSTIONS
+
+
+1366x768 (22.98%)
+1920x1080 (20.7%)
+1536x864 (7.92%)
+1440x900 (7.23%)
+1280x720 (4.46%)
+
+360x640 (18.7%)
+375x667 (7.34%)
+414x896 (6.76%)
+360x780 (5.31%)
+375x812 (5.01%)
+
+768x1024 (51.43%)
+1280x800 (7.28%)
+800x1280 (5.26%)
+601x962 (4.32%)
+962x601 (2.99%)
+
+1920x1080 (19.57%)
+1366x768 (14.88%)
+1440x900 (9.18%)
+1536x864 (7.22%)
+1024x768 (4.73%)
+
+414x896 (19.44%)
+375x667 (13.67%)
+375x812 (12.3%)
+414x736 (8.91%)
+360x640 (8.21%)
+
+768x1024 (55.64%)
+1280x800 (5.74%)
+800x1280 (5.31%)
+601x962 (5.14%)
+962x601 (3.2%)
+
+ */
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 12vw;
+  min-height: 200px;
+}
+.background h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 0;
+}
+
+.menu {
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=index.css.map */

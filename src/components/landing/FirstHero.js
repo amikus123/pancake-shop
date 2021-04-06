@@ -4,7 +4,7 @@ import Button from "../general/Button";
 
 function FirstHero() {
   return (
-    <div className="first-hero">
+    <section className="first-hero">
       <div className="content-wrap">
         <h1 className="show-mobile"> Expierience pancakes anew</h1>
         <h1 className="hide-mobile"> Panckes redifined</h1>
@@ -16,7 +16,7 @@ function FirstHero() {
         <Button text={"ORDER NOW"} location={"/menu"} component={Menu} type={"red"} />
 
       </div>
-    </div>
+    </section>
   );
 }
 

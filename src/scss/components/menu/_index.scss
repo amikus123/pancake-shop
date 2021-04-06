@@ -1,0 +1,8 @@
+@use '../../abstracts/' as *;
+
+@import "background";
+
+.menu{
+  height: 1000px;
+  @include f-space(column);
+}

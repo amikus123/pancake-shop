@@ -5,7 +5,7 @@ import ProductFrame from "../general/ProductFrame";
 import products from "../../data/pancakesData";
 function PromotedItems() {
   return (
-    <div className="promoted-items">
+    <section className="promoted-items">
       <h3>Our best pancakes</h3>
       <p>Made with indigirents with of best quality</p>
       <div className="promoted-wrapper">
@@ -21,7 +21,7 @@ function PromotedItems() {
         component={Menu}
         type={"trans"}
       />
-    </div>
+    </section>
   );
 }
 

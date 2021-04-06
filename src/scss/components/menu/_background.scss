@@ -1,0 +1,12 @@
+@use '../../abstracts/' as *;
+
+.background{
+  @include f-center(column);
+  align-items: center;
+  height: 12vw;
+  min-height: 200px;
+  h1{
+    @include ph();
+    margin-bottom:0;
+  }
+}
