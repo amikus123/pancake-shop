@@ -10,7 +10,9 @@ function PromotedItems() {
       <p>Made with indigirents with of best quality</p>
       <div className="promoted-wrapper">
         {products.map((prod, index) => (
+          index <=5? 
           <ProductFrame product={prod} key={index} classes={index} />
+          :null
         ))}
       </div>
       <Button

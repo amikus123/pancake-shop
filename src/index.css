@@ -213,6 +213,9 @@ h1, h2, h3, h4, h5, h6 {
   .header {
     transition: all 0.4s ease-in-out;
   }
+  .header a {
+    color: #a16720;
+  }
   .header__trans {
     background: none;
   }
@@ -901,7 +904,7 @@ footer .wrapper nav ul li {
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 10vw;
+    margin-right: 8vw;
     width: min-content;
   }
   .first-hero .content-wrap > * {
@@ -1075,7 +1078,8 @@ footer .wrapper nav ul li {
   .second-hero {
     flex-direction: row-reverse;
     justify-content: space-around;
-    max-width: 1200px;
+    min-width: 1000px;
+    max-width: 1400px;
   }
   .second-hero > * {
     margin-bottom: 0;
@@ -1240,8 +1244,9 @@ footer .wrapper nav ul li {
 @media (min-width: 64em) {
   .third-hero {
     flex-direction: row-reverse;
-    justify-content: space-between;
-    max-width: 1200px;
+    justify-content: space-around;
+    min-width: 1000px;
+    max-width: 1400px;
   }
   .third-hero .text-wrap h2, .third-hero .text-wrap p {
     text-align: left;
@@ -1372,8 +1377,9 @@ footer .wrapper nav ul li {
 @media (min-width: 64em) {
   .reviews {
     flex-direction: row-reverse;
-    justify-content: space-between;
-    max-width: 1200px;
+    justify-content: space-around;
+    min-width: 1000px;
+    max-width: 1400px;
   }
   .reviews-wrap {
     width: auto;

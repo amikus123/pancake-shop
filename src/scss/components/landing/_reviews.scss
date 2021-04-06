@@ -107,8 +107,9 @@
 
   @include breakpoint-up(large) {
     flex-direction: row-reverse;
-    justify-content: space-between;
-    max-width: 1200px;
+    justify-content: space-around;
+      min-width:1000px;
+    max-width:1400px;
     &-wrap {
       width: auto;
       min-width: 440px;

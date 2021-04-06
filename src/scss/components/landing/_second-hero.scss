@@ -32,7 +32,8 @@
   @include breakpoint-up(large) {
     flex-direction: row-reverse;
     justify-content: space-around;
-    max-width:1200px;
+    min-width:1000px;
+    max-width:1400px;
     >*{
       margin-bottom:0;
     }
