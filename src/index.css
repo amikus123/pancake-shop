@@ -1512,6 +1512,30 @@ footer .wrapper nav ul li {
   opacity: 0;
   transition: all 0.1s ease-in-out;
 }
+.cards-window {
+  width: 300px;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+}
+.cards-control-2 {
+  position: absolute;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  transition: all 0.4s ease;
+}
+.cards .left {
+  left: 0;
+}
+.cards .right {
+  left: -700px;
+}
+.cards .center {
+  left: -350px;
+}
 @media (min-width: 64em) {
   .cards {
     min-width: 960px;
