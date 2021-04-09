@@ -8,7 +8,7 @@
 
     &-heading{
       height: 60px;
-      background-color: red;
+      background-color: $whiteish;
       @include f-center;
       h2{
         width:100%;
@@ -22,16 +22,24 @@
       }
     }
     &-content{
+      padding: 1rem;
       display:flex;
+      // display: grid;
+      // grid-template-columns: repeat(3, 20px);
+
       width:100%; 
       @include f-center;
       flex-wrap:wrap;
       >a{
         margin:1rem;
       }
+      @include breakpoint-up(large){
+      @include f-start;
 
+      }
     }
   }
 
 
 }
+// dal mobile center, reszta start
