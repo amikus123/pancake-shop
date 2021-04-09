@@ -1,6 +1,7 @@
 @use '../../abstracts/' as *;
 
 .frame {
+  // ingereting widthj from parent 
   height: 275px;
   width: 275px;
   background-color: $whiteish;
@@ -9,6 +10,8 @@
   border-radius: 15px;
   box-shadow: 0 5px 5px 1px hsla(0, 0%, 7%, 10%);
   @include f-start(column);
+  background-color: $whiteish;
+
   &-img {
     position: relative;
     width: 100%;
@@ -24,7 +27,7 @@
       top: 0px;
       left: 0px;
       width: 33%;
-      height: 19%;
+      height: 20%;
       background-color: $whiteish;
       @include f-center;
       &-text {
@@ -60,6 +63,7 @@
     @include f-space(row);
     padding: 1rem 1rem;
     flex: 1;
+
     // height: 3.6875em;
 
     width: 100%;

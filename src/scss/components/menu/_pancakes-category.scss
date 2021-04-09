@@ -22,14 +22,13 @@
       }
     }
     &-content{
-      display:grid;
-      width:100%;
-      // grid-auto-columns: minmax(max-content, 2fr);
-      grid-auto-columns: 200px;
-      gap: 10px;
-  grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-  grid-auto-flow: column;  /* or 'row', 'row dense', 'column dense' */
-
+      display:flex;
+      width:100%; 
+      @include f-center;
+      flex-wrap:wrap;
+      >a{
+        margin:1rem;
+      }
 
     }
   }

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function ProductFrame({ product, classes }) {
   const { name, img, price, rating } = product;
   return (
-    <Link to="/a" className={`-frame ${classes}`}>
+    <Link to="/a" className={`frame ${classes}`}>
       <div className="frame-img">
         <div className="frame-img-rating">
           <span className="frame-img-rating-text">
