@@ -2,8 +2,13 @@
 
 @import "background";
 @import "nav";
+@import "pancakes-category";
+@import "pancakes-square";
+
 
 .menu{
   @include f-start(column);
-  height:2000px;
+  &-container{
+    @include f-start(column);
+  }
 }

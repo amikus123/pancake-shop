@@ -11,7 +11,7 @@ function PromotedItems() {
       <div className="promoted-wrapper">
         {products.map((prod, index) => (
           index <=5? 
-          <ProductFrame product={prod} key={index} classes={index} />
+          <ProductFrame product={prod} key={index}  />
           :null
         ))}
       </div>

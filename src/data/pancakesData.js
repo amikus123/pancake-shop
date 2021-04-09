@@ -14,6 +14,7 @@ const pancakes = [
     rating: "4.5",
     category:"sweet",
   },
+   
   {
     name: "Pancake with berries",
     price: "28",
@@ -46,6 +47,63 @@ const pancakes = [
     category:"tropical",
 
   },
+   {
+    name: "Pancake with bananas",
+    price: "16",
+    img: p5,
+    rating: "4.1",
+    category:"tropical",
+
+  }, {
+    name: "Pancake with bananas",
+    price: "16",
+    img: p5,
+    rating: "4.1",
+    category:"tropical",
+
+  }, {
+    name: "Pancake with bananas",
+    price: "16",
+    img: p5,
+    rating: "4.1",
+    category:"tropical",
+
+  }, {
+    name: "Pancake with bananas",
+    price: "16",
+    img: p5,
+    rating: "4.1",
+    category:"tropical",
+
+  }, {
+    name: "Pancake with bananas",
+    price: "16",
+    img: p5,
+    rating: "4.1",
+    category:"tropical",
+
+  }, {
+    name: "Pancake with bananas",
+    price: "16",
+    img: p5,
+    rating: "4.1",
+    category:"tropical",
+
+  }, {
+    name: "Pancake with bananas",
+    price: "16",
+    img: p5,
+    rating: "4.1",
+    category:"tropical",
+
+  }, {
+    name: "Pancake with bananas",
+    price: "16",
+    img: p5,
+    rating: "4.1",
+    category:"tropical",
+
+  }, 
   {
     name: "Pancake with strawberries",
     price: "26",
@@ -60,6 +118,30 @@ const pancakes = [
     img: p7,
     rating: "4.2",
     category:"special",
+
+  },
+  {
+    name: "Pancake with benefits",
+    price: "17",
+    img: p7,
+    rating: "4.2",
+    category:"pancake",
+
+  },
+  {
+    name: "Pancake with benefits",
+    price: "17",
+    img: p7,
+    rating: "4.2",
+    category:"with",
+
+  },
+  {
+    name: "Pancake with benefits",
+    price: "17",
+    img: p7,
+    rating: "4.2",
+    category:"benefits",
 
   },
 ];

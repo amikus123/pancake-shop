@@ -15,11 +15,18 @@ function CategoryList({sticky}) {
     setCategories(temp);
   },[pancakesData])
   return (
-    <div className ={`menu-nav ${sticky? "menu-nav-sticky":"menu-nav-relative"}`}>
+    <div className="save-padding">
+ <div className ={`menu-nav ${sticky? "menu-nav-sticky":"menu-nav-relative"}`}>
+      <div className="menu-nav-list">
+        <div className="hidden-layer"></div>
       {categories.map((item,index)=>{
-        return <CategoryItem text={item} where={"#" + item} key={index}/>
+        return <CategoryItem text={item} where={"#" + item} key={index} classes={index%2===0?"button-nav-active":"button-nav-inactive"}/>
       })}
+      </div>
+     
     </div>
+    </div>
+  
   )
 }
 

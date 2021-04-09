@@ -1,30 +1,93 @@
 @use '../../abstracts/' as *;
-$radius-mobile : 50px;
-$radius-desktop : 20px;
-
-.menu-nav{
+$radius-mobile: 50px;
+$radius-desktop: 100px;
+.save-padding{
+  overflow: hidden;
+    padding: 0;
+    height: 5rem;
+    margin-bottom: -1px;
+    @include f-start();
+}
+.menu-nav {
   @include f-start(row);
   overflow-x: auto;
-  width:100%;
-  padding: 0 1rem;
-  height:100px;
-  background-color: $whiteish;
-  border-radius:  $radius-mobile $radius-mobile 0 0;
-  >a{
-    margin-left:2rem;
-  }
-  > :first-child{
-    margin-left:0rem;
-
-  }
-  &-sticky{
+  width: 100vw;
+  height: 5rem;
+  z-index: 100;
+  &-sticky {
     position: fixed;
-    top:100px;
-  border-radius:  0 0 $radius-mobile $radius-mobile;
+    top: 4rem;
+    left:0;
+    > * {
+      border-radius: 0 0 $radius-mobile $radius-mobile;
+
+    }
+  }
+  &-relative {
+    position: relative;
+    >*{
+      border-radius: $radius-mobile $radius-mobile 0 0;
+
+    }
+    @include breakpoint-up(medium){
+    
+    }
+  }
+
+  &-list {
+    @include f-start(row);
+    position: relative;
+    background-color: $whiteish;
+    padding: 0 1rem;
+    width: max-content;
+    // min-width: 100%;
+    height: 100%;
+    > a {
+      margin-left: 1.85185vw;
+    }
+    > :nth-child(2) {
+      margin-left: 0;
+    }
+    > :last-child {
+      margin-right: 1.85185vw;
+    }
+    .hidden-layer{
+      border-radius: inherit;
+      position: absolute;
+      left:0;
+      width: 100vw;
+      height:100%;
+      background-color: $whiteish;
+      z-index: -2;
+    }
+  }
+
+}
+.button-nav {
+  @include f-center;
+  
+  height: 40px;
+  border-radius: 10px;
+  padding:0 1.5rem;
+  span {
+    @include bn(700);
+    line-height: 100%;
+  }
+  &-list {
+  }
+
+  &-active {
+    background: $red;
+    span{      
+      color:$whiteish;
+    }
 
   }
-  &-relative{
-    position: relative;
-
+  &-inactive {
+    border: 2px solid $red;
+    background-color: none;
+    span{
+      color:$red;
+    }
   }
 }

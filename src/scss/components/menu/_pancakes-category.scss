@@ -1,0 +1,38 @@
+@use '../../abstracts/' as *;
+
+.menu-container{
+  width:100%;
+  .category{
+  width:100%;
+   
+
+    &-heading{
+      height: 60px;
+      background-color: red;
+      @include f-center;
+      h2{
+        width:100%;
+        @include th;
+        padding-left: 1rem;
+        margin-bottom: 0;
+        text-align: left;
+        display: block;
+        text-transform: uppercase;
+       
+      }
+    }
+    &-content{
+      display:grid;
+      width:100%;
+      // grid-auto-columns: minmax(max-content, 2fr);
+      grid-auto-columns: 200px;
+      gap: 10px;
+  grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+  grid-auto-flow: column;  /* or 'row', 'row dense', 'column dense' */
+
+
+    }
+  }
+
+
+}

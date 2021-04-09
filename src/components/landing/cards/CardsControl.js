@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Card from "./CardsItem";
 import cards from "../../../data/cardsData";
-import FirstHero from "../FirstHero";
 function CardsControl({ number }) {
   const [first, setFirst] = useState({ num: 0, classes: "first first-show" });
   const [second, setSecond] = useState({

@@ -1,8 +1,8 @@
 import React from "react";
 
-function CategoryItem({ type, classes, text, where }) {
+function CategoryItem({ type, classes, text, where, active }) {
   return (
-    <a className={`button button__${type || "red"} ${classes}`} href={where}>
+    <a className={`button-nav ${classes}`} href={where}>
       <span>{text.toUpperCase()}</span>
     </a>
   );

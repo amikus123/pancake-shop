@@ -1,8 +1,12 @@
 import React from 'react'
 
-function PancakeSquare() {
+function PancakeSquare({data}) {
+  const {category} = data;
+  // on click it will open a modal 
   return (
-    <div>
+    <div className="square">
+      <img src="" alt=""/>
+      {category}
       
     </div>
   )

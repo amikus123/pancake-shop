@@ -1,30 +1,33 @@
 @use '../../abstracts/' as *;
 
-.product-frame {
-  height:275px;
-  width:275px;;
+.frame {
+  height: 275px;
+  width: 275px;
   background-color: $whiteish;
   // overflow: hidden;
-  margin:1rem;
+  margin: 1rem;
   border-radius: 15px;
   box-shadow: 0 5px 5px 1px hsla(0, 0%, 7%, 10%);
   @include f-start(column);
-  .frame-img {
-    height: 184px;
+  &-img {
     position: relative;
     width: 100%;
-    .frame-rating {
-      position: absolute;
-      border-bottom-right-radius: 20px;
-      border-top-left-radius: 20px;
+    // used for hiding hover animation;
+    overflow:hidden;
+    // border-radius: 20px;
 
-      top: 0;
-      left: -1px;
+    &-rating {
+      position: absolute;
+      border-bottom-right-radius: 15px;
+      border-top-left-radius: 15px;
+      z-index: 10;
+      top: 0px;
+      left: 0px;
       width: 33%;
       height: 19%;
       background-color: $whiteish;
       @include f-center;
-      .frame-rating-text {
+      &-text {
         @include f-center;
         span {
           margin-left: 0.2875em;
@@ -32,41 +35,48 @@
 
           line-height: 100%;
           @include bn();
-          color:$red;
+          color: $red;
           font-size: 1.125em;
         }
       }
     }
-    img {
-      width:100%;
+    &-con{
       border-radius: 20px;
-      margin-top: 1px;
-     
+      overflow: hidden;
+      height: 184px;
 
+      img {
+        width: 100%;
+        height: 100%;
+        margin-top: 1px;
+        transition: 0.4s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
-  .frame-data {
+  &-data {
     @include f-space(row);
     padding: 1rem 1rem;
-    flex:1;
+    flex: 1;
     // height: 3.6875em;
 
     width: 100%;
-    .frame-name {
+    &-name {
       width: 70%;
       @include st(700);
       text-align: left;
       font-size: 1.125rem;
       color: $dark;
     }
-    .frame-price {
+    &-price {
       width: 25%;
       color: $red;
 
       @include bn;
       text-align: right;
       font-size: 1.25rem;
-
     }
   }
   // tu bede dawac rozmiary
