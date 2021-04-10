@@ -1,27 +1,27 @@
 import React, { useEffect,useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import MenuButton from "../general/MenuButton";
 // it solves the issue of react router links  to working with links to id
 
-function Header({ location }) {
+function Header({location}) {
+  // const [location, setLocation] = useState( useLocation());
   const [offset, setOffset] = useState(false);
-  useEffect(() => {
-    console.log(location,"zmiana");
-
-  }, [location]);
+  // useEffect(() => {
+  //   console.log(location,"zmiana");
+  // }, [location]);
   // measuer the vertcial offset, used to cgange navbar color
   useEffect(()=>{
     // temporary solution, not efficient
   if(location.pathname === "/"){
 
     window.onscroll = () => {
-      if(window.pageYOffset === 0){
+      if(window.pageYOffset  <100){
         setOffset(false)
       }else{
         setOffset(true)
       }
     } }
-  },[])
+  },[location.pathname])
 
   return (
     // transparency is given on main page
@@ -38,7 +38,7 @@ function Header({ location }) {
             </Link>
           </li>
           <li>
-            <Link to="/menu#foot" >
+            <Link to="/menu" >
               Menu
             </Link>
           </li>

@@ -26,13 +26,13 @@ const useOnScreen = (options) => {
 
 function Menu({ item }) {
   // used to show correct modal
-  useEffect(() => {
-    if (item) {
-      console.log(item.params.slug);
-    } else {
-      console.log(item);
-    }
-  }, [item]);
+  // useEffect(() => {
+  //   if (item) {
+  //     console.log(item.params.slug);
+  //   } else {
+  //     console.log(item);
+  //   }
+  // }, [item]);
   // intersection observer for bg
 
   const [ref, listOnTop] = useOnScreen({threshold:0.5})
@@ -41,7 +41,6 @@ function Menu({ item }) {
       <Background ref={ref}/>
       <CategoryList sticky={!listOnTop}/>
       <PancakesFull/>
-      <p id="pog">{listOnTop?"asdasd":"11111"}</p>
     </main>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route,useRouteMatch,useLocation } from "react-router-dom";
+import { Switch, Route,useLocation } from "react-router-dom";
 //components
 import Error from "./pages/Error";
 import Landing from "./pages/Landing";
@@ -11,19 +11,12 @@ import Header from "./components/singleUse/Header";
 import Footer from "./components/singleUse/Footer";
 
 function App() {
-  const MenuItem = () =>{
-    let item =useRouteMatch("/menu/:slug");
-    return <Menu item={item}/>
-  }
-
   const location = useLocation();
-
-
   return (
     <>
       <Header location={location}/>
       <Switch>
-        <Route path="/menu"  component={MenuItem}>
+        <Route path="/menu"  component={Menu}>
         </Route>
         <Route path="/" exact component={Landing}>
         </Route>
