@@ -5,8 +5,8 @@ import PancakeSquare from "./PancakeSquare";
 function PancakeCategory({ data }) {
   const { list, category } = data;
   return (
-    <section className="category">
-      <div className="category-heading">
+    <section className="category" id={category}>
+      <div className="category-heading" >
         <h2> {category}</h2>
       </div>
       <div className="category-content">

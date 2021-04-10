@@ -23,7 +23,7 @@ function App() {
     <>
       <Header location={location}/>
       <Switch>
-        <Route path="/menu" exact component={MenuItem}>
+        <Route path="/menu"  component={MenuItem}>
         </Route>
         <Route path="/" exact component={Landing}>
         </Route>

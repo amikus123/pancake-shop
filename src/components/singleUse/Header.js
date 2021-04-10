@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from "react";
 import { Link } from "react-router-dom";
 import MenuButton from "../general/MenuButton";
+// it solves the issue of react router links  to working with links to id
 
 function Header({ location }) {
   const [offset, setOffset] = useState(false);
@@ -27,7 +28,6 @@ function Header({ location }) {
     <header className={`header ${(location.pathname ==="/") && "header__trans"} ${offset && "header__full"}`} >
       <nav>
         <MenuButton  />
-        {/* <div className="overlay" onClick={handleClick}></div> */}
         <Link to="/" className="logo">
           Cakepan
         </Link>
@@ -38,7 +38,7 @@ function Header({ location }) {
             </Link>
           </li>
           <li>
-            <Link to="/menu" >
+            <Link to="/menu#foot" >
               Menu
             </Link>
           </li>

@@ -4,7 +4,7 @@ import { FaFacebookF,FaTwitter,FaInstagram} from 'react-icons/fa';
 
 function Footer() {
   return (
-    <footer>
+    <footer id="foot">
      <div className="wrapper">
      <div className="contact">
       <Link to="/" className="logo">

@@ -1,10 +1,15 @@
 import React from "react";
+import { HashLink } from 'react-router-hash-link';
 
 function CategoryItem({ type, classes, text, where, active }) {
   return (
-    <a className={`button-nav ${classes}`} href={where}>
-      <span>{text.toUpperCase()}</span>
-    </a>
+    // <a >
+    //  
+    // </a>
+  <HashLink className={`button-nav ${classes}`} to={where}>
+
+<span>{text.toUpperCase()}</span>
+  </HashLink>
   );
 }
 
