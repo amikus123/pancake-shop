@@ -11,8 +11,16 @@ function PancakeCategory({ data,update,vis }) {
   });
   useEffect(()=>{
     // console.log( inView, entry)
-   update(inView)
-  },[inView,update])
+    if(entry){
+      if(inView){
+        update(entry.intersectionRatio)
+      }else{
+        update(0)
+
+      }
+
+    }
+  },[inView,update,entry])
   return (
        <section className="category" id={category} ref={ref}>
        <div className="category-heading" >
