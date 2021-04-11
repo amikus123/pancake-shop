@@ -1,7 +1,7 @@
 import React,{useEffect}from "react";
 import { HashLink } from 'react-router-hash-link';
 
-function CategoryItem({ type, classes, text, where, active,inView }) {
+function CategoryItem({ type, classes, text, where,inView }) {
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
     const yOffset = -180; 

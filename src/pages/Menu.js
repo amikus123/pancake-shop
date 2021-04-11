@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState } from "react";
-
+import {createListVisible} from "../actions"
 
 import Background from "../components/menu/Background";
 import CategoryList from "../components/menu/nav/CategoryList";
@@ -27,6 +27,7 @@ const useOnScreen = (options) => {
   }, [options, refTop]);
   return [refTop,listOnTop]
 };
+// set up of categories
 
 
 function Menu() {

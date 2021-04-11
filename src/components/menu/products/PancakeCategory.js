@@ -3,6 +3,7 @@ import ProductFrame from "../../general/ProductFrame";
 import { useInView,InView  } from 'react-intersection-observer';
 
 function PancakeCategory({ data,update,vis }) {
+
   const { list, category } = data;
   const { ref, inView, entry } = useInView({
     /* Optional options */

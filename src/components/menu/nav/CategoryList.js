@@ -1,34 +1,37 @@
-import React, {useEffect,useState} from 'react'
-import pancakesData from "../../../data/pancakesData";
-import CategoryItem from './CategoryItem';
+import React, { useEffect } from "react";
+import CategoryItem from "./CategoryItem";
+import { useSelector } from "react-redux";
 
+function CategoryList({ sticky }) {
+  const visibility = useSelector((state) => state.visibility);
+  const categories = useSelector((state) => state.categories);
 
-function CategoryList({sticky,tholds}) {
-  const [categories,setCategories] = useState([])
-  useEffect(()=>{
+  useEffect(() => {
     // stores categories, used for comparing
-    const temp = [];
-    pancakesData.forEach(item=>{
-      if( temp.indexOf(item.category) === -1){
-        temp.push(item.category)
-      }
-    })
-    setCategories(temp);
-  },[])
+  }, []);
   return (
     <div className="save-padding">
- <div className ={`menu-nav ${sticky? "menu-nav-sticky":"menu-nav-relative"}`}>
-      <div className="menu-nav-list">
-        <div className="hidden-layer"></div>
-      {categories.map((item,index)=>{
-        return <CategoryItem text={item} where={"#" + item} key={index} inView={tholds[index]}/>
-      })}
+      <div
+        className={`menu-nav ${
+          sticky ? "menu-nav-sticky" : "menu-nav-relative"
+        }`}
+      >
+        <div className="menu-nav-list">
+          <div className="hidden-layer"></div>
+          {categories.map((item, index) => {
+            return (
+              <CategoryItem
+                text={item.category}
+                where={"#" + item.category}
+                key={index}
+                inView={visibility[index]}
+              />
+            );
+          })}
+        </div>
       </div>
-     
     </div>
-    </div>
-  
-  )
+  );
 }
 
-export default CategoryList
+export default CategoryList;
