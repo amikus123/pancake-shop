@@ -1,5 +1,4 @@
 import React, {forwardRef} from 'react'
-import CategoryList from "./nav/CategoryList";
 const  Background = forwardRef((props,ref) => {
   return (
     <div className="background" ref={ref}> 

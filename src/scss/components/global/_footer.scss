@@ -42,7 +42,7 @@ footer{
       // width:100%;
       // padding:1rem;
       @include f-center;
-      align-items:start;
+      align-items:flex-start;
      >ul{
       margin:0 3rem 0 0;
      }

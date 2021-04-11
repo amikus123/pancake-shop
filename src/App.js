@@ -4,13 +4,14 @@ import { Switch, Route,useLocation } from "react-router-dom";
 import Error from "./pages/Error";
 import Landing from "./pages/Landing";
 import Menu from "./pages/Menu";
-
-// style
-import "./index.css";
 import Header from "./components/singleUse/Header";
 import Footer from "./components/singleUse/Footer";
 
+// style
+import "./index.css";
+
 function App() {
+
   const location = useLocation();
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
           <Error/>
         </Route>
       </Switch>
+      
       <Footer/>
 
   </>

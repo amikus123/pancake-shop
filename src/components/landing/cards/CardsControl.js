@@ -31,11 +31,11 @@ function CardsControl({ number }) {
       console.log(2);
     }, 400);
     return () => clearTimeout(timeout);
-  }, [number]);
+  }, [first.num,number]);
   useEffect(() => {
     setFirst({ num: number - 1, classes: "fisrt first-show" });
     setSecond({ num: number - 1, classes: "second second-show" });
-  }, []);
+  }, [number]);
 
   return (
     <div className="cards-control hide-desktop">

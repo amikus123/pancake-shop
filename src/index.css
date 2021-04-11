@@ -444,7 +444,7 @@ footer .wrapper nav {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
 }
 footer .wrapper nav > ul {
   margin: 0 3rem 0 0;

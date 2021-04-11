@@ -1,21 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProductFrame from "../../general/ProductFrame";
-import PancakeSquare from "./PancakeSquare";
+import { useInView,InView  } from 'react-intersection-observer';
 
-function PancakeCategory({ data }) {
+function PancakeCategory({ data,update,vis }) {
   const { list, category } = data;
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.5,
+  });
+  useEffect(()=>{
+    // console.log( inView, entry)
+   update(inView)
+  },[inView,update])
   return (
-    <section className="category" id={category}>
-      <div className="category-heading" >
-        <h2> {category}</h2>
-      </div>
-      <div className="category-content">
-        { list.map((item,index)=>{
-          // return <PancakeSquare data={item} key={index} />
-          return <ProductFrame product={item} key={index} />
-        })}
-      </div>
-    </section>
+       <section className="category" id={category} ref={ref}>
+       <div className="category-heading" >
+         <h2> {category}</h2>
+         <h2>{`Header inside viewport ${inView}.`}</h2>
+         <h2>{vis}</h2>
+
+       </div>
+       <div className="category-content">
+         { list.map((item,index)=>{
+           // return <PancakeSquare data={item} key={index} />
+           return <ProductFrame product={item} key={index} />
+         })}
+       </div>
+     </section>
+ 
+  
   );
 }
 

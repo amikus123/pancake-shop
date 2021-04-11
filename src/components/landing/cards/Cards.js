@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import CardsControl from './CardsControl';
 import IconsRow from "./CardsIconsRow";
 import CardsFull from "./CardsFull";
 import CardsControl2 from "./CardsControl2";

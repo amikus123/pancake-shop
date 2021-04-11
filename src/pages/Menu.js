@@ -1,4 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {useEffect, useRef, useState } from "react";
+
+
 import Background from "../components/menu/Background";
 import CategoryList from "../components/menu/nav/CategoryList";
 import PancakesFull from "../components/menu/products/PancakesFull";
@@ -6,41 +8,38 @@ import PancakesFull from "../components/menu/products/PancakesFull";
 // custom hook for observer
 const useOnScreen = (options) => {
   // apends to lsit to the op
-  const ref = useRef();
+  const refTop = useRef();
   const [listOnTop, setListOnTop] = useState(true);
   useEffect(() => {
+    // avoid lint mistake of changing drugin execution
+    const temp = refTop.current;
     const observer = new IntersectionObserver(([entry]) => {
       setListOnTop(entry.isIntersecting);
     }, options);
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (temp) {
+      observer.observe(temp);
     }
     return () => {
-      if(ref.current){
-        observer.unobserve(ref.current)
+      if(temp){
+        observer.unobserve(temp)
       }
     };
-  }, [options, ref]);
-  return [ref,listOnTop]
+  }, [options, refTop]);
+  return [refTop,listOnTop]
 };
 
-function Menu({ item }) {
-  // used to show correct modal
-  // useEffect(() => {
-  //   if (item) {
-  //     console.log(item.params.slug);
-  //   } else {
-  //     console.log(item);
-  //   }
-  // }, [item]);
-  // intersection observer for bg
 
-  const [ref, listOnTop] = useOnScreen({threshold:0.5})
+function Menu() {
+
+  // intersection observer for bg
+  const [refTop, listOnTop] = useOnScreen({threshold:0.5})
+  const [tholds,setTholds] = useState([])
+  
   return (
     <main className="menu">
-      <Background ref={ref}/>
-      <CategoryList sticky={!listOnTop}/>
-      <PancakesFull/>
+      <Background ref={refTop}/>
+      <CategoryList sticky={!listOnTop} tholds={tholds}/>
+      <PancakesFull tholds={tholds} setTholds={setTholds}/>
     </main>
   );
 }
