@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import Card from "./CardsItem";
 import cards from "../../../data/cardsData";
 import FirstHero from "../FirstHero";
