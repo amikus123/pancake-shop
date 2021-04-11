@@ -18,14 +18,9 @@ const visibility = (state = [], action) => {
       const copy = state 
       copy[action.payload.index] = action.payload.value
       return copy;
-      return [
-        ...state.slice(0, action.payload.index),
-        action.payload.value,
-        ...state.slice(action.payload.index ),
-      ];
-      return state
     default:
-      return state;
+      const xd = state
+      return xd;
   }
 };
 export default visibility;

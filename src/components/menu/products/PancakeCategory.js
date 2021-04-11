@@ -8,18 +8,18 @@ function PancakeCategory({ data,update,vis }) {
   let { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: [0,0,1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1],
-    rootMargin: "-100px 0px 0px 0px",
+    rootMargin: "-130px 0px 0px 0px",
     // delay:100,
   });
   useEffect(()=>{
     // console.log( inView, entry)
     if(entry){
       if(inView){
-        update(Number(entry.intersectionRatio.toPrecision(1)))
+        update(Number(entry.intersectionRatio.toPrecision(10)))
       }else{
         update(0)
       }
-      console.log(entry)
+      // console.log(entry)
     }
   },[inView,update,entry])
 
