@@ -9,7 +9,7 @@ import Footer from "./components/singleUse/Footer";
 // redux and data
 import pancakesData from "./data/pancakesData";
 import { useDispatch } from 'react-redux'
-import {createListVisible,createCategories} from "./actions"
+import {createListVisible,createCategories, createListVisibleBools} from "./actions"
 
 // style
 import "./index.css";
@@ -42,9 +42,11 @@ function App() {
   })
   dispatch(createCategories(categories))
   dispatch(createListVisible(uniqueNames.length))
+  dispatch(createListVisibleBools(uniqueNames.length))
+
 
   console.log(categories)
-  },[pancakesData,dispatch])
+  },[dispatch])
   return (
     <>
       <Header location={location}/>

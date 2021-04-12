@@ -23,7 +23,7 @@ function PancakesFull({ tholds }) {
             data={category}
             key={index}
             update={updateSingle(index)}
-            vis={tholds[index] + ""}
+            index={index}
           />
         );
       })}

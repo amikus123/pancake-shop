@@ -1,23 +1,21 @@
 const visibility = (state = [], action) => {
   switch (action.type) {
-    case "CREATE VISIBLE LIST":
+    case "CREATE VISIBLEBOOL LIST":
       const ret = [];
       for (let i = 0; i < action.payload.length; i++) {
         if (i === 0) {
           // ret.push(true);
-          ret.push(1);
+          ret.push(true);
 
         } else {
-          ret.push(0);
+          ret.push(false);
 
           // ret.push(false);
         }
       }
       return ret;
-    case "CHANGE VISIBLE LIST":
-      const copy = state 
-      copy[action.payload.index] = action.payload.value
-      return copy;
+    case "CHANGE VISIBLEBOOL LIST":
+      return action.payload.value;
     default:
       return state;
   }

@@ -1,8 +1,13 @@
-export const increment = () =>{
+
+export const createCategories = (obj) =>{
   return{
-    type:"INCREMENT"
+    type:"CREATE CATEGORIES",
+    payload : {
+      obj,
+    }
   }
 }
+
 
 export const createListVisible = (len) =>{
   return{
@@ -21,11 +26,20 @@ export const changeListVisible = (index,value) =>{
     }
   }
 }
-export const createCategories = (obj) =>{
-  return{
-    type:"CREATE CATEGORIES",
-    payload : {
-      obj,
+  ////
+  export const createListVisibleBools = (len) =>{
+    return{
+      type:"CREATE VISIBLEBOOL LIST",
+      payload : {
+        length:len,
+      }
     }
   }
-}
+  export const changeListVisibleBools = (value) =>{
+    return{
+      type:"CHANGE VISIBLEBOOL LIST",
+      payload : {
+        value
+      }
+    }
+  }
