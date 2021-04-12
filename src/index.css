@@ -1792,9 +1792,6 @@ footer .wrapper nav ul li {
 .menu-nav-list > a {
   margin-left: 1.85185vw;
 }
-.menu-nav-list > :nth-child(2) {
-  margin-left: 0;
-}
 .menu-nav-list > :last-child {
   margin-right: 1.85185vw;
 }

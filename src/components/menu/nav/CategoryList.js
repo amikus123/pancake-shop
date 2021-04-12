@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CategoryItem from "./CategoryItem";
-import { useSelector,shallowEqual  } from "react-redux";
+import { useSelector  } from "react-redux";
 
 function CategoryList({ sticky }) {
   const visibility = useSelector((state) => [...state.visibility] );

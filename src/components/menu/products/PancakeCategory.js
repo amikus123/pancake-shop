@@ -27,8 +27,8 @@ function PancakeCategory({ data,update,vis }) {
        <section className="category" id={category} ref={ref}>
        <div className="category-heading" >
          <h2> {category}</h2>
-         <h2>{`Header inside viewport ${inView}.`}</h2>
-         <h2>{entry?entry.intersectionRatio:null}</h2>
+         {/* <h2>{`Header inside viewport ${inView}.`}</h2> */}
+         {/* <h2>{entry?entry.intersectionRatio:null}</h2> */}
 
        </div>
        <div className="category-content">
