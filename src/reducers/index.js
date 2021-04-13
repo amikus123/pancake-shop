@@ -1,4 +1,4 @@
-import visibilityBools from "./visibilityBools";
+import visibilityInt from "./visibilityInt";
 import visibility from "./visibility";
 import categories from "./categories";
 
@@ -8,6 +8,6 @@ import {combineReducers} from "redux";
 const allReducer = combineReducers({
   visibility,
   categories,
-  visibilityBools,
+  visibilityInt,
 })
 export default allReducer;

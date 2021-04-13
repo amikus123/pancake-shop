@@ -11,7 +11,6 @@ function PancakesFull({ tholds }) {
   const updateSingle = (index) => {
     const res = (val) => {
       dispatch(changeListVisible(index,val))
-      // console.log("ZMIANA", index, val);
     };
     return res;
   };

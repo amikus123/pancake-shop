@@ -27,19 +27,28 @@ export const changeListVisible = (index,value) =>{
   }
 }
   ////
-  export const createListVisibleBools = (len) =>{
+  // export const createListVisibleBools = (len) =>{
+  //   return{
+  //     type:"CREATE VISIBLEBOOL LIST",
+  //     payload : {
+  //       length:len,
+  //     }
+  //   }
+  // }
+  export const changeVisibleInt= (value) =>{
     return{
-      type:"CREATE VISIBLEBOOL LIST",
-      payload : {
-        length:len,
-      }
-    }
-  }
-  export const changeListVisibleBools = (value) =>{
-    return{
-      type:"CHANGE VISIBLEBOOL LIST",
+      type:"CHANGE VISIBLEINT",
       payload : {
         value
       }
     }
   }
+  // export const getVisibleBool = (index) =>{
+  //   return{
+  //     type: "GET SINGLE VISIBLEBOOL",
+  //       payload : {
+  //         index
+  //     }
+  //   }
+  // }
+  

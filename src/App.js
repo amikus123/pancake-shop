@@ -9,7 +9,9 @@ import Footer from "./components/singleUse/Footer";
 // redux and data
 import pancakesData from "./data/pancakesData";
 import { useDispatch } from 'react-redux'
-import {createListVisible,createCategories, createListVisibleBools} from "./actions"
+import {createListVisible,createCategories} from "./actions"
+// polyfills
+import smoothscroll from 'smoothscroll-polyfill';
 
 // style
 import "./index.css";
@@ -20,6 +22,8 @@ function App() {
   useEffect(()=>{
     // dispatch(createListVisible(pancakesData.length))
      // geting all category names
+smoothscroll.polyfill();
+
   const uniqueNames = [];
   const categories = [];
 
@@ -42,7 +46,6 @@ function App() {
   })
   dispatch(createCategories(categories))
   dispatch(createListVisible(uniqueNames.length))
-  dispatch(createListVisibleBools(uniqueNames.length))
 
 
   console.log(categories)
