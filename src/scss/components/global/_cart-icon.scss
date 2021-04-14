@@ -1,0 +1,17 @@
+@use '../../abstracts/' as *;
+.cart-element{
+  position:fixed ;
+  width:4rem;
+  height:4rem;
+  background-color: $gold;
+  border-radius:50%;
+  z-index: 200;
+  @include f-center;
+  right:7.5vw;
+  bottom: 7.5vh;
+  > *{
+    width:32px;
+    height: 32px;
+    color:$whiteish;
+  }
+}

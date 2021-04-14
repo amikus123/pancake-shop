@@ -14,6 +14,7 @@ import { createListVisible, createCategories } from "./actions";
 
 // style
 import "./index.css";
+import CartIcon from "./components/singleUse/CartIcon";
 
 function App() {
   const dispatch = useDispatch();
@@ -58,7 +59,7 @@ function App() {
           <Error />
         </Route>
       </Switch>
-
+    <CartIcon/>
       <Footer />
     </>
   );

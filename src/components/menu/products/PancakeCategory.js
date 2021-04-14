@@ -18,10 +18,8 @@ function PancakeCategory({ data, update, index }) {
   let { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: [0, 0, 1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-    rootMargin: "0px 0px 0px 0px",
-    delay:100,
-    trackVisibility:true
-
+    rootMargin: "64px 0px 0px 0px",
+    delay:500,
   });
 
   useEffect(() => {
@@ -32,18 +30,19 @@ function PancakeCategory({ data, update, index }) {
 
     // prevents the crash when the emtry is und
     if (entry) {
-        console.log(entry) 
-
+      if(entry.intersectionRect.height !==0){
+        console.log(index,entry.intersectionRect.height,entry) 
+      }
       // nie zmieniam danych jesli sa takie same
       if (
-        Number(entry.intersectionRatio.toPrecision(10)) !== visibility[index]
+        entry.intersectionRect.height !== visibility[index]
       ) {
 
         // console.log(entry.intersectionRatio.toPrecision(10),visibility[index], entry.intersectionRatio.toPrecision(10) !== visibility[index]);
         dispatch(
           changeListVisible(
             index,
-            Number(entry.intersectionRatio.toPrecision(10))
+            entry.intersectionRect.height
           )
         );
       }

@@ -61,7 +61,7 @@
   }
   &-data {
     @include f-space(row);
-    padding: 1rem 1rem;
+    padding: 0.25rem 1rem;
     flex: 1;
 
     // height: 3.6875em;
@@ -74,13 +74,23 @@
       font-size: 1.125rem;
       color: $dark;
     }
-    &-price {
-      width: 25%;
-      color: $red;
+    &-wrap{
+      @include f-space(column);
+      width: 30%;
 
-      @include bn;
-      text-align: right;
-      font-size: 1.25rem;
+      >svg{
+        // icon
+        width:24px;
+        height: 24px;
+        color: $red;
+
+      }
+      &-price {
+        color: $red;
+
+        @include bn;
+        text-align: right;
+      }
     }
   }
   // tu bede dawac rozmiary

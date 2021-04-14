@@ -1,9 +1,14 @@
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { FaCartPlus } from "react-icons/fa";
 
 function ProductFrame({ product, classes }) {
   const { name, img, price, rating } = product;
+  const handleClick = (e) =>{
+    e.preventDefault()
+    console.log(11)
+  }
   return (
     <Link to="/a" className={`frame ${classes}`}>
       <div className="frame-img">
@@ -19,7 +24,10 @@ function ProductFrame({ product, classes }) {
       </div>
       <div className="frame-data">
         <span className="frame-data-name">{name}</span>
-        <span className="frame-data-price">{price} zł</span>
+        <div className="frame-data-wrap" onClick={handleClick}>
+          <span className="frame-data-wrap-price">{price} zł</span>
+          <FaCartPlus />
+        </div>
       </div>
     </Link>
   );

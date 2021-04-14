@@ -13,7 +13,7 @@ const myStore = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 ReactDOM.render(
-  <React.StrictMode>22
+  <React.StrictMode>
     <Provider store={myStore}>
     <Router>
       <ScrollToTop>
