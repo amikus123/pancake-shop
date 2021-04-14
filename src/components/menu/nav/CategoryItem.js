@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { changeForcedNumber } from "../../../actions";
 
 const CategoryItem = React.forwardRef((props, ref) => {
-  const { text, where, inView, index, classes } = props;
-  const [center, setCenter] = useState(false);
+  const { text, where, index, classes } = props;
   const visibilityInt = useSelector((state) => state.visibilityInt);
+  const forcedNumber = useSelector((state) => state.forcedNumber);
+  const dispatch = useDispatch();
+
   // scrols to correct category on click
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
@@ -14,36 +17,43 @@ const CategoryItem = React.forwardRef((props, ref) => {
   };
 
   useEffect(() => {
-    console.log("RERENDER")
+    console.log(forcedNumber);
+    if (visibilityInt === index && ref && forcedNumber === -1) {
+      console.log("srodkuk w");
+      ref.current.scrollIntoView({
+        behavior: "auto",
+        block: "nearest",
+        inline: "center",
+      });
+    }
+  }, [index, ref, visibilityInt, forcedNumber]);
 
-    if((visibilityInt === index) && ref){
-        console.log("srodkuk w")
-        ref.current.scrollIntoView({
-          behavior: 'instant',
-          inline : 'center',
-          block:"nearest"
-        });
-   
-
-   
-  }}, [index,ref,visibilityInt]);
   const handleClick = () => {
-    console.log(1, ref.current);
-    const element = ref.current
-    if (ref.current) 
-    {
-    setTimeout(()=>{
-      console.log(1, element);
-      const options = { behavior: 'instant', block: 'nearest', inline: 'center' }
-            element.scrollIntoView(options);
-          },0)
-        }
+    if (ref.current) {
+      dispatch(changeForcedNumber(index));
+      ref.current.scrollIntoView({
+        behavior: "auto",
+        block: "nearest",
+        inline: "center",
+      });
+    }
   };
+  //
+  // }
+  // ${forcedNumber === index?"button-nav-active" : ""}
   return (
     <HashLink
       className={`button-nav ${classes} ${
-        (visibilityInt === index) ? "button-nav-active" : "button-nav-inactive"
-      }`}
+        // first situation is when user has not clciked
+        forcedNumber === -1
+          ? visibilityInt === index
+            ? "button-nav-active"
+            : "button-nav-inactive"
+          : forcedNumber === index
+          ? "button-nav-active"
+          : "button-nav-inactive"
+      }
+      `}
       to={where}
       scroll={scrollWithOffset}
       onClick={handleClick}

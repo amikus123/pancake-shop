@@ -7,8 +7,6 @@ export const createCategories = (obj) =>{
     }
   }
 }
-
-
 export const createListVisible = (len) =>{
   return{
     type:"CREATE VISIBLE LIST",
@@ -26,15 +24,6 @@ export const changeListVisible = (index,value) =>{
     }
   }
 }
-  ////
-  // export const createListVisibleBools = (len) =>{
-  //   return{
-  //     type:"CREATE VISIBLEBOOL LIST",
-  //     payload : {
-  //       length:len,
-  //     }
-  //   }
-  // }
   export const changeVisibleInt= (value) =>{
     return{
       type:"CHANGE VISIBLEINT",
@@ -43,12 +32,11 @@ export const changeListVisible = (index,value) =>{
       }
     }
   }
-  // export const getVisibleBool = (index) =>{
-  //   return{
-  //     type: "GET SINGLE VISIBLEBOOL",
-  //       payload : {
-  //         index
-  //     }
-  //   }
-  // }
-  
+  export const changeForcedNumber= (value) =>{
+    return{
+      type:"NUMBER CHANGED",
+      payload : {
+        value
+      }
+    }
+  }
