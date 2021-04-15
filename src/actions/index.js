@@ -40,3 +40,11 @@ export const changeListVisible = (index,value) =>{
       }
     }
   }
+  export const addItemToCart= (obj) =>{
+    return{
+      type:"ADD ITEM",
+      payload : {
+        obj
+      }
+    }
+  }

@@ -20,9 +20,7 @@ function App() {
   const dispatch = useDispatch();
   const location = useLocation();
   useEffect(() => {
-    // dispatch(createListVisible(pancakesData.length))
-    // geting all category names
-    // smoothscroll.polyfill();
+    //  initizalization of base state
 
     const uniqueNames = [];
     const categories = [];
