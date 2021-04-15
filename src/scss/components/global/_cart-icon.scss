@@ -1,17 +1,70 @@
 @use '../../abstracts/' as *;
-.cart-element{
-  position:fixed ;
-  width:4rem;
-  height:4rem;
+.cart {
+  cursor: pointer;
+  position: fixed;
+
+  width: 4rem;
+  height: 4rem;
   background-color: $gold;
-  border-radius:50%;
+  border-radius: 50%;
   z-index: 200;
   @include f-center;
-  right:7.5vw;
+  right: 7.5vw;
   bottom: 7.5vh;
-  > *{
-    width:32px;
+  > svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
     height: 32px;
-    color:$whiteish;
+    color: $whiteish;
+    z-index: 100;
+  }
+  &-overlay {
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all 1s;
+    background-color: rgba(179, 56, 56, 0.111);
+    position: absolute;
+    // bottom: -10px;
+    // right: -10px;
+    &-opened {
+      background-color: rgba(0, 0, 255, 0.644);
+      width: 1000px;
+      height: 1000px;
+
+      @keyframes shit {
+      }
+      animation: shit forwards;
+    }
+    &-closed {
+      background-color: rgba(0, 128, 0, 0.411);
+      width: 0px;
+      height: 0px;
+      @keyframes shit {
+
+      }
+      animation: shat forwards;
+    }
+    &-list {
+      position: absolute;
+      right: 50%;
+      bottom: 50%;
+      transform: translate(50%,-1%);
+      width: 100px;
+      height: 400px;
+      background-color: rgba(0, 255, 255, 0.405);
+      > svg {
+        box-sizing: content-box;
+        padding: 1rem;
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        width: 32px;
+        height: 32px;
+        color: $whiteish;
+      }
+    }
   }
 }

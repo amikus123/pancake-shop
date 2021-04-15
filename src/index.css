@@ -683,6 +683,7 @@ footer .wrapper nav ul li {
 }
 .frame-data-wrap-price {
   color: #801d14;
+  margin-bottom: 0.5rem;
   font-size: 1.125rem;
   font-weight: 700;
   font-family: "Lusitana", serif;
@@ -928,7 +929,8 @@ footer .wrapper nav ul li {
 962x601 (3.2%)
 
  */
-.cart-element {
+.cart {
+  cursor: pointer;
   position: fixed;
   width: 4rem;
   height: 4rem;
@@ -942,7 +944,52 @@ footer .wrapper nav ul li {
   right: 7.5vw;
   bottom: 7.5vh;
 }
-.cart-element > * {
+.cart > svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  color: #f3f3f3;
+  z-index: 100;
+}
+.cart-overlay {
+  overflow: hidden;
+  border-radius: 50%;
+  transition: all 1s;
+  background-color: rgba(179, 56, 56, 0.111);
+  position: absolute;
+}
+.cart-overlay-opened {
+  background-color: rgba(0, 0, 255, 0.644);
+  width: 1000px;
+  height: 1000px;
+  animation: shit forwards;
+}
+@keyframes shit {}
+.cart-overlay-closed {
+  background-color: rgba(0, 128, 0, 0.411);
+  width: 0px;
+  height: 0px;
+  animation: shat forwards;
+}
+@keyframes shit {}
+.cart-overlay-list {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, -1%);
+  width: 100px;
+  height: 400px;
+  background-color: rgba(0, 255, 255, 0.405);
+}
+.cart-overlay-list > svg {
+  box-sizing: content-box;
+  padding: 1rem;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
   width: 32px;
   height: 32px;
   color: #f3f3f3;
@@ -1884,7 +1931,7 @@ footer .wrapper nav ul li {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  transition: all 0.4s ease-in, border 0s ease-in-out;
+  transition: all 1s ease-out, border 0s ease-in-out, color 0s ease-in-out;
   height: 40px;
   border-radius: 10px;
   padding: 0 1.5rem;

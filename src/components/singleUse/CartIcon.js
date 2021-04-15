@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from "react";
+import { FaShoppingCart } from "react-icons/fa";
+import { GrClose } from "react-icons/gr";
 
-import { FaShoppingCart } from 'react-icons/fa';
-
+import CartOverlay from "./CartOverlay";
 function CartIcon() {
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    console.log(2);
+    setOpen(!open);
+  };
   return (
-    <div className="cart-element">
-      <FaShoppingCart/>
+    <div className="cart" onClick={handleClick}>
+      {open ? < GrClose/> : <FaShoppingCart />}
+      <CartOverlay opened={open} />
     </div>
-  )
+  );
 }
 
-export default CartIcon
+export default CartIcon;
