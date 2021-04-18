@@ -27,6 +27,14 @@
           state[itemIndex].amount++;
         }
         return state;
+      case "REMOVE ITEM":
+        const itemIndexRemove = checkIfInside(action.payload.obj.name)
+        state[itemIndexRemove].amount--;
+        if(state[itemIndexRemove].amount <=0){
+          state.splice(itemIndexRemove,1)
+        }
+       
+        return state
       default:
         return state;
     }

@@ -7,7 +7,7 @@
   height: 4rem;
   background-color: $gold;
   border-radius: 50%;
-  z-index: 200;
+  z-index: 50;
   @include f-center;
   right: 7.5vw;
   bottom: 7.5vh;
@@ -20,51 +20,88 @@
     height: 32px;
     color: $whiteish;
     z-index: 100;
+    path {
+      stroke: inherit;
+    }
+    .close{
+      color:blue;
+    }
   }
   &-overlay {
     overflow: hidden;
+    pointer-events: none;
     border-radius: 50%;
     transition: all 1s;
-    background-color: rgba(179, 56, 56, 0.111);
+    background-color: rgba(179, 56, 56, 0);
     position: absolute;
     // bottom: -10px;
     // right: -10px;
     &-opened {
-      background-color: rgba(0, 0, 255, 0.644);
-      width: 1000px;
-      height: 1000px;
+      // background-color: rgba(0, 0, 255, 0.644);
+      width: 1500px;
+      height: 1500px;
 
       @keyframes shit {
       }
       animation: shit forwards;
     }
     &-closed {
-      background-color: rgba(0, 128, 0, 0.411);
       width: 0px;
       height: 0px;
       @keyframes shit {
-
       }
       animation: shat forwards;
     }
     &-list {
-      position: absolute;
+      position: inherit;
       right: 50%;
       bottom: 50%;
-      transform: translate(50%,-1%);
-      width: 100px;
-      height: 400px;
-      background-color: rgba(0, 255, 255, 0.405);
-      > svg {
-        box-sizing: content-box;
-        padding: 1rem;
-        position: absolute;
-        bottom: 8px;
-        right: 8px;
-        width: 32px;
-        height: 32px;
-        color: $whiteish;
+      pointer-events: auto;
+      transform: translate(15%, 10%);
+      width: 340px;
+      height: 540px;
+      border-radius: 10px;
+      border: 2px solid $gold;
+      background-color: $whiteish;
+      @include f-space(column);
+      padding-bottom: 75px;
+      ul{
+        width:80%;
+        padding-top: 1rem;
+        overflow: auto;
+        li {
+          @include f-space();
+          width:100%;
+          padding: 0.5rem 0;
+          p {
+            @include th(700);
+            font-size: 1.25rem;
+          }
+          div {
+            @include f-space;
+            .plus{
+              padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+            }
+            .minus{
+              padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+            }
+            svg {
+              box-sizing: content-box;
+              height: 1.5rem;
+              width:1.5rem;
+              cursor: pointer;
+            }
+            span {
+              @include th(700);
+              font-size: 1.5rem;
+              margin:0 0.25rem;
+            }
+          }
+        }
       }
+   a{
+     margin: 0.25rem 0;
+   }
     }
   }
 }

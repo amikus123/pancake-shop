@@ -31,7 +31,7 @@ function PancakeCategory({ data, update, index }) {
     // prevents the crash when the emtry is und
     if (entry) {
       if(entry.intersectionRect.height !==0){
-        console.log(index,entry.intersectionRect.height,entry) 
+        // console.log(index,entry.intersectionRect.height,entry) 
       }
       // nie zmieniam danych jesli sa takie same
       if (
@@ -49,7 +49,7 @@ function PancakeCategory({ data, update, index }) {
       // update visible int
       if (biggest(visibility).index !== visibilityInt) {
         // console.log(biggest(visibility).index,visibilityInt,biggest(visibility).index !== visibilityInt );
-        console.log("pwwinno sie zmienic")
+        // console.log("pwwinno sie zmienic")
         dispatch(changeVisibleInt(biggest(visibility).index));
       }
       if(biggest(visibility).index === forcedNumber){

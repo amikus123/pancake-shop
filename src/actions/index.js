@@ -48,3 +48,11 @@ export const changeListVisible = (index,value) =>{
       }
     }
   }
+  export const removeItemFromCart= (obj) =>{
+    return{
+      type:"REMOVE ITEM",
+      payload : {
+        obj
+      }
+    }
+  }

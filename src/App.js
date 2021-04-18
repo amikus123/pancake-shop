@@ -14,7 +14,7 @@ import { createListVisible, createCategories } from "./actions";
 
 // style
 import "./index.css";
-import CartIcon from "./components/singleUse/CartIcon";
+import CartIcon from "./components/singleUse/Cart/CartIcon";
 
 function App() {
   const dispatch = useDispatch();

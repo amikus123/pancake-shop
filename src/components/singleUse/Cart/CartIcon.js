@@ -11,7 +11,7 @@ function CartIcon() {
   };
   return (
     <div className="cart" onClick={handleClick}>
-      {open ? < GrClose/> : <FaShoppingCart />}
+      {open ? < GrClose stroke="#a16720" /> : <FaShoppingCart />}
       <CartOverlay opened={open} />
     </div>
   );

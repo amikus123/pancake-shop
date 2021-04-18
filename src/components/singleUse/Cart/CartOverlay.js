@@ -1,4 +1,5 @@
 import React from 'react'
+import CartContent from './CartContent'
 
 function CartOverlay({opened}) {
   const preventClosing=(e)=>{
@@ -8,9 +9,7 @@ function CartOverlay({opened}) {
   }
   return (
     <div className={`cart-overlay cart-overlay-${opened?"opened":"closed"}` }onClick={preventClosing}>
-      <div className="cart-overlay-list">
-      
-      </div>
+<CartContent/>
     </div>
   )
 }

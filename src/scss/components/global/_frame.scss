@@ -69,7 +69,7 @@
     width: 100%;
     &-name {
       width: 70%;
-      @include st(700);
+      @include th(700);
       text-align: left;
       font-size: 1.125rem;
       color: $dark;
