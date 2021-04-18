@@ -10,7 +10,7 @@
   z-index: 50;
   @include f-center;
   right: 7.5vw;
-  bottom: 7.5vh;
+  bottom: 10vh;
   > svg {
     position: absolute;
     left: 50%;
@@ -52,30 +52,42 @@
       }
       animation: shat forwards;
     }
+    .empty-cart{
+      @include f-center(column);
+  
+      p {
+        @include th(700);
+        padding-bottom:1rem;
+        font-size: 1.25rem;
+      }
+    }
     &-list {
+   
       position: inherit;
       right: 50%;
       bottom: 50%;
       pointer-events: auto;
       transform: translate(15%, 10%);
       width: 340px;
-      height: 540px;
+      height: 560px;
+      max-height: calc(90vh - 50px);
       border-radius: 10px;
       border: 2px solid $gold;
       background-color: $whiteish;
       @include f-space(column);
       padding-bottom: 75px;
       ul{
-        width:80%;
+        width:90%;
         padding-top: 1rem;
         overflow: auto;
         li {
           @include f-space();
-          width:100%;
-          padding: 0.5rem 0;
+          width:95%;
+          padding: 0.5rem 0 1rem;
           p {
             @include th(700);
             font-size: 1.25rem;
+            max-width: 150px;
           }
           div {
             @include f-space;

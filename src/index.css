@@ -195,12 +195,12 @@ main > :first-child {
   }
   .header nav ul li a {
     text-transform: uppercase;
-    color: #a16720;
     font-size: 2.25rem;
     font-weight: 600;
     font-family: "Raleway", sans-serif;
     text-align: center;
     color: #131313;
+    color: #a16720;
     transition: color 0.2s ease-in-out;
   }
   .header nav .logo {
@@ -942,7 +942,7 @@ footer .wrapper nav ul li {
   justify-content: center;
   flex-direction: row;
   right: 7.5vw;
-  bottom: 7.5vh;
+  bottom: 10vh;
 }
 .cart > svg {
   position: absolute;
@@ -980,6 +980,19 @@ footer .wrapper nav ul li {
   animation: shat forwards;
 }
 @keyframes shit {}
+.cart-overlay .empty-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cart-overlay .empty-cart p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+}
 .cart-overlay-list {
   position: inherit;
   right: 50%;
@@ -987,7 +1000,8 @@ footer .wrapper nav ul li {
   pointer-events: auto;
   transform: translate(15%, 10%);
   width: 340px;
-  height: 540px;
+  height: 560px;
+  max-height: calc(90vh - 50px);
   border-radius: 10px;
   border: 2px solid #a16720;
   background-color: #f3f3f3;
@@ -998,7 +1012,7 @@ footer .wrapper nav ul li {
   padding-bottom: 75px;
 }
 .cart-overlay-list ul {
-  width: 80%;
+  width: 90%;
   padding-top: 1rem;
   overflow: auto;
 }
@@ -1007,14 +1021,15 @@ footer .wrapper nav ul li {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  width: 100%;
-  padding: 0.5rem 0;
+  width: 95%;
+  padding: 0.5rem 0 1rem;
 }
 .cart-overlay-list ul li p {
   font-size: 1.5rem;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   font-size: 1.25rem;
+  max-width: 150px;
 }
 .cart-overlay-list ul li div {
   display: flex;

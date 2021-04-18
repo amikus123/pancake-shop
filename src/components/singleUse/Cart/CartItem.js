@@ -3,7 +3,7 @@ import { FaPlus,FaMinus } from "react-icons/fa";
 import {useDispatch } from "react-redux";
 import { addItemToCart,removeItemFromCart } from "../../../actions";
 function CartItem({item}) {
-  const {name,price} = item.product;
+  const {name} = item.product;
   const dispatch = useDispatch();
 
   return (

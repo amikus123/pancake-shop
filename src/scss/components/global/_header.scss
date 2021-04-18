@@ -45,8 +45,8 @@
           padding: 0 0 3.1875rem 0;
           a {
             text-transform: uppercase;
-            color: $gold;
             @include sh();
+            color: $gold;
             transition: color 0.2s ease-in-out;
           }
         }
