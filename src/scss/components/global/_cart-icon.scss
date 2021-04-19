@@ -1,4 +1,5 @@
 @use '../../abstracts/' as *;
+
 .cart {
   cursor: pointer;
   position: fixed;
@@ -11,6 +12,15 @@
   @include f-center;
   right: 7.5vw;
   bottom: 10vh;
+ 
+  // >span{
+  //   z-index: 100;
+  //   color:$red;
+  //   @include bn(700);
+  //   font-size: 2rem;
+  //   margin-left:1.5rem;
+  //   margin-top:1rem;;
+  // }
   > svg {
     position: absolute;
     left: 50%;
@@ -31,26 +41,33 @@
     overflow: hidden;
     pointer-events: none;
     border-radius: 50%;
-    transition: all 1s;
+    transition: all 0.75s ease-out;
     background-color: rgba(179, 56, 56, 0);
     position: absolute;
-    // bottom: -10px;
-    // right: -10px;
+    // prenet blue rect
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+     outline-style:none;
+    -webkit-tap-highlight-color: transparent;
+    &:focus{
+      outline: none!important;;
+
+    }
     &-opened {
       // background-color: rgba(0, 0, 255, 0.644);
       width: 1500px;
       height: 1500px;
 
-      @keyframes shit {
-      }
-      animation: shit forwards;
     }
     &-closed {
       width: 0px;
       height: 0px;
       @keyframes shit {
       }
-      animation: shat forwards;
     }
     .empty-cart{
       @include f-center(column);
@@ -69,10 +86,11 @@
       pointer-events: auto;
       transform: translate(15%, 10%);
       width: 340px;
+      max-width:90vw;
       height: 560px;
-      max-height: calc(90vh - 50px);
+      max-height: calc(85vh - 50px);
       border-radius: 10px;
-      border: 2px solid $gold;
+      border: 1px solid $gold;
       background-color: $whiteish;
       @include f-space(column);
       padding-bottom: 75px;
@@ -82,7 +100,7 @@
         overflow: auto;
         li {
           @include f-space();
-          width:95%;
+          // width:95%;
           padding: 0.5rem 0 1rem;
           p {
             @include th(700);

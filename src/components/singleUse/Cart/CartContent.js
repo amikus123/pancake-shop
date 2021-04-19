@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 
 
-function CartContent() {
+function CartContent({closeCart}) {
   const cart = useSelector((state) => [...state.cart]);
 
   return (
@@ -17,7 +17,7 @@ function CartContent() {
          The cart is empty!
        </p>
        <p>You can change that</p>
-       <Button text={"HERE"} location={"/menu"} component={Menu} type={"red"} />
+       <Button text={"HERE"} location={"/menu"} component={Menu} type={"red"} onClick={closeCart} />
 
        </>
        :

@@ -73,6 +73,9 @@
       text-align: left;
       font-size: 1.125rem;
       color: $dark;
+      >span{
+        color:$red;
+      }
     }
     &-wrap{
       @include f-space(column);

@@ -10,9 +10,9 @@
 
   @include f-center(column);
   .text-wrap {
-    height: 70%;
+    height: 50%;
     width: 80%;
-    @include f-center(column);
+    @include f-space(column);
 
     h4,
     h3,

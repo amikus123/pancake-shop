@@ -669,6 +669,9 @@ footer .wrapper nav ul li {
   font-size: 1.125rem;
   color: #131313;
 }
+.frame-data-name > span {
+  color: #801d14;
+}
 .frame-data-wrap {
   display: flex;
   align-items: center;
@@ -964,20 +967,28 @@ footer .wrapper nav ul li {
   overflow: hidden;
   pointer-events: none;
   border-radius: 50%;
-  transition: all 1s;
+  transition: all 0.75s ease-out;
   background-color: rgba(179, 56, 56, 0);
   position: absolute;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.cart-overlay:focus {
+  outline: none !important;
 }
 .cart-overlay-opened {
   width: 1500px;
   height: 1500px;
-  animation: shit forwards;
 }
-@keyframes shit {}
 .cart-overlay-closed {
   width: 0px;
   height: 0px;
-  animation: shat forwards;
 }
 @keyframes shit {}
 .cart-overlay .empty-cart {
@@ -1000,10 +1011,11 @@ footer .wrapper nav ul li {
   pointer-events: auto;
   transform: translate(15%, 10%);
   width: 340px;
+  max-width: 90vw;
   height: 560px;
-  max-height: calc(90vh - 50px);
+  max-height: calc(85vh - 50px);
   border-radius: 10px;
-  border: 2px solid #a16720;
+  border: 1px solid #a16720;
   background-color: #f3f3f3;
   display: flex;
   align-items: center;
@@ -1021,7 +1033,6 @@ footer .wrapper nav ul li {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  width: 95%;
   padding: 0.5rem 0 1rem;
 }
 .cart-overlay-list ul li p {
@@ -1319,11 +1330,11 @@ footer .wrapper nav ul li {
   flex-direction: column;
 }
 .final-cta .text-wrap {
-  height: 70%;
+  height: 50%;
   width: 80%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 .final-cta .text-wrap h4,

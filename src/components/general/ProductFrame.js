@@ -1,18 +1,29 @@
-import React from "react";
+import React,{useState} from "react";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { FaCartPlus } from "react-icons/fa";
+import { FaCartPlus, FaGalacticSenate } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../.../../../actions";
 
 function ProductFrame({ product, classes }) {
   const { name, img, price, rating } = product;
   const dispatch = useDispatch();
+  const [clicked,setClicked] = useState(false)
+  const [timeoutID,setTimeoutId] = useState(0)
 
+  const revert= ()=>{
+    setClicked(false)
+  }
   const handleClick = (e) =>{
     e.preventDefault();
     console.log("S")
     dispatch(addItemToCart(product));
+    setClicked(true)
+    if(timeoutID!==0){
+      clearTimeout(timeoutID)
+    }
+    const x = setTimeout(revert,1500)
+    setTimeoutId(x)
 
   }
   return (
@@ -29,7 +40,9 @@ function ProductFrame({ product, classes }) {
         </div>
       </div>
       <div className="frame-data">
-        <span className="frame-data-name">{name}</span>
+        <span className="frame-data-name">
+    {clicked?<span>Item added</span>:name}
+          </span>
         <div className="frame-data-wrap" onClick={handleClick}>
           <span className="frame-data-wrap-price">{price} zł</span>
           <FaCartPlus  />
