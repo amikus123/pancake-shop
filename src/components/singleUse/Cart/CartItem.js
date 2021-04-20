@@ -1,30 +1,38 @@
-import React from 'react'
-import { FaPlus,FaMinus } from "react-icons/fa";
-import {useDispatch } from "react-redux";
-import { addItemToCart,removeItemFromCart } from "../../../actions";
-function CartItem({item}) {
-  const {name} = item.product;
+import React from "react";
+import { FaPlus, FaMinus } from "react-icons/fa";
+import { IoTrashBinSharp } from "react-icons/io5";
+
+import { useDispatch } from "react-redux";
+import { addItemToCart, removeItemFromCart ,removeAllOfItemFromCart} from "../../../actions";
+function CartItem({ item }) {
+  const { name, img, price } = item.product;
   const dispatch = useDispatch();
 
   return (
-    <li> 
-      {/* <img src={img}/> */}
+    <li className="cart-item">
+      <img src={img} alt="item" />
 
-    <p>
-    {name}
-    </p>
-    <div>
-    <FaPlus className="plus"  onClick={()=>dispatch(addItemToCart(item.product))}/>
-    <span>
+      <div className="text-wrap">
+        <p>{name}</p>
 
-    {item.amount}
-
-    </span>
-    <FaMinus className="minus"  onClick={()=>dispatch(removeItemFromCart(item.product))}/>
-    </div>
-
+        <div className="interaction-wrap">
+          <div className="amount">
+            <FaPlus
+              className="plus"
+              onClick={() => dispatch(addItemToCart(item.product))}
+            />
+            <span>{item.amount}</span>
+            <FaMinus
+              className="minus"
+              onClick={() => dispatch(removeItemFromCart(item.product))}
+            />
+          </div>
+          <span className="price">{price} zł</span>
+      <IoTrashBinSharp onClick={()=>{dispatch(removeAllOfItemFromCart(item.product))}} />
+        </div>
+      </div>
     </li>
-  )
+  );
 }
 
-export default CartItem
+export default CartItem;

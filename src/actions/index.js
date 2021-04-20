@@ -56,3 +56,12 @@ export const changeListVisible = (index,value) =>{
       }
     }
   }
+
+  export const removeAllOfItemFromCart= (obj) =>{
+    return{
+      type:"REMOVE ALL OF ITEM",
+      payload : {
+        obj
+      }
+    }
+  }
