@@ -1,9 +1,10 @@
 import React, { useEffect,useState } from "react";
 import { Link } from "react-router-dom";
 import MenuButton from "../general/MenuButton";
+import CartIcon from "./Cart/CartIcon";
 // it solves the issue of react router links  to working with links to id
 
-function Header({location}) {
+function Header({location,handleClick}) {
   // const [location, setLocation] = useState( useLocation());
   const [offset, setOffset] = useState(false);
   // useEffect(() => {
@@ -13,7 +14,6 @@ function Header({location}) {
   useEffect(()=>{
     // temporary solution, not efficient
   if(location.pathname === "/"){
-
     window.onscroll = () => {
       if(window.pageYOffset  <100){
         setOffset(false)
@@ -22,10 +22,11 @@ function Header({location}) {
       }
     } }
   },[location.pathname])
+  // <header className={`header ${(location.pathname ==="/" ) && "header__trans"} ${offset && "header__full"}`}  >
 
   return (
     // transparency is given on main page
-    <header className={`header ${(location.pathname ==="/") && "header__trans"} ${offset && "header__full"}`} >
+    <header className={`header ${(location.pathname ==="/" )? offset?"header__full":"header__trans":"header__full"}`}>
       <nav>
         <MenuButton  />
         <Link to="/" className="logo">
@@ -51,6 +52,9 @@ function Header({location}) {
             <Link to="/contact">
               Contact us
             </Link>
+          </li>
+          <li >
+            <CartIcon location="header" handleClick={handleClick}/>
           </li>
         </ul>
       </nav>

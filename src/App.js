@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
 //components
 import Error from "./pages/Error";
@@ -14,11 +14,19 @@ import { createListVisible, createCategories } from "./actions";
 
 // style
 import "./index.css";
-import CartIcon from "./components/singleUse/Cart/CartIcon";
+import CartFixed from "./components/singleUse/Cart/CartFixed";
 
 function App() {
   const dispatch = useDispatch();
   const location = useLocation();
+  // for cart
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    console.log("bla bla")
+    setOpen(!open);
+    
+
+  };
   useEffect(() => {
     //  initizalization of base state
 
@@ -49,7 +57,7 @@ function App() {
   }, [dispatch]);
   return (
     <>
-      <Header location={location} />
+      <Header location={location} handleClick={handleClick}/>
       <Switch>
         <Route path="/menu" component={Menu}></Route>
         <Route path="/" exact component={Landing}></Route>
@@ -57,7 +65,7 @@ function App() {
           <Error />
         </Route>
       </Switch>
-    <CartIcon/>
+    <CartFixed handleClick={handleClick} open={open}/>
       <Footer />
     </>
   );

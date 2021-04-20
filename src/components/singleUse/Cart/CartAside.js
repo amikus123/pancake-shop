@@ -34,7 +34,7 @@ function CartAside({ open, setOpen }) {
           <span>Your cart is empty</span>
           <Button
             text={"BACK TO SHOP"}
-            type={"red"}
+            type={"trans"}
             onClick={() => {
               setOpen(false);
             }}
@@ -55,7 +55,7 @@ function CartAside({ open, setOpen }) {
               <span className="price-amount">{totalPrice} zł</span>
             </div>
             <Button
-              text={"BACK TO SHOP"}
+              text={"CHECKOUT"}
               type={"red"}
               onClick={() => {
                 setOpen(false);
@@ -63,7 +63,7 @@ function CartAside({ open, setOpen }) {
             />
             <Button
               text={"BACK TO SHOP"}
-              type={"red"}
+              type={"trans"}
               onClick={() => {
                 setOpen(false);
               }}

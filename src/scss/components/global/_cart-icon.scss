@@ -1,5 +1,43 @@
 @use '../../abstracts/' as *;
 
+
+.cart-icon{
+  position: relative;
+  width: 32px;
+  height: 32px;
+
+  >span{
+    z-index: 100;
+    color:$gold;
+    @include bn(700);
+    font-size: 1.125rem;
+    position: absolute;
+    // margin-left:.5rem;
+    right:40%;
+    top:50%;
+    transform: translate(50%,-58%);
+  transition: all .2s ease-in-out;
+
+  }
+  > svg {
+  transition: all .2s ease-in-out;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 42px;
+    height: 42px;
+    color: $whiteish;
+    z-index: 100;
+    path {
+  transition: all .2s ease-in-out;
+
+      stroke: inherit;
+    }
+  }
+}
+
 .cart {
   cursor: pointer;
   position: fixed;
@@ -14,30 +52,7 @@
   bottom: 10vh;
   
   
-  >span{
-    z-index: 100;
-    color:$red;
-    @include bn(700);
-    font-size: 1rem;
-    margin-left:.5rem;
-    margin-bottom:0.25rem;;
-  }
-  > svg {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 32px;
-    height: 32px;
-    color: $whiteish;
-    z-index: 100;
-    path {
-      stroke: inherit;
-    }
-    .close{
-      color:blue;
-    }
-  }
+  
   &-overlay {
     overflow: hidden;
     pointer-events: none;

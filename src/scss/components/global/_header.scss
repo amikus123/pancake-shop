@@ -81,6 +81,10 @@
   }
   @include breakpoint-up(medium) {
     transition: all 0.4s ease-in-out;
+    
+
+
+
  a{
    color:$gold;
  }
@@ -116,6 +120,7 @@
           }
         }
       }
+
     &__full{
       background-color:$whiteish;
       nav {
@@ -127,7 +132,16 @@
             a {
               color: $gold;
             }
+            .cart-header{
+              svg{
+                color: $gold;
+              }
+              span{
+                color:$whiteish;
+              }
+            }
           }
+
         }
         .menu-icon {
           span {

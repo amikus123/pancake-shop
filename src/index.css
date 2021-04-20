@@ -260,6 +260,12 @@ main > :first-child {
   .header__full nav ul li a {
     color: #a16720;
   }
+  .header__full nav ul li .cart-header svg {
+    color: #a16720;
+  }
+  .header__full nav ul li .cart-header span {
+    color: #f3f3f3;
+  }
   .header__full nav .menu-icon span {
     background-color: #a16720;
   }
@@ -510,6 +516,7 @@ footer .wrapper nav ul li {
 .button {
   border-radius: 10px;
   padding: 10px 20px;
+  box-sizing: content-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -932,6 +939,40 @@ footer .wrapper nav ul li {
 962x601 (3.2%)
 
  */
+.cart-icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+.cart-icon > span {
+  z-index: 100;
+  color: #a16720;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Lusitana", serif;
+  font-size: 1.125rem;
+  position: absolute;
+  right: 40%;
+  top: 50%;
+  transform: translate(50%, -58%);
+  transition: all 0.2s ease-in-out;
+}
+.cart-icon > svg {
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 42px;
+  height: 42px;
+  color: #f3f3f3;
+  z-index: 100;
+}
+.cart-icon > svg path {
+  transition: all 0.2s ease-in-out;
+  stroke: inherit;
+}
+
 .cart {
   cursor: pointer;
   position: fixed;
@@ -946,32 +987,6 @@ footer .wrapper nav ul li {
   flex-direction: row;
   right: 7.5vw;
   bottom: 10vh;
-}
-.cart > span {
-  z-index: 100;
-  color: #801d14;
-  font-size: 1.125rem;
-  font-weight: 700;
-  font-family: "Lusitana", serif;
-  font-size: 1rem;
-  margin-left: 0.5rem;
-  margin-bottom: 0.25rem;
-}
-.cart > svg {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 32px;
-  height: 32px;
-  color: #f3f3f3;
-  z-index: 100;
-}
-.cart > svg path {
-  stroke: inherit;
-}
-.cart > svg .close {
-  color: blue;
 }
 .cart-overlay {
   overflow: hidden;
@@ -1099,7 +1114,7 @@ footer .wrapper nav ul li {
   flex-direction: column;
 }
 .cart-aside .button {
-  max-width: 200px !important;
+  width: 200px !important;
 }
 .cart-aside-closed {
   transform: translateX(100%);
@@ -1137,6 +1152,7 @@ footer .wrapper nav ul li {
 }
 .cart-aside-full {
   width: 100%;
+  margin-top: 1rem;
   overflow: auto;
 }
 .cart-aside-empty {
