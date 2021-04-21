@@ -440,6 +440,7 @@ footer .wrapper .contact .icons {
   padding: 1rem 0;
 }
 footer .wrapper .contact .icons svg {
+  cursor: pointer;
   fill: #131313;
 }
 footer .wrapper nav {
@@ -461,6 +462,7 @@ footer .wrapper nav ul li {
   font-weight: 700;
   font-family: "Lusitana", serif;
   padding-bottom: 1rem;
+  cursor: pointer;
 }
 @media (min-width: 48em) {
   footer .wrapper {
@@ -517,10 +519,17 @@ footer .wrapper nav ul li {
   border-radius: 10px;
   padding: 10px 20px;
   box-sizing: content-box;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.button:hover, .button:active {
+  transform: translateY(-2px);
 }
 .button span {
   font-size: 1.125rem;
@@ -531,11 +540,17 @@ footer .wrapper nav ul li {
 .button__red {
   background-color: #801d14;
 }
+.button__red:active, .button__red:hover {
+  background-color: #a16720;
+}
 .button__red span {
   color: #f3f3f3;
 }
 .button__trans {
   border: 4px solid #801d14;
+}
+.button__trans:active, .button__trans:hover {
+  background-color: #e7e7e7;
 }
 .button__trans span {
   color: #801d14;
@@ -690,6 +705,11 @@ footer .wrapper nav ul li {
   width: 24px;
   height: 24px;
   color: #801d14;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.frame-data-wrap > svg:hover, .frame-data-wrap > svg:active {
+  transform: translateY(-2px);
 }
 .frame-data-wrap-price {
   color: #801d14;
@@ -943,6 +963,12 @@ footer .wrapper nav ul li {
   position: relative;
   width: 32px;
   height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.cart-icon:hover, .cart-icon:active {
+  transform: translateY(-2px);
 }
 .cart-icon > span {
   z-index: 100;
@@ -954,8 +980,9 @@ footer .wrapper nav ul li {
   position: absolute;
   right: 40%;
   top: 50%;
-  transform: translate(50%, -58%);
+  transform: translate(50%, -60%);
   transition: all 0.2s ease-in-out;
+  text-shadow: 0.5px 1px #a16720;
 }
 .cart-icon > svg {
   transition: all 0.2s ease-in-out;
@@ -1132,6 +1159,11 @@ footer .wrapper nav ul li {
   flex-direction: row;
   width: 100%;
 }
+@media (min-width: 64em) {
+  .cart-aside-header {
+    height: 80px;
+  }
+}
 .cart-aside-header .text-wrap {
   margin: 0 auto;
 }
@@ -1146,6 +1178,11 @@ footer .wrapper nav ul li {
   height: 30px;
   width: 30px;
   margin-right: 1rem;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.cart-aside-header svg:hover, .cart-aside-header svg:active {
+  transform: translateY(-2px);
 }
 .cart-aside-header svg path {
   fill: #f3f3f3;
@@ -1178,10 +1215,15 @@ footer .wrapper nav ul li {
   padding: 0.5rem;
   width: 100%;
 }
-.cart-aside .cart-item img {
-  width: 100px;
-  height: 100px;
+.cart-aside .cart-item .img-wrap {
+  width: 125px;
+  overflow: hidden;
   border-radius: 5px;
+}
+.cart-aside .cart-item .img-wrap img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.25);
 }
 .cart-aside .cart-item .text-wrap {
   flex: 1;
@@ -1212,13 +1254,18 @@ footer .wrapper nav ul li {
   height: 1.5rem;
   width: 1.5rem;
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.cart-aside .cart-item .text-wrap .interaction-wrap .amount svg:hover, .cart-aside .cart-item .text-wrap .interaction-wrap .amount svg:active {
+  transform: translateY(-2px);
 }
 .cart-aside .cart-item .text-wrap .interaction-wrap .amount span {
   font-size: 1.125rem;
   font-weight: 700;
   font-family: "Lusitana", serif;
   font-size: 1.5rem;
-  margin: 0.25rem 0.25rem 0rem;
+  margin: 0.25rem 0.75rem 0rem;
 }
 .cart-aside .cart-item .text-wrap .interaction-wrap .price {
   font-size: 1.125rem;
@@ -1226,6 +1273,14 @@ footer .wrapper nav ul li {
   font-family: "Lusitana", serif;
   color: #801d14;
   font-size: 1.5rem;
+}
+.cart-aside .cart-item .text-wrap .interaction-wrap > svg {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  cursor: pointer;
+}
+.cart-aside .cart-item .text-wrap .interaction-wrap > svg:hover, .cart-aside .cart-item .text-wrap .interaction-wrap > svg:active {
+  transform: translateY(-2px);
 }
 .cart-aside-footer {
   height: 240px;
@@ -1261,6 +1316,9 @@ footer .wrapper nav ul li {
   font-family: "Lusitana", serif;
   font-size: 2rem;
   color: #801d14;
+}
+.cart-aside-footer .total-price .price-amount div {
+  display: inline;
 }
 
 .first-hero {

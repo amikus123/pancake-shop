@@ -25,6 +25,10 @@
     padding: 0.5rem;
     background-color: $red;
     height: 64px;
+    @include breakpoint-up(large){
+    height: 80px;
+
+    }
     @include f-center;
     width: 100%;
     .text-wrap{
@@ -41,6 +45,8 @@
       height: 30px;
       width: 30px;  
       margin-right: 1rem;
+@include active-animation;
+
       path{
         fill: $whiteish;
       }
@@ -69,10 +75,16 @@
   @include f-start();
   padding: 0.5rem;
   width:100%;
-  img{
-    width: 100px;
-    height: 100px;
+  .img-wrap{
+    width: 125px;
+    overflow: hidden;
     border-radius: 5px;
+    img{
+      // height: 125px;
+      width: 100%;
+      height: 100%;
+      transform: scale(1.25);
+    }
   }
   .text-wrap{
     flex:1;
@@ -95,15 +107,19 @@
         
       }
       svg {
+        
         box-sizing: content-box;
         height: 1.5rem;
         width:1.5rem;
         cursor: pointer;
+@include active-animation;
+
       }
       span {
         @include bn();
         font-size: 1.5rem;
-        margin:0.25rem 0.25rem 0rem;
+        margin:0.25rem 0.75rem 0rem;
+        
       }
      }
      .price{
@@ -113,7 +129,8 @@
       font-size: 1.5rem;
     }
      >svg{
-
+      @include active-animation;
+cursor: pointer;
      }
     }
   }
@@ -140,6 +157,9 @@
     }
     .price-amount{
       @include bn();
+      div{
+        display:inline
+      }
       font-size: 2rem;
       color:$red;
     }

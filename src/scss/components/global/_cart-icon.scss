@@ -1,26 +1,27 @@
 @use '../../abstracts/' as *;
 
-
-.cart-icon{
+.cart-icon {
   position: relative;
   width: 32px;
   height: 32px;
-
-  >span{
+  cursor: pointer;
+@include active-animation;
+        
+  > span {
     z-index: 100;
-    color:$gold;
+    color: $gold;
     @include bn(700);
     font-size: 1.125rem;
     position: absolute;
     // margin-left:.5rem;
-    right:40%;
-    top:50%;
-    transform: translate(50%,-58%);
-  transition: all .2s ease-in-out;
-
+    right: 40%;
+    top: 50%;
+    transform: translate(50%, -60%);
+    transition: all 0.2s ease-in-out;
+    text-shadow: 0.5px 1px $gold;
   }
   > svg {
-  transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     position: absolute;
     left: 50%;
@@ -31,7 +32,7 @@
     color: $whiteish;
     z-index: 100;
     path {
-  transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
 
       stroke: inherit;
     }
@@ -50,9 +51,7 @@
   @include f-center;
   right: 7.5vw;
   bottom: 10vh;
-  
-  
-  
+
   &-overlay {
     overflow: hidden;
     pointer-events: none;
@@ -67,17 +66,15 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-     outline-style:none;
+    outline-style: none;
     -webkit-tap-highlight-color: transparent;
-    &:focus{
-      outline: none!important;;
-
+    &:focus {
+      outline: none !important;
     }
     &-opened {
       // background-color: rgba(0, 0, 255, 0.644);
       width: 1500px;
       height: 1500px;
-
     }
     &-closed {
       width: 0px;
@@ -85,24 +82,23 @@
       @keyframes shit {
       }
     }
-    .empty-cart{
+    .empty-cart {
       @include f-center(column);
-  
+
       p {
         @include th(700);
-        padding-bottom:1rem;
+        padding-bottom: 1rem;
         font-size: 1.25rem;
       }
     }
     &-list {
-   
       position: inherit;
       right: 50%;
       bottom: 50%;
       pointer-events: auto;
       transform: translate(15%, 10%);
       width: 340px;
-      max-width:90vw;
+      max-width: 90vw;
       height: 560px;
       max-height: calc(85vh - 50px);
       border-radius: 10px;
@@ -110,15 +106,14 @@
       background-color: $whiteish;
       @include f-space(column);
       padding-bottom: 75px;
-      ul{
-        width:90%;
+      ul {
+        width: 90%;
         padding-top: 1rem;
         overflow: auto;
-       
       }
-   a{
-     margin: 0.25rem 0;
-   }
+      a {
+        margin: 0.25rem 0;
+      }
     }
   }
 }

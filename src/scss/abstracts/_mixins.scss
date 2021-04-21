@@ -79,6 +79,14 @@ $breakpoints-down: (
     margin-bottom: 3rem;
   }
 }
+// animation 
+@mixin active-animation{
+  transition: transform 0.2s ease-in-out;
+  cursor:pointer;
+  &:hover, &:active{
+    transform: translateY(-2px);
+        }
+}
 /*
   COMMON RESOLUSTIONS
   

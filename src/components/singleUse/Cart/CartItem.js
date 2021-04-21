@@ -2,6 +2,7 @@ import React from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { IoTrashBinSharp } from "react-icons/io5";
 
+
 import { useDispatch } from "react-redux";
 import { addItemToCart, removeItemFromCart ,removeAllOfItemFromCart} from "../../../actions";
 function CartItem({ item }) {
@@ -10,8 +11,10 @@ function CartItem({ item }) {
 
   return (
     <li className="cart-item">
-      <img src={img} alt="item" />
-
+<div className="img-wrap">
+<img src={img} alt="item" />
+{/* // add aniamtion on number change */}
+</div>
       <div className="text-wrap">
         <p>{name}</p>
 
@@ -27,7 +30,7 @@ function CartItem({ item }) {
               onClick={() => dispatch(removeItemFromCart(item.product))}
             />
           </div>
-          <span className="price">{price} zł</span>
+          <span className="price">{price}zł</span>
       <IoTrashBinSharp onClick={()=>{dispatch(removeAllOfItemFromCart(item.product))}} />
         </div>
       </div>

@@ -3,13 +3,30 @@ import Button from "../../general/Button";
 import CartItem from "./CartItem";
 import { IoClose } from "react-icons/io5";
 
+import 'react-count-animation/dist/count.min.css';
+import AnimationCount from 'react-count-animation';
+
 import { useSelector } from "react-redux";
 function CartAside({ open, setOpen }) {
   const cart = useSelector((state) => [...state.cart]);
   const [cartItems, setCartItems] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [previousPRice, setPreviousPrice] = useState(0);
 
+  const settings = {
+    start: previousPRice,
+    count: totalPrice,
+    duration: 1000,
+    decimals: 0,
+    useGroup: true,
+    animation: 'up',
+  };
   useEffect(() => {
+    // i get before price before the calculatiobn
+    if(totalPrice ===previousPRice){
+      setPreviousPrice(totalPrice)
+
+    }
     let items = 0,
       price = 0;
     cart.forEach((item) => {
@@ -18,10 +35,11 @@ function CartAside({ open, setOpen }) {
     });
     setCartItems(items);
     setTotalPrice(price);
-  }, [cart]);
+    console.log(totalPrice)
+  }, [cart,totalPrice,previousPRice]);
   return (
     <aside className={`cart-aside cart-aside-${open ? "open" : "closed"}`}>
-      <div className="cart-aside-header">
+      <div className="cart-aside-header" onClick={() => setOpen(false)}>
         <div className="text-wrap">
           <span>
             YOUR CART{cartItems !== 0 ? " (" + cartItems + ")" : null}
@@ -52,7 +70,7 @@ function CartAside({ open, setOpen }) {
           <div className="cart-aside-footer">
             <div className="total-price">
               <span className="price-info">In total</span>
-              <span className="price-amount">{totalPrice} zł</span>
+              <span className="price-amount"><AnimationCount {...settings}/> zł</span>
             </div>
             <Button
               text={"CHECKOUT"}
