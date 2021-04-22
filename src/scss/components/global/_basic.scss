@@ -6,7 +6,8 @@
   box-sizing:content-box;
   cursor: pointer;
   @include f-center();
-  @include active-animation;
+  // not sure about this
+  @include active-animation(active);
   transition: all 0.2s ease-in-out; 
   span {
     @include bn;
@@ -25,9 +26,9 @@
 
   }
   &__trans {
-    
+
     &:active,&:hover{
-      background-color:#e7e7e7;
+      background-color:#f3f3f380;
     }
     span {
       color: $red;

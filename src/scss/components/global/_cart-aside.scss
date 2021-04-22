@@ -1,6 +1,15 @@
 @use '../../abstracts/' as *;
+.preventBodyScroll{
+  
+    @include breakpoint-down(small){
+      height: 100vh;
+    overflow-y: hidden;
+    }
+    // padding-right: 15px; /* Avoid width reflow */
 
+}
 .cart-aside{
+
   .button{
     width: 200px!important;
   }
@@ -56,6 +65,7 @@
  &-full{
   width:100%;
   margin-top: 1rem;
+  margin-bottom:240px;
   overflow:auto ;
  }
  &-empty{

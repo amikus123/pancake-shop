@@ -23,9 +23,9 @@ function CartAside({ open, setOpen }) {
   };
   useEffect(() => {
     // i get before price before the calculatiobn
-    if(totalPrice ===previousPRice){
+    if(totalPrice !== previousPRice){
       setPreviousPrice(totalPrice)
-
+      console.log(123)
     }
     let items = 0,
       price = 0;
@@ -45,7 +45,7 @@ function CartAside({ open, setOpen }) {
             YOUR CART{cartItems !== 0 ? " (" + cartItems + ")" : null}
           </span>
         </div>
-        <IoClose onClick={() => setOpen(false)} />
+        <IoClose/>
       </div>
       {cart.length === 0 ? (
         <div className="cart-aside-empty">

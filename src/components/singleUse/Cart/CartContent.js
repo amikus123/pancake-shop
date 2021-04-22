@@ -1,5 +1,7 @@
-import React, { useEffect,useState } from 'react'
+import React from 'react'
+import Checkout from "../../../pages/Checkout";
 import Menu from "../../../pages/Menu";
+
 import Button from "../../general/Button";
 import CartItem from "./CartItem";
 import { useSelector } from "react-redux";
@@ -27,7 +29,7 @@ function CartContent({closeCart}) {
             return <CartItem item={item} key={index}/>
           })}
         </ul>
-        <Button text={"CHECKOUT"} location={"/menu"} component={Menu} type={"red"} />
+        <Button text={"CHECKOUT"} location={"/checkout"} component={Checkout} type={"red"} />
         </>}
     </div>
   )

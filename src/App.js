@@ -4,6 +4,7 @@ import { Switch, Route, useLocation } from "react-router-dom";
 import Error from "./pages/Error";
 import Landing from "./pages/Landing";
 import Menu from "./pages/Menu";
+import Checkout from "./pages/Checkout";
 import Header from "./components/singleUse/Header";
 import Footer from "./components/singleUse/Footer";
 // redux and data
@@ -22,9 +23,9 @@ function App() {
   // for cart
   const [open, setOpen] = useState(false);
   const handleClick = () => {
-    console.log("bla bla")
     setOpen(!open);
-    
+    console.log(document.getElementsByTagName("body")[0].classList.toggle("preventBodyScroll"))
+    //     
 
   };
   useEffect(() => {
@@ -60,6 +61,8 @@ function App() {
       <Header location={location} handleClick={handleClick}/>
       <Switch>
         <Route path="/menu" component={Menu}></Route>
+        <Route path="/checkout" component={Checkout}></Route>
+
         <Route path="/" exact component={Landing}></Route>
         <Route path="/*">
           <Error />

@@ -80,12 +80,22 @@ $breakpoints-down: (
   }
 }
 // animation 
-@mixin active-animation{
+@mixin active-animation($which:""){
   transition: transform 0.2s ease-in-out;
   cursor:pointer;
-  &:hover, &:active{
-    transform: translateY(-2px);
-        }
+  @if $which == active{
+     &:active{
+      transform: translateY(-2px);
+          }
+  }@else if $which == hover{
+    &:hover{
+      transform: translateY(-2px);
+          }
+  }@else{
+    &:hover, &:active{
+      transform: translateY(-2px);
+          }
+  }
 }
 /*
   COMMON RESOLUSTIONS
