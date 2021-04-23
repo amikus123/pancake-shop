@@ -14,30 +14,59 @@ function Form() {
     setTotalPrice(price);
     console.log(totalPrice);
   }, [cart, totalPrice]);
+
+  // lsit of regex
+
+  const megaReg = {
+    city:  /^[AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyZzŹźŻż ]*$/,
+    code: /^[0-9]{2}-[0-9]{3}?$/,
+    street: /^[#.0-9AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyZzŹźŻż/\s,-]+$/,
+    email: /(\w\.?)+@[\w\.-]+\.\w{2,4}/,
+    name: /^[AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyZzŹźŻż ]*$/,
+    phone: /^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/,
+  };
   const checkForm = (e) => {
     e.preventDefault();
-    let allCorrect = true;
-    // addres valiadtion
-    const checkIfValid = (id, regex, mess) => {
-      const value = document.getElementById(id).value;
-      console.log(value);
-      if (regex.test(value)) {
-        console.log(22222221111);
-      } else {
-        console.log(444444);
+    let isCorrect = true;
+    Object.keys(megaReg).forEach(item=>{
+      if(!validateById(item)){
+        isCorrect= false
       }
-    };
-    checkIfValid("email", /(\w\.?)+@[\w\.-]+\.\w{2,4}/, "XDDD");
+    })
+    console.log(isCorrect)
   };
-  const valiadeEmail = (e) => {
-    console.log(e);
-    console.log(e.target.value);
 
+  const validate = (e,x) => {
+    const el = e.target;
+    const error = el.nextSibling;
+    const reg = megaReg[el.id]
+    if(reg.test(el.value) && el.value.trim() !== ""){
+      error.classList.remove("error-show")
+      el.classList.remove("input-error")
+    }else{
+      error.classList.add("error-show")
+      el.classList.add("input-error")
+    }
   };
+
+  const validateById = (id) => {
+    const el = document.getElementById(id)
+    const error = el.nextSibling;
+    const reg = megaReg[el.id]
+    if(reg.test(el.value) && el.value.trim() !== ""){
+      error.classList.remove("error-show")
+      el.classList.remove("input-error")
+      return true;
+    }else{
+      error.classList.add("error-show")
+      el.classList.add("input-error")
+      return false;
+    }
+  }
   return (
     <div className="form main">
       <form autoComplete="on" onSubmit={checkForm} noValidate>
-        <p>Address</p>
+        <p>Adres dostawy</p>
         <label htmlFor="street">
           Ulica i numer budynku
           <input
@@ -46,8 +75,11 @@ function Form() {
             id="street"
             placeholder="3 Maja 21"
             required
+            onChange={validate}
+            onSubmit={validate}
+
           />
-          <span className="error hide">Podaj prawidłowy adres</span>
+          <span className="error">Podaj prawidłowy adres</span>
         </label>
         <label htmlFor="code">
           Kod pocztowy
@@ -57,7 +89,11 @@ function Form() {
             id="code"
             placeholder="21-322"
             required
+            onChange={validate}
+
           />
+          <span className="error">Podaj prawidłowy kod pocztowy</span>
+
         </label>
         <label htmlFor="city">
           Miasto
@@ -67,9 +103,13 @@ function Form() {
             id="city"
             placeholder="Warszawa"
             required
+            onChange={validate}
+
           />
+          <span className="error">Podaj prawidłowe miasto</span>
+
         </label>
-        <p>Personal data</p>
+        <p>Dane osobiste</p>
         <label htmlFor="name">
           Imię i nazwisko
           <input
@@ -78,7 +118,11 @@ function Form() {
             id="name"
             placeholder="Jan Kowalski"
             required
+            onChange={validate}
+
           />
+          <span className="error ">Podaj prawidłowe imię i nazwisko</span>
+
         </label>
         <label htmlFor="email">
           Email
@@ -88,10 +132,10 @@ function Form() {
             id="email"
             placeholder="example@gmail.com"
             required
-            onChange={valiadeEmail}
-          />
-          <span className="error hide">Podaj prawidłowy adres</span>
+            onChange={validate}
 
+          />
+          <span className="error">Podaj prawidłowy email</span>
         </label>
         <label htmlFor="phone">
           Numer telefonu
@@ -101,7 +145,11 @@ function Form() {
             id="phone"
             placeholder="123456789"
             required
+            onChange={validate}
+
           />
+          <span className="error">Podaj prawidłowy numer telefonu</span>
+
         </label>
         <input type="submit" value={`PAY ${totalPrice} ZŁ`} id="submit" />
       </form>

@@ -2721,9 +2721,8 @@ footer .wrapper nav ul li {
   background-color: #f3f3f3;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
   padding: 1rem;
 }
 .form form > * {
@@ -2738,16 +2737,60 @@ footer .wrapper nav ul li {
   font-size: 1.125rem;
   font-weight: 400;
   font-family: "Lusitana", serif;
+  width: 100%;
+  max-width: 500px;
 }
 .form form label input {
   margin-top: 10px;
   padding: 0.25rem;
+  width: 100%;
+  max-width: 500px;
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  border: 1px solid #514646;
+  outline: none;
+  box-sizing: content-box;
+  color: #131313;
 }
-.form form p {
+.form form label input:focus {
+  border: 2px solid #a16720;
+}
+.form form label .input-error {
+  border: 2px solid #801d14 !important;
+  color: #801d14;
+}
+.form form label .error {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
   font-size: 1.125rem;
   font-weight: 700;
   font-family: "Lusitana", serif;
+  font-size: 1rem;
+  color: #801d14;
+}
+.form form label .error-show {
+  animation: show 0.4s forwards ease-in-out;
+}
+@keyframes show {
+  0% {
+    visibility: hidden;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+    position: relative;
+  }
+}
+.form form p {
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
   text-align: left;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
 }
 .form #submit {
   margin-top: 2rem;
