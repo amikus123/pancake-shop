@@ -20,6 +20,7 @@ function CartAside({ open, setOpen }) {
     setTotalPrice(price);
     console.log(totalPrice)
   }, [cart,totalPrice]);
+
   return (
     <aside className={`cart-aside cart-aside-${open ? "open" : "closed"}`}>
       <div className="cart-aside-header" onClick={() => setOpen(false)}>

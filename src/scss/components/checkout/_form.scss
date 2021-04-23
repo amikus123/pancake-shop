@@ -28,6 +28,7 @@
   }
 
   #submit{
+    margin-top:2rem;
     border-radius: 10px;
   padding: 10px 20px;
   box-sizing:content-box;
@@ -40,7 +41,7 @@
   font-size: 1.125em;
   border: none;
   align-self: center;
-
+  
   &:active,&:hover{
     background-color:$gold;
   }

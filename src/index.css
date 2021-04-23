@@ -2750,6 +2750,7 @@ footer .wrapper nav ul li {
   text-align: left;
 }
 .form #submit {
+  margin-top: 2rem;
   border-radius: 10px;
   padding: 10px 20px;
   box-sizing: content-box;
