@@ -47,6 +47,10 @@
   }
 }
 
+.hide {
+  display: none !important;
+}
+
 @media (min-width: 64em) {
   .hide-desktop {
     display: none !important;
@@ -160,6 +164,12 @@ main > :first-child {
   justify-content: center;
   background: #f3f3f3;
   z-index: 100;
+}
+.header__checkout nav {
+  justify-content: center !important;
+}
+.header__checkout nav .abs-con, .header__checkout nav ul {
+  display: none !important;
 }
 .header nav {
   height: 4rem;
@@ -1224,7 +1234,7 @@ footer .wrapper nav ul li {
   width: 100%;
 }
 .cart-aside .cart-item .img-wrap {
-  width: 125px;
+  width: 150px;
   overflow: hidden;
   border-radius: 5px;
 }
@@ -2391,5 +2401,301 @@ footer .wrapper nav ul li {
   justify-content: flex-start;
   flex-direction: column;
 }
+
+/*
+  COMMON RESOLUSTIONS
+
+
+1366x768 (22.98%)
+1920x1080 (20.7%)
+1536x864 (7.92%)
+1440x900 (7.23%)
+1280x720 (4.46%)
+
+360x640 (18.7%)
+375x667 (7.34%)
+414x896 (6.76%)
+360x780 (5.31%)
+375x812 (5.01%)
+
+768x1024 (51.43%)
+1280x800 (7.28%)
+800x1280 (5.26%)
+601x962 (4.32%)
+962x601 (2.99%)
+
+1920x1080 (19.57%)
+1366x768 (14.88%)
+1440x900 (9.18%)
+1536x864 (7.22%)
+1024x768 (4.73%)
+
+414x896 (19.44%)
+375x667 (13.67%)
+375x812 (12.3%)
+414x736 (8.91%)
+360x640 (8.21%)
+
+768x1024 (55.64%)
+1280x800 (5.74%)
+800x1280 (5.31%)
+601x962 (5.14%)
+962x601 (3.2%)
+
+ */
+.checkout {
+  margin-top: 16px;
+  width: 100%;
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.checkout > h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+}
+
+.checkout-list {
+  flex-wrap: wrap;
+  background-color: #f3f3f3;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.checkout-list .button {
+  width: 200px !important;
+}
+.checkout-list-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.checkout-list-empty > span {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Lusitana", serif;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  letter-spacing: 0.25px;
+}
+.checkout-list-full {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 36px;
+  overflow: auto;
+}
+.checkout-list-header {
+  padding: 0.5rem;
+  background-color: #801d14;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+@media (min-width: 64em) {
+  .checkout-list-header {
+    height: 80px;
+  }
+}
+.checkout-list-header .text-wrap {
+  margin: 0 auto;
+}
+.checkout-list-header .text-wrap span {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Lusitana", serif;
+  font-size: 1.5rem;
+  color: #f3f3f3;
+}
+.checkout-list-header svg {
+  height: 30px;
+  width: 30px;
+  margin-right: 1rem;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.checkout-list-header svg:hover, .checkout-list-header svg:active {
+  transform: translateY(-2px);
+}
+.checkout-list-header svg path {
+  fill: #f3f3f3;
+}
+.checkout-list ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.checkout-list ul .cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 0.75rem;
+}
+.checkout-list ul .cart-item .img-wrap {
+  width: 150px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.checkout-list ul .cart-item .img-wrap img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.25);
+}
+.checkout-list ul .cart-item .text-wrap {
+  flex: 1;
+  margin-left: 1rem;
+  max-width: 300px;
+}
+.checkout-list ul .cart-item .text-wrap p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  max-width: 150px;
+}
+.checkout-list ul .cart-item .text-wrap .interaction-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-right: 0.5rem;
+}
+.checkout-list ul .cart-item .text-wrap .interaction-wrap .amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.checkout-list ul .cart-item .text-wrap .interaction-wrap .amount svg {
+  box-sizing: content-box;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.checkout-list ul .cart-item .text-wrap .interaction-wrap .amount svg:hover, .checkout-list ul .cart-item .text-wrap .interaction-wrap .amount svg:active {
+  transform: translateY(-2px);
+}
+.checkout-list ul .cart-item .text-wrap .interaction-wrap .amount span {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Lusitana", serif;
+  font-size: 1.5rem;
+  margin: 0.25rem 0.75rem 0rem;
+}
+.checkout-list ul .cart-item .text-wrap .interaction-wrap .price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Lusitana", serif;
+  color: #801d14;
+  font-size: 1.5rem;
+}
+.checkout-list ul .cart-item .text-wrap .interaction-wrap > svg {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  cursor: pointer;
+}
+.checkout-list ul .cart-item .text-wrap .interaction-wrap > svg:hover, .checkout-list ul .cart-item .text-wrap .interaction-wrap > svg:active {
+  transform: translateY(-2px);
+}
+.checkout-list-footer {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid #131313;
+}
+.checkout-list-footer > * {
+  margin-bottom: 1rem;
+}
+.checkout-list-footer .total-price {
+  padding: 0 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.checkout-list-footer .total-price .price-info {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Lusitana", serif;
+  font-size: 2rem;
+}
+.checkout-list-footer .total-price .price-amount {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Lusitana", serif;
+  font-size: 2rem;
+  color: #801d14;
+}
+.checkout-list-footer .total-price .price-amount div {
+  display: inline;
+}
+
+/*
+  COMMON RESOLUSTIONS
+
+
+1366x768 (22.98%)
+1920x1080 (20.7%)
+1536x864 (7.92%)
+1440x900 (7.23%)
+1280x720 (4.46%)
+
+360x640 (18.7%)
+375x667 (7.34%)
+414x896 (6.76%)
+360x780 (5.31%)
+375x812 (5.01%)
+
+768x1024 (51.43%)
+1280x800 (7.28%)
+800x1280 (5.26%)
+601x962 (4.32%)
+962x601 (2.99%)
+
+1920x1080 (19.57%)
+1366x768 (14.88%)
+1440x900 (9.18%)
+1536x864 (7.22%)
+1024x768 (4.73%)
+
+414x896 (19.44%)
+375x667 (13.67%)
+375x812 (12.3%)
+414x736 (8.91%)
+360x640 (8.21%)
+
+768x1024 (55.64%)
+1280x800 (5.74%)
+800x1280 (5.31%)
+601x962 (5.14%)
+962x601 (3.2%)
+
+ */
 
 /*# sourceMappingURL=index.css.map */

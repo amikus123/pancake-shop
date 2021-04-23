@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import CartAside from "./CartAside";
 import CartIcon from "./CartIcon";
-function CartFixed({handleClick,open}) {
- // ad on drag ledt
-
+function CartFixed({handleClick,open,location}) {
+ const [isCheckout, setIsCheckout] = useState(false)
+ useEffect(()=>{
+if(location.pathname === "/checkout"){
+  setIsCheckout(true)
+}else{
+  setIsCheckout(false)
+}
+},[location.pathname,setIsCheckout])
   
   return ( 
   
     <>
-    <div className="cart" onClick={handleClick}>
+    <div className={`cart ${isCheckout?"hide":null}`} onClick={handleClick}>
  
        <CartIcon/>
     </div>

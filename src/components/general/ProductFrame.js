@@ -1,7 +1,7 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { FaCartPlus, FaGalacticSenate } from "react-icons/fa";
+import { FaCartPlus } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../.../../../actions";
 
@@ -26,8 +26,11 @@ function ProductFrame({ product, classes }) {
     setTimeoutId(x)
 
   }
+  useEffect(()=>{
+
+  },[])
   return (
-    <Link to="/a" className={`frame ${classes}`}>
+    <Link to={"#"+name} id={name} className={`frame ${classes}`}>
       <div className="frame-img">
         <div className="frame-img-rating">
           <span className="frame-img-rating-text">

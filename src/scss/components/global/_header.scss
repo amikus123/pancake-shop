@@ -3,6 +3,15 @@
 
 
 .header {
+  &__checkout{
+  // top: 100px;
+  nav{
+    justify-content: center!important;
+    .abs-con, ul{
+      display:none!important;
+    }
+  }
+  }
   position: fixed;
   top: 0;
   width: 100%;

@@ -29,7 +29,7 @@ function CartContent({closeCart}) {
             return <CartItem item={item} key={index}/>
           })}
         </ul>
-        <Button text={"CHECKOUT"} location={"/checkout"} component={Checkout} type={"red"} />
+        <Button text={"CHECKOUT"} location={"/checkout"} component={Checkout} type={"red"}  onClick={closeCart}/>
         </>}
     </div>
   )

@@ -68,7 +68,7 @@ function App() {
           <Error />
         </Route>
       </Switch>
-    <CartFixed handleClick={handleClick} open={open}/>
+    <CartFixed handleClick={handleClick} location={location}  open={open}/>
       <Footer />
     </>
   );

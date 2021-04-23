@@ -5,11 +5,8 @@ import CartIcon from "./Cart/CartIcon";
 // it solves the issue of react router links  to working with links to id
 
 function Header({location,handleClick}) {
-  // const [location, setLocation] = useState( useLocation());
   const [offset, setOffset] = useState(false);
-  // useEffect(() => {
-  //   console.log(location,"zmiana");
-  // }, [location]);
+
   // measuer the vertcial offset, used to cgange navbar color
   useEffect(()=>{
     // temporary solution, not efficient
@@ -26,7 +23,7 @@ function Header({location,handleClick}) {
 
   return (
     // transparency is given on main page
-    <header className={`header ${(location.pathname ==="/" )? offset?"header__full":"header__trans":"header__full"}`}>
+    <header className={`header ${(location.pathname ==="/" )? offset?"header__full":"header__trans":"header__full"} ${location.pathname ==="/checkout"?"header__checkout":null}`}>
       <nav>
         <MenuButton  />
         <Link to="/" className="logo">
@@ -44,8 +41,8 @@ function Header({location,handleClick}) {
             </Link>
           </li>
           <li>
-            <Link to="/menu" >
-              Order now
+            <Link to="/checkout" >
+              Checkout
             </Link>
           </li>
           <li>
