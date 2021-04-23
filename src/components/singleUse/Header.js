@@ -64,11 +64,12 @@ function Header({ location, handleClick }) {
           <li>
             <Link to="/menu">Menu</Link>
           </li>
+         
           <li>
-            <Link to="/checkout">Checkout</Link>
+            <Link to="/menu">Order now</Link>
           </li>
           <li>
-            <Link to="/contact">Contact us</Link>
+            <Link to="/checkout">Checkout</Link>
           </li>
           <li>
             <CartIcon location="header" handleClick={handleClick} />

@@ -29,6 +29,7 @@
     width: 80%;
     position:relative;
     // hopes thus line dosent break anything
+
     .go-back{
       position: absolute;
       left:0;
@@ -73,6 +74,7 @@
             @include sh();
             color: $gold;
             transition: color 0.2s ease-in-out;
+      
           }
         }
       }
@@ -112,6 +114,8 @@
 
  a{
    color:$gold;
+    transition: color 0.4s ease-in-out;
+          
  }
     &__trans {
         background: none;
@@ -124,8 +128,9 @@
             li {
               a {
                 color: $whiteish;
-    transition: all 0.4s ease-in-out;
-
+                &:hover{
+                  color: $red;
+                  };
               }
             }
           }
@@ -156,6 +161,9 @@
           li {
             a {
               color: $gold;
+              &:hover{
+                color: $dark;
+                };
             }
             .cart-header{
               svg{
@@ -197,6 +205,7 @@
           a {
             text-transform: uppercase;
             @include bn(600);
+           
           }
         }
       }

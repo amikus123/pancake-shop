@@ -59,7 +59,7 @@
           text-align: left;
         }
         p {
-          @include pt();
+          @include pt(700);
           color: $gold;
           width: 250px;
         }

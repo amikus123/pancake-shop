@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
+import { IoWarning } from 'react-icons/io5';
+
 function Form() {
   const cart = useSelector((state) => [...state.cart]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [correct, setCorrect] = useState(false);
 
   useEffect(() => {
     // i get before price before the calculatiobn
@@ -33,7 +36,7 @@ function Form() {
         isCorrect= false
       }
     })
-    console.log(isCorrect)
+    setCorrect(isCorrect)
   };
 
   const validate = (e,x) => {
@@ -65,7 +68,7 @@ function Form() {
   }
   return (
     <div className="form main">
-      <form autoComplete="on" onSubmit={checkForm} noValidate>
+      {correct?<h1>wooow you ordered it</h1>: <form autoComplete="on" onSubmit={checkForm} noValidate>
         <p>Adres dostawy</p>
         <label htmlFor="street">
           Ulica i numer budynku
@@ -79,7 +82,7 @@ function Form() {
             onSubmit={validate}
 
           />
-          <span className="error">Podaj prawidłowy adres</span>
+          <span className="error"><IoWarning/>Podaj prawidłowy adres</span>
         </label>
         <label htmlFor="code">
           Kod pocztowy
@@ -92,7 +95,7 @@ function Form() {
             onChange={validate}
 
           />
-          <span className="error">Podaj prawidłowy kod pocztowy</span>
+          <span className="error"><IoWarning/>Podaj prawidłowy kod pocztowy</span>
 
         </label>
         <label htmlFor="city">
@@ -106,7 +109,7 @@ function Form() {
             onChange={validate}
 
           />
-          <span className="error">Podaj prawidłowe miasto</span>
+          <span className="error"><IoWarning/>Podaj prawidłowe miasto</span>
 
         </label>
         <p>Dane osobiste</p>
@@ -121,7 +124,7 @@ function Form() {
             onChange={validate}
 
           />
-          <span className="error ">Podaj prawidłowe imię i nazwisko</span>
+          <span className="error "><IoWarning/>Podaj prawidłowe imię i nazwisko</span>
 
         </label>
         <label htmlFor="email">
@@ -135,7 +138,7 @@ function Form() {
             onChange={validate}
 
           />
-          <span className="error">Podaj prawidłowy email</span>
+          <span className="error"><IoWarning/>Podaj prawidłowy email</span>
         </label>
         <label htmlFor="phone">
           Numer telefonu
@@ -148,11 +151,12 @@ function Form() {
             onChange={validate}
 
           />
-          <span className="error">Podaj prawidłowy numer telefonu</span>
+          <span className="error"><IoWarning/>Podaj prawidłowy numer telefonu</span>
 
         </label>
         <input type="submit" value={`PAY ${totalPrice} ZŁ`} id="submit" />
-      </form>
+      </form>}
+     
     </div>
   );
 }

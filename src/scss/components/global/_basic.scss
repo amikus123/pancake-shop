@@ -7,7 +7,7 @@
   cursor: pointer;
   @include f-center();
   // not sure about this
-  @include active-animation(active);
+  @include active-animation();
   transition: all 0.2s ease-in-out; 
   span {
     @include bn;
@@ -16,7 +16,7 @@
   // subclasses
   &__red {
     &:active,&:hover{
-      background-color:$gold;
+      // background-color:$gold;
     }
     background-color: $red;
     
@@ -28,7 +28,7 @@
   &__trans {
 
     &:active,&:hover{
-      background-color:#f3f3f380;
+      background-color:#eee;
     }
     span {
       color: $red;

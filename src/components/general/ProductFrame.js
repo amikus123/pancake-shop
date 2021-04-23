@@ -30,7 +30,7 @@ function ProductFrame({ product, classes }) {
 
   },[])
   return (
-    <Link to={"#"+name} id={name} className={`frame ${classes}`}>
+    <Link to={"#"+name} id={name} className={`frame ${classes}`} onClick={handleClick}>
       <div className="frame-img">
         <div className="frame-img-rating">
           <span className="frame-img-rating-text">
@@ -39,14 +39,18 @@ function ProductFrame({ product, classes }) {
           </span>
         </div>
         <div className="frame-img-con">
+          <div className={`added ${clicked?"added-active":""}`}>
+            <span> Item added</span>
+          </div>
           <img src={img} alt="" />
         </div>
       </div>
       <div className="frame-data">
         <span className="frame-data-name">
-    {clicked?<span>Item added</span>:name}
+    {/* {clicked?<span>Item added</span>:name} */}
+    {name}
           </span>
-        <div className="frame-data-wrap" onClick={handleClick}>
+        <div className="frame-data-wrap" >
           <span className="frame-data-wrap-price">{price} zł</span>
           <FaCartPlus  />
         </div>

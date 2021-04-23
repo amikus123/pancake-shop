@@ -3,6 +3,11 @@
   background-color: $whiteish;
   min-height: 100vh;
   margin-top: 16px;
+  h1{
+    text-align: center;
+    @include ph();
+    padding-top: 10rem!important;
+  }
   form {
     background-color: $whiteish;
     @include f-center(column);
@@ -29,12 +34,15 @@
         outline: none;
         box-sizing: content-box;
         color:$dark;
-
+        &::placeholder{
+          color:#131313c6;
+        }
         &:focus{
         border: 2px solid $gold;
         
         }
       }
+ 
       .input-error {
         border: 2px solid $red!important;
           color:$red;
@@ -44,26 +52,44 @@
         // transition: transform 0.4s ease-in-out;
         visibility: hidden;
         position: absolute;
-        bottom: 0;
+      
       @include bn(700);
       font-size:1rem;
         color:$red;
+        display: flex;
+        align-items: center;
+        svg{
+          // height: 20px
+        margin-bottom:4px;
+        margin-right: 4px;
+
+        }
         &-show {
           // transform: translateY(-50%);
-          animation: show 0.4s forwards ease-in-out;
+          animation: show .4s forwards ease-in-out;
         }
 
         @keyframes show {
           0% {
-            visibility: hidden;
             position: absolute;
-            // background-color: rgb(126, 122, 122);
             transform: translateY(-50%);
+          opacity: 0.1;
+            
+            // background-color: rgb(126, 122, 122);
           }
           1% {
+            visibility: hidden;
+            position: relative;
+
+            // transform: translateY(-50%);
+          }
+          50%{
+
+            transform: translateY(0);
           }
           100% {
-            transform: translateY(0);
+          opacity: 1;
+
             visibility: visible;
             // background-color: rgb(124, 124, 152);
             position: relative;
