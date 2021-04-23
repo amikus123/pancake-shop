@@ -1,87 +1,71 @@
 import React, { useEffect } from "react";
 import ProductFrame from "../../general/ProductFrame";
 import { useInView } from "react-intersection-observer";
-import { changeListVisibleBools } from "../../../actions";
+import { changeVisibleInt, changeListVisible,changeForcedNumber} from "../../../actions";
 
 import { useSelector, useDispatch } from "react-redux";
 
 function PancakeCategory({ data, update, index }) {
   const visibility = useSelector((state) => [...state.visibility]);
-  const visibilityBools = useSelector((state) => [...state.visibilityBools]);
+  const visibilityInt = useSelector((state) => {
+    return state.visibilityInt;
+  });
+  const forcedNumber = useSelector((state) => state.forcedNumber);
+
   const dispatch = useDispatch();
 
   const { list, category } = data;
   let { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: [0, 0, 1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-    rootMargin: "-200px 0px 0px 0px",
-    // delay:100,
+    rootMargin: "64px 0px 0px 0px",
+    delay:500,
   });
- 
+
   useEffect(() => {
-  
-    const firstTruth = (arr) => {
-      let temp = 0;
-      arr.forEach((item, index) => {
-        if (item) {
-          temp = index;
-        }
-      });
-      return temp;
-    };
     const biggest = (arr) => {
-      let biggestNum = -1;
-      let index = 0;
-      arr.forEach((item, arrIndex) => {
-        if (item > biggestNum) {
-          biggestNum = item;
-          index = arrIndex;
-        }
-      });
-      return index;
+      let biggestNum = Math.max(...arr);
+      return { index: arr.indexOf(biggestNum), val: biggestNum };
     };
-    const updateBools = () => {
-      const clone = [...visibilityBools];
-      clone[firstTruth(visibilityBools)] = false;
-      clone[biggest(visibility)] = true;
-      dispatch(changeListVisibleBools(clone));
-    };
-    // changes the raw data
+
+    // prevents the crash when the emtry is und
     if (entry) {
-      if ((Number(entry.intersectionRatio.toPrecision(10)) !==visibility[index])){
-  
-      if (inView  ) {
-        console.log(
-          visibility[index],
-          Number(entry.intersectionRatio.toPrecision(10))
-        );
-        update(Number(entry.intersectionRatio.toPrecision(10)));
-      } else {
-        update(0);
-        console.log(
-          visibility[index],
-          Number(entry.intersectionRatio.toPrecision(10)),
-          "zeruje"
+      if(entry.intersectionRect.height !==0){
+        // console.log(index,entry.intersectionRect.height,entry) 
+      }
+      // nie zmieniam danych jesli sa takie same
+      if (
+        entry.intersectionRect.height !== visibility[index]
+      ) {
+
+        // console.log(entry.intersectionRatio.toPrecision(10),visibility[index], entry.intersectionRatio.toPrecision(10) !== visibility[index]);
+        dispatch(
+          changeListVisible(
+            index,
+            entry.intersectionRect.height
+          )
         );
       }
+      // update visible int
+      if (biggest(visibility).index !== visibilityInt) {
+        // console.log(biggest(visibility).index,visibilityInt,biggest(visibility).index !== visibilityInt );
+        // console.log("pwwinno sie zmienic")
+        dispatch(changeVisibleInt(biggest(visibility).index));
+      }
+      if(biggest(visibility).index === forcedNumber){
+        dispatch(changeForcedNumber(-1));
+
+      }
     }
-    if (firstTruth(visibilityBools) !== biggest(visibility)) {
-      console.log(firstTruth(visibilityBools), biggest(visibility));
-      updateBools();
-    }
-  }
-  }, [inView, update, entry,index,visibilityBools,visibility,dispatch]);
+  }, [inView, update, entry, index, visibility, visibilityInt, dispatch,forcedNumber]);
 
   return (
     <section className="category" id={category} ref={ref}>
       <div className="category-heading">
         <h2> {category}</h2>
-        {/* <h2>{`Header inside viewport ${inView}.`}</h2> */}
-        {/* <h2>{entry?entry.intersectionRatio:null}</h2> */}
       </div>
       <div className="category-content">
         {list.map((item, index) => {
-          // return <PancakeSquare data={item} key={index} />
           return <ProductFrame product={item} key={index} />;
         })}
       </div>

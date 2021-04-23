@@ -4,14 +4,13 @@ import { useSelector } from "react-redux";
 import { changeListVisible } from "../../../actions";
 import { useDispatch } from "react-redux";
 
-function PancakesFull({ tholds }) {
+function PancakesFull() {
   const categories = useSelector((state) => state.categories);
   const dispatch = useDispatch();
 
   const updateSingle = (index) => {
     const res = (val) => {
       dispatch(changeListVisible(index,val))
-      // console.log("ZMIANA", index, val);
     };
     return res;
   };

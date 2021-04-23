@@ -7,8 +7,6 @@ export const createCategories = (obj) =>{
     }
   }
 }
-
-
 export const createListVisible = (len) =>{
   return{
     type:"CREATE VISIBLE LIST",
@@ -26,20 +24,44 @@ export const changeListVisible = (index,value) =>{
     }
   }
 }
-  ////
-  export const createListVisibleBools = (len) =>{
+  export const changeVisibleInt= (value) =>{
     return{
-      type:"CREATE VISIBLEBOOL LIST",
+      type:"CHANGE VISIBLEINT",
       payload : {
-        length:len,
+        value
       }
     }
   }
-  export const changeListVisibleBools = (value) =>{
+  export const changeForcedNumber= (value) =>{
     return{
-      type:"CHANGE VISIBLEBOOL LIST",
+      type:"NUMBER CHANGED",
       payload : {
         value
+      }
+    }
+  }
+  export const addItemToCart= (obj) =>{
+    return{
+      type:"ADD ITEM",
+      payload : {
+        obj
+      }
+    }
+  }
+  export const removeItemFromCart= (obj) =>{
+    return{
+      type:"REMOVE ITEM",
+      payload : {
+        obj
+      }
+    }
+  }
+
+  export const removeAllOfItemFromCart= (obj) =>{
+    return{
+      type:"REMOVE ALL OF ITEM",
+      payload : {
+        obj
       }
     }
   }

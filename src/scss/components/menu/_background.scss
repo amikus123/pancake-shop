@@ -9,6 +9,8 @@
   background-size: cover;
   background-position: 10% 80%;
   position: relative;
+  margin-top:0!important;
+
   // i dont want it to count the top margin
   box-sizing: content-box;
   // height of item list
@@ -27,7 +29,7 @@
   h1 {
     @include ph();
     position: absolute;
-    top: 15%;
+    top: 25%;
     color: $whiteish;
   }
 

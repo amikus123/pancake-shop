@@ -1,0 +1,174 @@
+@use '../../abstracts/' as *;
+.preventBodyScroll{
+  
+    @include breakpoint-down(small){
+      height: 100vh;
+    overflow-y: hidden;
+    }
+    // padding-right: 15px; /* Avoid width reflow */
+
+}
+.cart-aside{
+
+  .button{
+    width: 200px!important;
+  }
+  &-closed{
+    transform: translateX(100%);
+  }
+  &-open{
+    transform: translateX(0);
+
+  }
+  transition: all 0.4s;
+  position: fixed;
+  right:0;
+  top:0;
+  background-color: $whiteish;
+  height: 100vh;
+  width: 100vw;
+  max-width: 400px;
+  z-index: 1001;
+  @include f-start(column);
+  &-header{
+    padding: 0.5rem;
+    background-color: $red;
+    height: 64px;
+    @include breakpoint-up(large){
+    height: 80px;
+
+    }
+    @include f-center;
+    width: 100%;
+    .text-wrap{
+      margin:  0 auto;
+      span{
+        // font used here is wrong, beacuse the ohter fonts number are atrocious
+        @include bn();
+        font-size: 1.5rem;
+        color: $whiteish;
+      }
+    }
+
+    svg{
+      height: 30px;
+      width: 30px;  
+      margin-right: 1rem;
+@include active-animation;
+
+      path{
+        fill: $whiteish;
+      }
+    }
+  }
+
+ &-full{
+  width:100%;
+  margin-top: 1rem;
+  margin-bottom:240px;
+  overflow:auto ;
+ }
+ &-empty{
+   flex:1;
+
+  @include f-center(column);
+  >span{
+    @include bn();
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    letter-spacing: 0.25px;
+  }
+ 
+ }
+ 
+ .cart-item {
+  @include f-start();
+  padding: 0.5rem;
+  width:100%;
+  .img-wrap{
+    width: 150px;
+    overflow: hidden;
+    border-radius: 5px;
+    img{
+      // height: 125px;
+      width: 100%;
+      height: 100%;
+      transform: scale(1.25);
+    }
+  }
+  .text-wrap{
+    flex:1;
+    margin-left: 1rem;
+    p {
+      @include th(700);
+      font-size: 1.25rem;
+      max-width: 150px;
+    }
+    .interaction-wrap {
+      @include f-space;
+      padding-right: 0.5rem;
+     .amount{
+       @include f-center;
+
+      svg {
+        
+        box-sizing: content-box;
+        height: 1.5rem;
+        width:1.5rem;
+        cursor: pointer;
+@include active-animation;
+
+      }
+      span {
+        @include bn();
+        font-size: 1.5rem;
+        margin:0.25rem 0.75rem 0rem;
+        
+      }
+     }
+     .price{
+      @include bn();
+      color: $red;
+      // margin-bottom: 0.25rem;
+      font-size: 1.5rem;
+    }
+     >svg{
+      @include active-animation;
+cursor: pointer;
+     }
+    }
+  }
+}
+&-footer{
+
+  height: 240px;
+  position: fixed;
+  bottom: 0;
+  @include f-start(column);
+  width:100%;
+  // background-color: rgb(202, 190, 190);
+  border-top: 1px solid $dark;
+  >*{
+    margin-bottom: 1rem;
+  }
+  .total-price{
+    padding: 0 3rem;
+    width: 100%;
+    @include f-space;
+    .price-info{
+      @include bn();
+      font-size: 2rem;
+    }
+    .price-amount{
+      @include bn();
+      div{
+        display:inline
+      }
+      font-size: 2rem;
+      color:$red;
+    }
+  
+  }
+}
+
+}

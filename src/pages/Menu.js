@@ -1,5 +1,4 @@
 import React, {useEffect, useRef, useState } from "react";
-import {createListVisible} from "../actions"
 
 import Background from "../components/menu/Background";
 import CategoryList from "../components/menu/nav/CategoryList";
@@ -34,14 +33,13 @@ function Menu() {
 
   // intersection observer for bg
   const [refTop, listOnTop] = useOnScreen({threshold:0.5})
-  const [tholds,setTholds] = useState([])
   
   return (
-    <main className="menu">
+    <div className="menu main">
       <Background ref={refTop}/>
-      <CategoryList sticky={!listOnTop} tholds={tholds}/>
-      <PancakesFull tholds={tholds} setTholds={setTholds}/>
-    </main>
+      <CategoryList sticky={!listOnTop}/>
+      <PancakesFull />
+    </div>
   );
 }
 

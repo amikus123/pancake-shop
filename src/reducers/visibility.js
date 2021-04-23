@@ -4,13 +4,9 @@ const visibility = (state = [], action) => {
       const ret = [];
       for (let i = 0; i < action.payload.length; i++) {
         if (i === 0) {
-          // ret.push(true);
           ret.push(1);
-
         } else {
           ret.push(0);
-
-          // ret.push(false);
         }
       }
       return ret;

@@ -3,6 +3,15 @@
 
 
 .header {
+  &__checkout{
+  // top: 100px;
+  nav{
+    justify-content: center!important;
+    .abs-con, ul{
+      display:none!important;
+    }
+  }
+  }
   position: fixed;
   top: 0;
   width: 100%;
@@ -11,12 +20,29 @@
   justify-content: center;
   background: $whiteish;
   z-index: 100;
+
   nav{
     height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
+    position:relative;
+    // hopes thus line dosent break anything
+
+    .go-back{
+      position: absolute;
+      left:0;
+      color:$gold;
+      transition: all 0.4s ease-in-out;
+      &:hover{
+        color: $red;
+      }
+      svg{
+      width:32px;
+      height: 32px;
+      }
+    }
   }
   @include breakpoint-down(medium){
     nav {
@@ -45,9 +71,10 @@
           padding: 0 0 3.1875rem 0;
           a {
             text-transform: uppercase;
-            color: $gold;
             @include sh();
+            color: $gold;
             transition: color 0.2s ease-in-out;
+      
           }
         }
       }
@@ -81,8 +108,14 @@
   }
   @include breakpoint-up(medium) {
     transition: all 0.4s ease-in-out;
+    
+
+
+
  a{
    color:$gold;
+    transition: color 0.4s ease-in-out;
+          
  }
     &__trans {
         background: none;
@@ -95,8 +128,9 @@
             li {
               a {
                 color: $whiteish;
-    transition: all 0.4s ease-in-out;
-
+                &:hover{
+                  color: $red;
+                  };
               }
             }
           }
@@ -116,6 +150,7 @@
           }
         }
       }
+
     &__full{
       background-color:$whiteish;
       nav {
@@ -126,8 +161,20 @@
           li {
             a {
               color: $gold;
+              &:hover{
+                color: $dark;
+                };
+            }
+            .cart-header{
+              svg{
+                color: $gold;
+              }
+              span{
+                color:$whiteish;
+              }
             }
           }
+
         }
         .menu-icon {
           span {
@@ -158,6 +205,7 @@
           a {
             text-transform: uppercase;
             @include bn(600);
+           
           }
         }
       }

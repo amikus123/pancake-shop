@@ -3,20 +3,33 @@
 .button {
   border-radius: 10px;
   padding: 10px 20px;
+  box-sizing:content-box;
+  cursor: pointer;
   @include f-center();
+  // not sure about this
+  @include active-animation();
+  transition: all 0.2s ease-in-out; 
   span {
     @include bn;
     font-size: 1.125em;
   }
   // subclasses
   &__red {
+    &:active,&:hover{
+      // background-color:$gold;
+    }
     background-color: $red;
-
+    
     span {
       color: $whiteish;
     }
+
   }
   &__trans {
+
+    &:active,&:hover{
+      background-color:#eee;
+    }
     span {
       color: $red;
     }

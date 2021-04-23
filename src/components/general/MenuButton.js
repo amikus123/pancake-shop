@@ -4,6 +4,7 @@ function MenuButton() {
 const [isOpen,setIsOpen] = useState(false)
 // this makes user able to hide overlay on any click
 const handleClick = useCallback((event) => {
+
     setIsOpen(false)
     console.log(event)
 
