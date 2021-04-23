@@ -10,7 +10,7 @@ import Cards from "../components/landing/cards/Cards";
 function Landing() {
   return (
     <>
-      <main className="landing">
+      <main className="landing main">
         <FirstHero />
         <Cards />
         <SecondHero />

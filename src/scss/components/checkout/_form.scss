@@ -1,1 +1,52 @@
 @use '../../abstracts/' as *;
+.form{
+  background-color: $whiteish;
+  min-height: 100vh;
+  margin-top:16px;
+  form{
+  background-color: $whiteish;
+    @include f-start(column);
+    align-items: flex-start;
+    padding: 1rem;
+    >*{
+      margin-bottom: 0.5rem;
+    }
+    label{  
+      @include f-start(column);
+      align-items: flex-start;
+      @include bn(400);
+      input{
+        margin-top: 10px;
+        padding: 0.25rem;
+      }
+    }
+    p{
+      // used for sepearation
+      @include bn();
+      text-align: left;
+    }
+  }
+
+  #submit{
+    border-radius: 10px;
+  padding: 10px 20px;
+  box-sizing:content-box;
+  cursor: pointer;
+  @include f-center();
+  // not sure about this
+  @include active-animation(active);
+  transition: all 0.2s ease-in-out; 
+  @include bn;
+  font-size: 1.125em;
+  border: none;
+  align-self: center;
+
+  &:active,&:hover{
+    background-color:$gold;
+  }
+  background-color: $red;
+  
+    color: $whiteish;
+  
+  }
+}

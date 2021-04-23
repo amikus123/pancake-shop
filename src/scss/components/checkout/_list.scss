@@ -20,7 +20,7 @@
   }
   &-empty {
     flex: 1;
-
+    margin-top: 0!important;
     @include f-center(column);
     > span {
       @include bn();

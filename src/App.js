@@ -5,6 +5,8 @@ import Error from "./pages/Error";
 import Landing from "./pages/Landing";
 import Menu from "./pages/Menu";
 import Checkout from "./pages/Checkout";
+import Form from "./pages/Form";
+
 import Header from "./components/singleUse/Header";
 import Footer from "./components/singleUse/Footer";
 // redux and data
@@ -63,7 +65,9 @@ function App() {
         <Route path="/menu" component={Menu}></Route>
         <Route path="/checkout" component={Checkout}></Route>
 
+        <Route path="/form" exact component={Form}></Route>
         <Route path="/" exact component={Landing}></Route>
+
         <Route path="/*">
           <Error />
         </Route>

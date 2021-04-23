@@ -21,7 +21,7 @@ function List() {
   }, [cart,totalPrice]);
 
   return (
-  <div className="checkout-list">
+    <>
       {cart.length === 0 ? (
         <div className="checkout-list-empty">
           <span>Your cart is empty</span>
@@ -31,8 +31,9 @@ function List() {
             location={"/menu"}
           />
         </div>
-      ) : (
-        <>
+        ) : (
+          <div className="checkout-list">
+          <>
           <div className="checkout-list-full">
             <ul>
               {cart.map((item, index) => {
@@ -47,14 +48,12 @@ function List() {
                  
                  {totalPrice} zł</span>
             </div>
-            {/* <Button
-              text={"CHECKOUT"}
-              location="/checkout"
+            <Button
+              text={"CONTINUE"}
+              location="/form"
               type={"red"}
-              onClick={() => {
-                setOpen(false);
-              }}
-            /> */}
+        
+            />
             {/* <Button
               text={"BACK TO SHOP"}
               type={"trans"}
@@ -64,9 +63,9 @@ function List() {
             /> */}
           </div>
         </>
-      )}
     </div>
-
+      )}
+</>
   )
 }
 

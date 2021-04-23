@@ -35,11 +35,11 @@ function Menu() {
   const [refTop, listOnTop] = useOnScreen({threshold:0.5})
   
   return (
-    <main className="menu">
+    <div className="menu main">
       <Background ref={refTop}/>
       <CategoryList sticky={!listOnTop}/>
       <PancakesFull />
-    </main>
+    </div>
   );
 }
 

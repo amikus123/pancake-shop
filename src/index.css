@@ -105,11 +105,11 @@ ul {
   list-style: none;
 }
 
-main > :first-child {
+#root > .main > :first-child {
   margin-top: 4rem;
 }
 @media (min-width: 64em) {
-  main > :first-child {
+  #root > .main > :first-child {
     margin-top: 5rem;
   }
 }
@@ -177,6 +177,20 @@ main > :first-child {
   justify-content: space-between;
   align-items: center;
   width: 80%;
+  position: relative;
+}
+.header nav .go-back {
+  position: absolute;
+  left: 0;
+  color: #a16720;
+  transition: all 0.4s ease-in-out;
+}
+.header nav .go-back:hover {
+  color: #801d14;
+}
+.header nav .go-back svg {
+  width: 32px;
+  height: 32px;
 }
 @media (max-width: 63.9375em) {
   .header nav .overlay {
@@ -2473,6 +2487,7 @@ footer .wrapper nav ul li {
 }
 .checkout-list-empty {
   flex: 1;
+  margin-top: 0 !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2697,5 +2712,69 @@ footer .wrapper nav ul li {
 962x601 (3.2%)
 
  */
+.form {
+  background-color: #f3f3f3;
+  min-height: 100vh;
+  margin-top: 16px;
+}
+.form form {
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.form form > * {
+  margin-bottom: 0.5rem;
+}
+.form form label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-family: "Lusitana", serif;
+}
+.form form label input {
+  margin-top: 10px;
+  padding: 0.25rem;
+}
+.form form p {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Lusitana", serif;
+  text-align: left;
+}
+.form #submit {
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-sizing: content-box;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Lusitana", serif;
+  font-size: 1.125em;
+  border: none;
+  align-self: center;
+  background-color: #801d14;
+  color: #f3f3f3;
+}
+.form #submit:active {
+  transform: translateY(-2px);
+}
+.form #submit:active, .form #submit:hover {
+  background-color: #a16720;
+}
 
 /*# sourceMappingURL=index.css.map */

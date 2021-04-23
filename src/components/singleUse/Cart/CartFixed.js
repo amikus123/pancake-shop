@@ -4,7 +4,7 @@ import CartIcon from "./CartIcon";
 function CartFixed({handleClick,open,location}) {
  const [isCheckout, setIsCheckout] = useState(false)
  useEffect(()=>{
-if(location.pathname === "/checkout"){
+if(location.pathname === "/checkout" || location.pathname ==="/form"){
   setIsCheckout(true)
 }else{
   setIsCheckout(false)
