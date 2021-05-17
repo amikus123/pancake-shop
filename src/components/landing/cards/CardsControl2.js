@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "./CardsItem";
 import cards from "../../../data/cardsData";
-import FirstHero from "../FirstHero";
 function CardsControl({ number }) {
 
 const changePosistion = (num) =>{

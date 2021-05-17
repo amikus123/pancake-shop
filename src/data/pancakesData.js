@@ -8,7 +8,14 @@ import p7 from "../images/data/pancakes/7.png";
 
 const pancakes = [
   {
-    name: "Pancake with strawberries",
+    name: "Pancake with berries",
+    price: "23",
+    img: p1,
+    rating: "4.5",
+    category:"sweet",
+  },
+  {
+    name: "Pancake with maple syrup",
     price: "22",
     img: p1,
     rating: "4.5",
@@ -16,29 +23,22 @@ const pancakes = [
   },
   {
     name: "Pancake with strawberries",
-    price: "22",
-    img: p1,
-    rating: "4.5",
-    category:"sweet",
-  },
-  {
-    name: "Pancake with berries",
     price: "28",
     img: p2,
-    rating: "2.2",
+    rating: "2.3",
     category:"sweet",
 
   },
   {
-    name: "Pancake with berries",
-    price: "28",
+    name: "Pancake with ice cream",
+    price: "31",
     img: p2,
-    rating: "2.2",
+    rating: "2.5",
     category:"sweet",
 
   },
   {
-    name: "Pancake with chocolate",
+    name: "Pancake with sugar",
     price: "19",
     img: p3,
     rating: "3.2",
@@ -46,15 +46,15 @@ const pancakes = [
 
   },
   {
-    name: "Pancake with chocolate",
-    price: "19",
+    name: "Pancake with blueberries",
+    price: "22",
     img: p3,
-    rating: "3.2",
+    rating: "4.2",
     category:"bitter",
 
   },
   {
-    name: "Pancake with fish",
+    name: "Pancake with blakcberry",
     price: "22",
     img: p4,
     rating: "5.0",
@@ -62,31 +62,31 @@ const pancakes = [
 
   },
   {
-    name: "Pancake with fish",
-    price: "22",
+    name: "Pancake with whipped cream",
+    price: "27",
     img: p4,
     rating: "5.0",
     category:"bitter",
 
   },
   {
-    name: "Pancake with bananas",
+    name: "Pancake with chocolate",
     price: "16",
     img: p5,
-    rating: "4.1",
+    rating: "3.1",
     category:"tropical",
 
   },
  {
-    name: "Pancake with bananas",
-    price: "16",
+    name: "Pancake with dark chocolate",
+    price: "17",
     img: p5,
     rating: "4.1",
     category:"tropical",
 
   },
   {
-    name: "Pancake with strawberries",
+    name: "Pancake with nutella",
     price: "26",
     img: p6,
     rating: "4.8",
@@ -94,7 +94,7 @@ const pancakes = [
 
   },
   {
-    name: "Pancake with panckaes",
+    name: "Pancake with fruits",
     price: "17",
     img: p7,
     rating: "4.2",
@@ -102,27 +102,27 @@ const pancakes = [
 
   },
   {
-    name: "Pancake with random",
-    price: "17",
+    name: "Mysterious pancake",
+    price: "25",
     img: p7,
     rating: "4.2",
-    category:"pancake",
+    category:"experimental",
 
   },
   {
-    name: "Pancake with stick",
+    name: "Pancake with bananas",
     price: "17",
     img: p7,
     rating: "4.2",
-    category:"sticks",
+    category:"banana",
 
   },
   {
-    name: "Pancake with benefits",
+    name: "Pancake ",
     price: "17",
     img: p7,
     rating: "4.2",
-    category:"benefits",
+    category:"plain",
 
   },
 ];

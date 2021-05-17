@@ -1,4 +1,3 @@
-import React,{useState} from 'react'
 import Rating from './Rating';
 
 function Review({data,classess}) {
