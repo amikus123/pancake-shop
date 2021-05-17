@@ -6,7 +6,6 @@ const [isOpen,setIsOpen] = useState(false)
 const handleClick = useCallback((event) => {
 
     setIsOpen(false)
-    console.log(event)
 
 }, [setIsOpen])
 

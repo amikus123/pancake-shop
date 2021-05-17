@@ -8,7 +8,6 @@ const CategoryItem = React.forwardRef((props, ref) => {
   const visibilityInt = useSelector((state) => state.visibilityInt);
   const forcedNumber = useSelector((state) => state.forcedNumber);
   const dispatch = useDispatch();
-
   // scrols to correct category on click
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
@@ -17,9 +16,7 @@ const CategoryItem = React.forwardRef((props, ref) => {
   };
 
   useEffect(() => {
-    console.log(forcedNumber);
     if (visibilityInt === index && ref && forcedNumber === -1) {
-      console.log("srodkuk w");
       ref.current.scrollIntoView({
         behavior: "auto",
         block: "nearest",
@@ -39,8 +36,6 @@ const CategoryItem = React.forwardRef((props, ref) => {
     }
   };
   //
-  // }
-  // ${forcedNumber === index?"button-nav-active" : ""}
   return (
     <HashLink
       className={`button-nav ${classes} ${
@@ -65,31 +60,3 @@ const CategoryItem = React.forwardRef((props, ref) => {
 });
 
 export default CategoryItem;
-
-// function CategoryItem({ type, classes, text, where, inView }) {
-//   const scrollWithOffset = (el) => {
-//     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-//     const yOffset = -180;
-//     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
-//   };
-//   useEffect(() => {
-//     console.log(inView);
-//   }, [inView]);
-//   return (
-//     <>
-//       {/* <a  className={`button-nav ${classes}`} href={where}>
-//      asdasdasd
-//     </a> */}
-//       <HashLink
-//         // className={`button-nav ${classes} ${
-//         //   inView ? "button-nav-active" : "button-nav-inactive"
-//         // }`}
-//         // to={where}
-//         // scroll={scrollWithOffset}
-//       >
-//         {/* <span>{text.toUpperCase()}</span> */}
-//         <p>sad</p>
-//       </HashLink>
-//     </>
-//   );
-// }

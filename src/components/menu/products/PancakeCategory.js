@@ -28,17 +28,15 @@ function PancakeCategory({ data, update, index }) {
       return { index: arr.indexOf(biggestNum), val: biggestNum };
     };
 
-    // prevents the crash when the emtry is und
+    // prevents the crash when the entry is undefined
     if (entry) {
       if(entry.intersectionRect.height !==0){
-        // console.log(index,entry.intersectionRect.height,entry) 
       }
       // nie zmieniam danych jesli sa takie same
       if (
         entry.intersectionRect.height !== visibility[index]
       ) {
 
-        // console.log(entry.intersectionRatio.toPrecision(10),visibility[index], entry.intersectionRatio.toPrecision(10) !== visibility[index]);
         dispatch(
           changeListVisible(
             index,
@@ -48,8 +46,6 @@ function PancakeCategory({ data, update, index }) {
       }
       // update visible int
       if (biggest(visibility).index !== visibilityInt) {
-        // console.log(biggest(visibility).index,visibilityInt,biggest(visibility).index !== visibilityInt );
-        // console.log("pwwinno sie zmienic")
         dispatch(changeVisibleInt(biggest(visibility).index));
       }
       if(biggest(visibility).index === forcedNumber){

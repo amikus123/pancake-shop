@@ -9,10 +9,8 @@ function Header({ location, handleClick }) {
   const [offset, setOffset] = useState(false);
   let history = useHistory();
 
-  // measuer the vertcial offset, used to cgange navbar color
+  // measuer the vertcial offset, used to change navbar color
   useEffect(() => {
-    console.log(history, "asd");
-    // temporary solution, not efficient
     if (location.pathname === "/") {
       window.onscroll = () => {
         if (window.pageYOffset < 100) {
@@ -23,8 +21,6 @@ function Header({ location, handleClick }) {
       };
     }
   }, [location.pathname, history]);
-  // <header className={`header ${(location.pathname ==="/" ) && "header__trans"} ${offset && "header__full"}`}  >
-  // NavLink
   return (
     // transparency is given on main page
     <header
@@ -43,7 +39,6 @@ function Header({ location, handleClick }) {
       <nav>
         <MenuButton />
         <Link
-          // to={location.pathname === "/checkout" ? "/" : "/checkout"}
           to="#"
           className={`go-back ${
             location.pathname === "/checkout" || location.pathname === "/form"

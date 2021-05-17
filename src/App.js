@@ -26,7 +26,6 @@ function App() {
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open);
-    console.log(document.getElementsByTagName("body")[0].classList.toggle("preventBodyScroll"))
     //     
 
   };
@@ -55,8 +54,6 @@ function App() {
     });
     dispatch(createCategories(categories));
     dispatch(createListVisible(uniqueNames.length));
-
-    console.log(categories);
   }, [dispatch]);
   return (
     <>
