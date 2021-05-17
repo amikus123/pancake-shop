@@ -4,7 +4,6 @@ import Woman from "../../images/landing/second-hero/second-hero.png";
 import Menu from "../../pages/Menu";
 
 function SecondHero() {
-  // https://freedesignfile.com/380895-pretty-female-cook-stock-photo-07/
   return (
     <section className="second-hero">
    

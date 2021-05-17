@@ -456,7 +456,7 @@ footer .wrapper .contact .logo {
 footer .wrapper .contact ul {
   padding-bottom: 1rem;
 }
-footer .wrapper .contact ul li {
+footer .wrapper .contact ul li, footer .wrapper .contact ul a {
   font-size: 1.125rem;
   font-weight: 700;
   font-family: "Lusitana", serif;
@@ -483,10 +483,10 @@ footer .wrapper nav {
 footer .wrapper nav > ul {
   margin: 0 3rem 0 0;
 }
-footer .wrapper nav ul :first-child {
+footer .wrapper nav ul > :first-child {
   color: #131313;
 }
-footer .wrapper nav ul li {
+footer .wrapper nav ul li, footer .wrapper nav ul a {
   color: #514646;
   font-size: 1.125rem;
   font-weight: 700;

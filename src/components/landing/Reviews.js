@@ -1,8 +1,6 @@
 import React from 'react'
 import Desktop from "../../images/landing/reviews/review.png";
 import ReviewsGallery from './review/ReviewsGallery';
-
-// im not sure if 2 pic are making any difference
 function Reviews() {
   return (
     <section className="reviews">
