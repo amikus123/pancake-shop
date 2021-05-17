@@ -1,5 +1,5 @@
 # Cakepan - online pancake restaurant
-![Image](./images/readme.jpg)
+![Image](https://user-images.githubusercontent.com/51713265/118542911-e9f13600-b753-11eb-8a5c-7d7b415a1621.jpg)
 
 ## Table of contents
 * [General info](#general-info)
