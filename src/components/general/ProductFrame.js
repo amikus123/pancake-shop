@@ -16,7 +16,6 @@ function ProductFrame({ product, classes }) {
   }
   const handleClick = (e) =>{
     e.preventDefault();
-    console.log("S")
     dispatch(addItemToCart(product));
     setClicked(true)
     if(timeoutID!==0){

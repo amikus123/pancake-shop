@@ -12,7 +12,7 @@ function CartContent({closeCart}) {
   const cart = useSelector((state) => [...state.cart]);
 
   return (
-    <div className={`cart-overlay-list ${cart.length===0?"empty-cart":"full-cart"}`} onClick={()=>{console.log(cart)}}>
+    <div className={`cart-overlay-list ${cart.length===0?"empty-cart":"full-cart"}`}>
        {cart.length ===0? 
        <>
        <p className="empty"> 

@@ -18,7 +18,6 @@ function CartAside({ open, setOpen }) {
     });
     setCartItems(items);
     setTotalPrice(price);
-    console.log(totalPrice)
   }, [cart,totalPrice]);
 
   return (

@@ -4,8 +4,6 @@ import { withRouter } from 'react-router-dom';
 function ScrollToTop({ history, children }) {
   useEffect(() => {
     const unlisten = history.listen(() => {
-      console.log("hsitoria",history) 
-      console.log(history.location.hash, "hash" ) 
       if(history.location.hash === ""){
         window.scrollTo(0, 0);
       }

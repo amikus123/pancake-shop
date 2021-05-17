@@ -9,9 +9,7 @@ function Cards() {
     <section className="cards ">
       <h2>What makes us Special</h2>
       <IconsRow fun={setNumber} number={number}/>
-      {/* <CardsControl number={number}/> */}
       <CardsControl2 number={number}/>
-      
       <CardsFull/>
     </section>
   )

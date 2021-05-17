@@ -21,7 +21,7 @@ footer{
         margin-bottom: 1em
       }
       ul{
-        li{
+        li,a{
           @include bn;
   
         }
@@ -49,12 +49,12 @@ footer{
       margin:0 3rem 0 0;
      }
       ul{
-        
-        :first-child{
+
+      > :first-child{
           color: $dark;
         }
   
-        li{
+        li,a{
           color:$grey;
           @include bn;
           padding-bottom: 1rem;
