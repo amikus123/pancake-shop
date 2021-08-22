@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import MenuButton from "../general/MenuButton";
 import CartIcon from "./Cart/CartIcon";
-// it solves the issue of react router links  to working with links to id
 import { ImArrowLeft2 } from "react-icons/im";
 
 function Header({ location, handleClick }) {
@@ -21,8 +20,9 @@ function Header({ location, handleClick }) {
       };
     }
   }, [location.pathname, history]);
+
   return (
-    // transparency is given on main page
+    // header is only transparent on landing page
     <header
       className={`header ${
         location.pathname === "/"

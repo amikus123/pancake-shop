@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import IconsRow from "./CardsIconsRow";
 import CardsFull from "./CardsFull";
-import CardsControl2 from "./CardsControl2";
+import CardsControl from "./CardsControl";
 
 function Cards() {
   const [number,setNumber] = useState(1)
@@ -9,7 +9,7 @@ function Cards() {
     <section className="cards ">
       <h2>What makes us Special</h2>
       <IconsRow fun={setNumber} number={number}/>
-      <CardsControl2 number={number}/>
+      <CardsControl number={number}/>
       <CardsFull/>
     </section>
   )
