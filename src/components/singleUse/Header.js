@@ -38,7 +38,7 @@ function Header({ location, handleClick }) {
     >
       <nav>
         <MenuButton />
-        <Link
+        <Link 
           to="#"
           className={`go-back ${
             location.pathname === "/checkout" || location.pathname === "/form"

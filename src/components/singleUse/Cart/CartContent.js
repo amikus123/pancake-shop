@@ -20,7 +20,6 @@ function CartContent({closeCart}) {
        </p>
        <p>You can change that</p>
        <Button text={"HERE"} location={"/menu"} component={Menu} type={"red"} onClick={closeCart} />
-
        </>
        :
        <>

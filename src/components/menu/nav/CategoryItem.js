@@ -8,7 +8,8 @@ const CategoryItem = React.forwardRef((props, ref) => {
   const visibilityInt = useSelector((state) => state.visibilityInt);
   const forcedNumber = useSelector((state) => state.forcedNumber);
   const dispatch = useDispatch();
-  // scrols to correct category on click
+  
+  // scrols to correct category on click, using smooth scroll
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
     const yOffset = -180;

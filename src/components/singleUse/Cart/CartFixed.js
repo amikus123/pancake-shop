@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from "react";
 import CartAside from "./CartAside";
 import CartIcon from "./CartIcon";
+
 function CartFixed({handleClick,open,location}) {
  const [isCheckout, setIsCheckout] = useState(false)
  useEffect(()=>{

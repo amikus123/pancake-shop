@@ -9,7 +9,6 @@ function Form() {
   const [correct, setCorrect] = useState(false);
 
   useEffect(() => {
-    // i get before price before the calculatiobn
     let price = 0;
     cart.forEach((item) => {
       price += item.amount * item.product.price;
@@ -17,17 +16,16 @@ function Form() {
     setTotalPrice(price);
   }, [cart, totalPrice]);
 
-  // lsit of regex
 
   const megaReg = {
     city: /^[AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyZzŹźŻż ]*$/,
     code: /^[0-9]{2}-[0-9]{3}?$/,
     street:
       /^[#.0-9AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyZzŹźŻż/\s,-]+$/,
-    email: /(\w\.?)+@[\w\.-]+\.\w{2,4}/,
+    email: /(\w\.?)+@[\w.-]+\.\w{2,4}/,
     name: /^[AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyZzŹźŻż ]*$/,
     phone:
-      /^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/,
+      /^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[-. \\/]?)?((?:\(?\d{1,}\)?[-. \\/]?){0,})(?:[-. \\/]?(?:#|ext\.?|extension|x)[-. \\/]?(\d+))?$/,
   };
   const checkForm = (e) => {
     e.preventDefault();

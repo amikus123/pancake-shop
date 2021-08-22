@@ -5,14 +5,12 @@ import CartItem from "../singleUse/Cart/CartItem";
 
 function List() {
   const cart = useSelector((state) => [...state.cart]);
-  // const [cartItems, setCartItems] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
     let price = 0;
     cart.forEach((item) => {
       price += item.amount * item.product.price;
     });
-    // setCartItems(items);
     setTotalPrice(price);
   }, [cart, totalPrice]);
 
@@ -23,7 +21,6 @@ function List() {
           <span>Your cart is empty</span>
           <Button
             text={"BACK TO SHOP"}
-            // type={"trans"}
             location={"/menu"}
           />
         </div>

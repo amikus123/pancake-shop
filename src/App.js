@@ -54,7 +54,6 @@ function App() {
       <Switch>
         <Route path="/menu" component={Menu}></Route>
         <Route path="/checkout" component={Checkout}></Route>
-
         <Route path="/form" exact component={Form}></Route>
         <Route path="/" component={Landing}></Route>
       </Switch>
