@@ -11,7 +11,7 @@
 ## General info
 This project is a restaurant page, which allows customers to order pancakes online.  
 ## Hosting
-This page can be seen live [here](pancakes-309615.web.app)
+This page can be seen live [here](https://pancakes-309615.web.app)
 	                      
 ## Technologies
 Project is created with:
