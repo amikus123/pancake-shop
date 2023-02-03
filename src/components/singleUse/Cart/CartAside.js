@@ -9,7 +9,7 @@ function CartAside({ open, setOpen }) {
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    // i get before price before the calculatiobn
+    // I get before price before the calculatiobn
     let items = 0,
       price = 0;
     cart.forEach((item) => {

@@ -1,12 +1,12 @@
-@use '../../abstracts/' as *;
+@use "../../abstracts/" as *;
 .form {
   background-color: $whiteish;
   min-height: 100vh;
   margin-top: 16px;
-  h1{
+  h1 {
     text-align: center;
     @include ph();
-    padding-top: 10rem!important;
+    padding-top: 10rem !important;
   }
   form {
     background-color: $whiteish;
@@ -20,61 +20,58 @@
       @include f-start(column);
       align-items: flex-start;
       @include bn(400);
-      width:100%;
-      max-width:500px;
+      width: 100%;
+      max-width: 500px;
 
       input {
         margin-top: 10px;
         padding: 0.25rem;
-        width:100%;
-        max-width:500px;
+        width: 100%;
+        max-width: 500px;
         background-color: $whiteish;
+        border: none;
         border-radius: 4px;
-        border: 1px solid $grey;
-        outline: none;
+        outline: 1px solid $grey;
         box-sizing: content-box;
-        color:$dark;
-        &::placeholder{
-          color:#131313c6;
+        color: $dark;
+        &::placeholder {
+          color: #131313c6;
         }
-        &:focus{
-        border: 2px solid $gold;
-        
+        &:focus {
+          outline: 2px solid $gold;
         }
       }
- 
+
       .input-error {
-        border: 2px solid $red!important;
-          color:$red;
-    
+        outline: 2px solid $red !important;
+        color: $red;
       }
       .error {
         // transition: transform 0.4s ease-in-out;
         visibility: hidden;
         position: absolute;
-      
-      @include bn(700);
-      font-size:1rem;
-        color:$red;
+
+        @include bn(700);
+        font-size: 1rem;
+        color: $red;
         display: flex;
         align-items: center;
-        svg{
+        svg {
           // height: 20px
-        margin-bottom:4px;
-        margin-right: 4px;
-
+          margin-bottom: 4px;
+          margin-right: 4px;
         }
         &-show {
           // transform: translateY(-50%);
-          animation: show .4s forwards ease-in-out;
+          animation: show 0.4s forwards ease-in-out;
         }
 
         @keyframes show {
           0% {
             position: absolute;
             transform: translateY(-50%);
-          opacity: 0.1;
-            
+            opacity: 0.1;
+
             // background-color: rgb(126, 122, 122);
           }
           1% {
@@ -83,12 +80,11 @@
 
             // transform: translateY(-50%);
           }
-          50%{
-
+          50% {
             transform: translateY(0);
           }
           100% {
-          opacity: 1;
+            opacity: 1;
 
             visibility: visible;
             // background-color: rgb(124, 124, 152);
@@ -102,7 +98,7 @@
       @include ph();
       text-align: left;
       font-size: 1.5rem;
-      margin-top:1.5rem;
+      margin-top: 1.5rem;
     }
   }
 
