@@ -10,7 +10,7 @@ function PancakesFull() {
 
   const updateSingle = (index) => {
     const res = (val) => {
-      dispatch(changeListVisible(index,val))
+      dispatch(changeListVisible(index, val));
     };
     return res;
   };

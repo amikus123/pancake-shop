@@ -12,9 +12,12 @@ function FirstHero() {
           Our mission is to show that pancakes are no doubt the best type of pan
           and cake alike.
         </p>
-
-        <Button text={"ORDER NOW"} location={"/menu"} component={Menu} type={"red"} />
-
+        <Button
+          text={"ORDER NOW"}
+          location={"/menu"}
+          component={Menu}
+          type={"red"}
+        />
       </div>
     </section>
   );

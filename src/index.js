@@ -3,10 +3,9 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import ScrollToTop from "./components/general/ScrollToTop";
-// redux
 import { createStore } from "redux";
 import allReducer from "./reducers";
-import {Provider} from "react-redux";
+import { Provider } from "react-redux";
 const myStore = createStore(
   allReducer,
   // chrome redux extension
@@ -15,11 +14,11 @@ const myStore = createStore(
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={myStore}>
-    <Router>
-      <ScrollToTop>
-        <App />
-      </ScrollToTop>
-    </Router>
+      <Router>
+        <ScrollToTop>
+          <App />
+        </ScrollToTop>
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

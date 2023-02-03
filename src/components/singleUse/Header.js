@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import MenuButton from "../general/MenuButton";
 import CartIcon from "./Cart/CartIcon";
-// it solves the issue of react router links  to working with links to id
 import { ImArrowLeft2 } from "react-icons/im";
 
 function Header({ location, handleClick }) {
   const [offset, setOffset] = useState(false);
   let history = useHistory();
 
-  // measuer the vertcial offset, used to change navbar color
+  // measures the vertcial offset, used to change navbar color
   useEffect(() => {
     if (location.pathname === "/") {
       window.onscroll = () => {
@@ -45,7 +44,9 @@ function Header({ location, handleClick }) {
               ? null
               : "hide"
           }`}
-          onClick={()=>{history.goBack(1)}}
+          onClick={() => {
+            history.goBack(1);
+          }}
         >
           <ImArrowLeft2 />
         </Link>
@@ -59,7 +60,7 @@ function Header({ location, handleClick }) {
           <li>
             <Link to="/menu">Menu</Link>
           </li>
-         
+
           <li>
             <Link to="/menu">Order now</Link>
           </li>

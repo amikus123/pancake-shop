@@ -1,10 +1,10 @@
-import React, {forwardRef} from 'react'
-const  Background = forwardRef((props,ref) => {
+import React, { forwardRef } from "react";
+const Background = forwardRef((props, ref) => {
   return (
-    <div className="background" ref={ref}> 
+    <div className="background" ref={ref}>
       <h1>Our menu </h1>
     </div>
-  )
-})
+  );
+});
 
-export default Background
+export default Background;

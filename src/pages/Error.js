@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 function Error() {
   return (
     <div className="main">
-      <p>jeblo</p>
+      <p>An error has occurder :(</p>
     </div>
-  )
+  );
 }
 
-export default Error  
+export default Error;

@@ -9,11 +9,9 @@ function PromotedItems() {
       <h3>Our best pancakes</h3>
       <p>Made with indigirents with of best quality</p>
       <div className="promoted-wrapper">
-        {products.map((prod, index) => (
-          index <=5? 
-          <ProductFrame product={prod} key={index}  />
-          :null
-        ))}
+        {products.map((prod, index) =>
+          index <= 5 ? <ProductFrame product={prod} key={index} /> : null
+        )}
       </div>
       <Button
         text={"MORE PANCAKES"}

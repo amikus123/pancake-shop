@@ -1,18 +1,14 @@
-import React from 'react';
+import React from "react";
 import Icon from "./CardsIcon";
 
-function IconsRow({fun,number}) {
-  let three = [1,2,3]
-
+function IconsRow({ fun, number }) {
   return (
-    <div className="icon-row hide-desktop" >
-   {
-     three.map((index)=>{
-       return <Icon fun={fun} ownNumber={index} number={number}  key={index} />
-     })
-   }
+    <div className="icon-row hide-desktop">
+      {[1, 2, 3].map((index) => {
+        return <Icon fun={fun} ownNumber={index} number={number} key={index} />;
+      })}
     </div>
-  )
+  );
 }
 
-export default IconsRow
+export default IconsRow;

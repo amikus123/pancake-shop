@@ -3,7 +3,7 @@ import { PrevButton, NextButton } from "./EmblaCarouselButtons";
 import { useRecursiveTimeout } from "./useRecursiveTimeout";
 
 import { useEmblaCarousel } from "embla-carousel/react";
-import Review from './Review'
+import Review from "./Review";
 import reviews from "../../../data/reviewData";
 
 function ReviewsGallery() {
@@ -19,7 +19,7 @@ function ReviewsGallery() {
       embla.scrollTo(0);
     }
   }, [embla]);
-  
+
   const { play, stop } = useRecursiveTimeout(autoplay, AUTOPLAY_INTERVAL);
 
   const scrollNext = useCallback(() => {
@@ -51,17 +51,15 @@ function ReviewsGallery() {
     play();
   }, [play]);
 
-
   return (
     <div className="embla">
       <div className="embla__viewport" ref={viewportRef}>
         <div className="embla__container">
-          {reviews.map((data,index) => (
+          {reviews.map((data, index) => (
             <div className="embla__slide" key={index}>
               <div className="embla__slide__inner">
-                <Review data={data}/>
-                <Review data={data} classess="helper"/>
-
+                <Review data={data} />
+                <Review data={data} classess="helper" />
               </div>
             </div>
           ))}
@@ -71,7 +69,6 @@ function ReviewsGallery() {
       <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
     </div>
   );
-};
+}
 
-
-export default ReviewsGallery
+export default ReviewsGallery;

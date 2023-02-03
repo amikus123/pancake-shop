@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
-function CartIcon({ location,handleClick }) {
+function CartIcon({ location, handleClick }) {
   const cart = useSelector((state) => [...state.cart]);
   const [cartItems, setCartItems] = useState(0);
   useEffect(() => {
@@ -11,24 +11,22 @@ function CartIcon({ location,handleClick }) {
     setCartItems(items);
   }, [cart]);
   return location === "header" ? (
-<>
-
-<div className={`cart-icon cart-header show-desktop`} onClick={handleClick}>
-      <FaShoppingCart className="show-number" number={cartItems} />
-      {cartItems === 0 ? null : <span>{cartItems}</span>}
-    </div>
-    {/* <span className="show-desktop"> VIEW CART</span> */}
-</>
-
+    <>
+      <div
+        className={`cart-icon cart-header show-desktop`}
+        onClick={handleClick}
+      >
+        <FaShoppingCart className="show-number" number={cartItems} />
+        {cartItems === 0 ? null : <span>{cartItems}</span>}
+      </div>
+    </>
   ) : (
-
-   <>
-    <div className={`cart-icon`}>
-      <FaShoppingCart className="show-number" number={cartItems} />
-      {cartItems === 0 ? null : <span>{cartItems}</span>}
-    </div>
-
-   </>
+    <>
+      <div className={`cart-icon`}>
+        <FaShoppingCart className="show-number" number={cartItems} />
+        {cartItems === 0 ? null : <span>{cartItems}</span>}
+      </div>
+    </>
   );
 }
 

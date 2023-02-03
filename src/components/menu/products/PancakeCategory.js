@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import ProductFrame from "../../general/ProductFrame";
 import { useInView } from "react-intersection-observer";
-import { changeVisibleInt, changeListVisible,changeForcedNumber} from "../../../actions";
+import {
+  changeVisibleInt,
+  changeListVisible,
+  changeForcedNumber,
+} from "../../../actions";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -19,7 +23,7 @@ function PancakeCategory({ data, update, index }) {
     /* Optional options */
     threshold: [0, 0, 1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
     rootMargin: "64px 0px 0px 0px",
-    delay:500,
+    delay: 500,
   });
 
   useEffect(() => {
@@ -30,30 +34,30 @@ function PancakeCategory({ data, update, index }) {
 
     // prevents the crash when the entry is undefined
     if (entry) {
-      if(entry.intersectionRect.height !==0){
+      if (entry.intersectionRect.height !== 0) {
       }
       // nie zmieniam danych jesli sa takie same
-      if (
-        entry.intersectionRect.height !== visibility[index]
-      ) {
-
-        dispatch(
-          changeListVisible(
-            index,
-            entry.intersectionRect.height
-          )
-        );
+      if (entry.intersectionRect.height !== visibility[index]) {
+        dispatch(changeListVisible(index, entry.intersectionRect.height));
       }
       // update visible int
       if (biggest(visibility).index !== visibilityInt) {
         dispatch(changeVisibleInt(biggest(visibility).index));
       }
-      if(biggest(visibility).index === forcedNumber){
+      if (biggest(visibility).index === forcedNumber) {
         dispatch(changeForcedNumber(-1));
-
       }
     }
-  }, [inView, update, entry, index, visibility, visibilityInt, dispatch,forcedNumber]);
+  }, [
+    inView,
+    update,
+    entry,
+    index,
+    visibility,
+    visibilityInt,
+    dispatch,
+    forcedNumber,
+  ]);
 
   return (
     <section className="category" id={category} ref={ref}>

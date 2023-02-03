@@ -18,7 +18,7 @@ function CartAside({ open, setOpen }) {
     });
     setCartItems(items);
     setTotalPrice(price);
-  }, [cart,totalPrice]);
+  }, [cart, totalPrice]);
 
   return (
     <aside className={`cart-aside cart-aside-${open ? "open" : "closed"}`}>
@@ -28,7 +28,7 @@ function CartAside({ open, setOpen }) {
             YOUR CART{cartItems !== 0 ? " (" + cartItems + ")" : null}
           </span>
         </div>
-        <IoClose/>
+        <IoClose />
       </div>
       {cart.length === 0 ? (
         <div className="cart-aside-empty">
@@ -53,9 +53,7 @@ function CartAside({ open, setOpen }) {
           <div className="cart-aside-footer">
             <div className="total-price">
               <span className="price-info">In total</span>
-              <span className="price-amount">
-                 
-                 {totalPrice} zł</span>
+              <span className="price-amount">{totalPrice} zł</span>
             </div>
             <Button
               text={"CHECKOUT"}

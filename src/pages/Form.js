@@ -9,15 +9,13 @@ function Form() {
   const [correct, setCorrect] = useState(false);
 
   useEffect(() => {
-    // i get before price before the calculatiobn
+    // I get before price before the calculatiobn
     let price = 0;
     cart.forEach((item) => {
       price += item.amount * item.product.price;
     });
     setTotalPrice(price);
   }, [cart, totalPrice]);
-
-  // lsit of regex
 
   const megaReg = {
     city: /^[AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyZzŹźŻż ]*$/,
@@ -73,9 +71,9 @@ function Form() {
         <h1>Thanks for ordering!</h1>
       ) : (
         <form autoComplete="on" onSubmit={checkForm} noValidate>
-          <p>Adres dostawy</p>
+          <p>Delivery address</p>
           <label htmlFor="street">
-            Ulica i numer budynku
+            Street address
             <input
               type="text"
               name="street"
@@ -87,11 +85,11 @@ function Form() {
             />
             <span className="error">
               <IoWarning />
-              Podaj prawidłowy adres
+              Please enter the correct address
             </span>
           </label>
           <label htmlFor="code">
-            Kod pocztowy
+            Zip code
             <input
               type="text"
               name="code"
@@ -102,27 +100,27 @@ function Form() {
             />
             <span className="error">
               <IoWarning />
-              Podaj prawidłowy kod pocztowy
+              Please enter a valid zip code
             </span>
           </label>
           <label htmlFor="city">
-            Miasto
+            City
             <input
               type="text"
               name="city"
               id="city"
-              placeholder="Warszawa"
+              placeholder="Warsaw"
               required
               onChange={validate}
             />
             <span className="error">
               <IoWarning />
-              Podaj prawidłowe miasto
+              Please enter a valid city
             </span>
           </label>
           <p>Dane osobiste</p>
           <label htmlFor="name">
-            Imię i nazwisko
+            First name and last name
             <input
               type="text"
               name="name"
@@ -133,7 +131,7 @@ function Form() {
             />
             <span className="error ">
               <IoWarning />
-              Podaj prawidłowe imię i nazwisko
+              Please enter a valid first and last name
             </span>
           </label>
           <label htmlFor="email">
@@ -148,11 +146,11 @@ function Form() {
             />
             <span className="error">
               <IoWarning />
-              Podaj prawidłowy email
+              Please enter a valid email
             </span>
           </label>
           <label htmlFor="phone">
-            Numer telefonu
+            Phone number
             <input
               type="text"
               name="phone"
@@ -163,7 +161,7 @@ function Form() {
             />
             <span className="error">
               <IoWarning />
-              Podaj prawidłowy numer telefonu
+              Please enter a valid phone number
             </span>
           </label>
           <input type="submit" value={`PAY ${totalPrice} ZŁ`} id="submit" />
